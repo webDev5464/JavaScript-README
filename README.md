@@ -2748,6 +2748,108 @@ The `reduce()` method does not reduce the original array.
 
 This example finds the sum of all numbers in an array:
 
+```js
+const numbers = [45, 4, 9, 16, 25];
+
+console.log(numbers.reduce((total, value, index, array) => {
+  return total + value
+}));
+
+// 99
+```
+
+Note that the function takes 4 arguments:
+
+The total (the initial value / previously returned value)
+The item value
+The item index
+The array itself
+The example above does not use the index and array parameters. It can be rewritten to:
+
+```js
+const numbers = [45, 4, 9, 16, 25];
+
+console.log(numbers.reduce((total, value) => {
+  return total + value
+}));
+
+// 99
+```
+
+#### 🔺 Array reduceRight()
+
+The `reduceRight()` method runs a function on each array element to produce (reduce it to) a single value.
+
+The `reduceRight()` works from right-to-left in the array. See also `reduce()`.
+
+****
+The `reduceRight()` method does not reduce the original array.
+****
+
+```js
+const numbers = [45, 4, 9, 16, 25];
+
+console.log(numbers.reduceRight((total, value) => {
+  return total + value
+}));
+
+// 99
+```
+
+#### Array every()
+
+The `every()` method checks if all array values pass a test.
+
+This example checks if all array values are larger than 18:
+
+```js
+const numbers = [45, 4, 9, 16, 25];
+
+let result = numbers.every((value, index, array) => {
+  return value > 18
+});
+
+console.log("All over 18 is " + result);
+
+// All over 18 is false
+```
+
+#### 🔺 Array some()
+
+The `some()` method checks if some array values pass a test.
+
+This example checks if some array values are larger than 18:
+
+```js
+const numbers = [45, 4, 9, 16, 25];
+
+let result = numbers.some((value, index, array) => {
+  return value > 18
+});
+
+console.log("All over 18 is " + result);
+
+// All over 18 is true
+```
+
+#### 🔺 Array find()
+
+The `find()` method returns the value of the first array element that passes a test function.
+
+This example finds (returns the value of) the first element that is larger than 18:
+
+```js
+const numbers = [4, 9, 16, 25, 29];
+
+let result = numbers.find((value, index, array) => {
+  return value > 18
+});
+
+console.log("First number over 18 is " + result);
+
+// First number over 18 is 25
+```
+
 ****
 [![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.com/badshah5464/Next_Js-README.git) [![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
 ****
