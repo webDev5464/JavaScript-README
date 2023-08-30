@@ -2796,7 +2796,7 @@ console.log(numbers.reduceRight((total, value) => {
 // 99
 ```
 
-#### Array every()
+#### 🔺 Array every()
 
 The `every()` method checks if all array values pass a test.
 
