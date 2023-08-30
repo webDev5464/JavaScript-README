@@ -4,7 +4,6 @@
 ## 📌 Statements
 
 ```js
-
 let x, y, z;    // Statement 1
 x = 5;          // Statement 2
 y = 6;          // Statement 3
@@ -2748,28 +2747,6 @@ The `reduce()` method does not reduce the original array.
 ****
 
 This example finds the sum of all numbers in an array:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ****
 [![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.com/badshah5464/Next_Js-README.git) [![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
