@@ -21,6 +21,6 @@ Script/
 demo/
 Demo/
 
-*.js
-*.html
-*.css
+# *.js
+# *.html
+# *.css

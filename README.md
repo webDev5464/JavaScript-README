@@ -2850,6 +2850,14 @@ console.log("First number over 18 is " + result);
 // First number over 18 is 25
 ```
 
+#### 🔺 Array findIndex()
+
+The `findIndex()` method returns the index of the first array element that passes a test function.
+
+This example finds the index of the first element that is larger than 18:
+
+
+
 ****
 [![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.com/badshah5464/Next_Js-README.git) [![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
 ****
