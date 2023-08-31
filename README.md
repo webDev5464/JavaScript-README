@@ -2856,6 +2856,85 @@ The `findIndex()` method returns the index of the first array element that passe
 
 This example finds the index of the first element that is larger than 18:
 
+```js
+const numbers = [4, 9, 16, 25, 29];
+
+let result = numbers.findIndex((value, index, array) => {
+  return value > 18
+})
+
+console.log("First number over 18 has index " + result);
+// First number over 18 has index 3
+```
+
+#### 🔺 Array.from()
+
+The `Array.from()` method returns an Array object from any object with a length property or any iterable object.
+
+```js
+const myArr = Array.from("ABCDEFG");
+console.log(myArr);
+// ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+```
+
+#### 🔺 Array Keys()
+
+The `Array.keys()` method returns an Array Iterator object with the keys of an array.
+
+```js
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const key = fruits.keys()
+
+let text = ""
+for (let x of key) {
+  text += x + "<br>"
+}
+
+console.log(text);
+/* 0<br>1<br>2<br>3<br> */
+```
+
+#### 🔺 Array entries()
+
+```js
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const f = fruits.entries()
+
+text = ""
+for (let x of f) {
+  text += x + "<br>"
+}
+console.log(text);
+// 0,Banana<br>1,Orange<br>2,Apple<br>3,Mango<br>
+```
+
+#### 🔺 Array includes()
+
+ECMAScript 2016 introduced `Array.includes()` to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf).
+
+```js
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+console.log(fruits.includes("Apple"));
+// true
+```
+
+#### 🔺 Array Spread (...)
+
+The ... operator expands an iterable (like an array) into more elements:
+
+```js
+const q1 = ["Jan", "Feb", "Mar"];
+const q2 = ["Apr", "May", "Jun"];
+const q3 = ["Jul", "Aug", "Sep"];
+const q4 = ["Oct", "Nov", "May"];
+
+const year = [...q1, ...q2, ...q3, ...q4];
+
+console.log(year);
+// [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'May' ]
+```
+
 
 
 ****
