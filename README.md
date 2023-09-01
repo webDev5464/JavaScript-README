@@ -3160,7 +3160,24 @@ getYear() is supposed to return a 2-digit year.
 getYear() is deprecated. Do not use it!
 ****
 
+####  getMonth() Method
 
+The `getMonth()` method returns the month of a date as a number (0-11).
+
+****
+📝 Note
+
+In JavaScript, January is month number 0, February is number 1, ...
+
+Finally, December is month number 11.
+****
+
+```js
+const d = new Date()
+
+console.log(d.getMonth() + 1);
+// 9
+```
 
 
 
