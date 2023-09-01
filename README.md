@@ -2958,7 +2958,115 @@ console.log(year);
 // [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'May' ]
 ```
 
+## 📌 Date Objects
 
+```js
+const d = new Date()
+```
+
+```js
+const d = new Date(2023-09-01)
+```
+
+****
+⚠️ **Note**
+
+Date objects are static. The "clock" is not "running".
+
+The computer clock is ticking, date objects are not.
+****
+
+#### 🔺 Date Output
+
+By default, JavaScript will use the browser's time zone and display a date as a full text string:
+
+**Fri Sep 01 2023 09:24:22 GMT+0530 (India Standard Time)**
+
+****
+You will learn much more about how to display dates, later in this tutorial.
+****
+
+#### 🔺 Creating Date Objects
+
+Date objects are created with the `new Date()` constructor.
+
+There are 9 ways to create a new date object:
+
+```js
+new Date()
+new Date(date string)
+
+new Date(year,month)
+new Date(year,month,day)
+new Date(year,month,day,hours)
+new Date(year,month,day,hours,minutes)
+new Date(year,month,day,hours,minutes,seconds)
+new Date(year,month,day,hours,minutes,seconds,ms)
+
+new Date(milliseconds)
+```
+
+#### 🔺 new Date(date string)
+
+`new Date(date string)` creates a date object from a **date string**:
+
+```js
+const d = new Date("September 01, 2023 09:28:44");
+```
+
+#### 🔺 new Date(year, month, ...)
+
+`new Date(year, month, ...)` creates a date object with a **specified date and time**.
+
+7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):
+
+```js
+const d = new Date(2023, 11, 24, 10, 33, 30, 0);
+document.getElementById("demo").innerHTML = d
+// Sun Dec 24 2023 10:33:30 GMT+0530 (India Standard Time)
+```
+
+****
+⚠️ **Note**
+
+JavaScript counts months from **0** to **11**:
+
+**January = 0.**
+
+**December = 11.**
+****
+
+#### 🔺 Using 6, 4, 3, or 2 Numbers
+
+6 numbers specify year, month, day, hour, minute, second:
+
+```js
+const d = new Date(2023, 11, 24, 10, 33, 30);
+```
+
+5 numbers specify year, month, day, hour, and minute:
+
+```js
+const d = new Date(2023, 11, 24, 10, 33);
+```
+
+4 numbers specify year, month, day, and hour:
+
+```js
+const d = new Date(2023, 11, 24, 10);
+```
+
+3 numbers specify year, month, and day:
+
+```js
+const d = new Date(2023, 11, 24);
+```
+
+2 numbers specify year and month:
+
+```js
+const d = new Date(2023, 11);
+```
 
 ****
 [![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.com/badshah5464/Next_Js-README.git) [![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
