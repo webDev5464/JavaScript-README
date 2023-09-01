@@ -2965,7 +2965,7 @@ const d = new Date()
 ```
 
 ```js
-const d = new Date(2023-09-01)
+const d = new Date("2023-9-1")
 ```
 
 ****
