@@ -387,12 +387,6 @@ Assignment operators assign values to JavaScript variables.
 | %=       | x % = y  | x = x % y  |
 | **=      | x ** = y | x = x ** y |
 
-#### 🔺 Logical Assignment Operators
-| Operator | Example | Same As          |
-| :------- | :------ | :--------------- |
-| &&=      | x &&= y | x = && (x=y)     |
-| ??=      | x ??= y | x = x ?? (x = y) |
-
 #### 🔺 The `=` Operator
 The **Simple Assignment Operator** assigns a value to a variable.
 
@@ -500,31 +494,6 @@ x %= 5;
 | :----- |
 | 0      |
 
-#### 🔺 The `&&=` Operators
-The **Logical AND assignment operator** is used between two values.
-
-If the first value is true, the second value is assigned.
-
-```js
-let x = 10;
-x &&= 5;
-```
-| Result |
-| :----- |
-| 5      |
-
-#### 🔺 The `??=` Operators
-The **Nullish coalescing assignment operator** is used between two values.
-
-If the first value is undefined or null, the second value is assigned.
-```js
-let x;
-x ??= 5;
-```
-| result |
-| :----- |
-| 5      |
-
 ## 📌 Data Types
 
 #### 🔺 JavaScript has 8 Datatypes
@@ -573,7 +542,7 @@ let y = false;
 const person = {firstName : "John", lastName : "Doe"};
 
 // Array object:
-const cars = ["saad", "volvo", "BMW"];
+const cars = ["Saad", "volvo", "BMW"];
 
 // Date Object:
 const date = new Date("2023-09-11");
@@ -1025,20 +994,6 @@ The sequence `\\`  inserts a backslash in a string:
 ```js
 let text = "The character \\ is called backslash.";
 ```
-****
-⚠️
-Six other escape sequences are valid in JavaScript:
-
-| Code | Result               |
-| :--- | :------------------- |
-| \b   | Backspace            |
-| \f   | Form Feed            |
-| \n   | New Line             |
-| \r   | Carriage Return      |
-| \t   | Horizontal Tabulator |
-| \v   | Vertical Tabulator   |
-
-****
 
 You can also break up a code line within a text string with a single backslash:
 
@@ -3136,26 +3091,6 @@ Short dates are written with an "MM/DD/YYYY" syntax like this:
 const d = new Date("03/25/2015");
 ```
 
-#### 🔺 Long Dates.
-
-Long dates are most often written with a "MMM DD YYYY" syntax like this:
-
-```js
-const d = new Date("Mar 25 2015");
-```
-
-Month and day can be in any order:
-
-```js
-const d = new Date("25 Mar 2015");
-```
-
-Commas are ignored. Names are case insensitive:
-
-```js
-const d = new Date("JANUARY, 25, 2015");
-```
-
 #### 🔺 Date Input - Parsing Dates
 
 If you have a valid date string, you can use the `Date.parse()` method to convert it to milliseconds.
@@ -3172,6 +3107,14 @@ You can then use the number of milliseconds to **convert it to a date** object:
 let msec = Date.parse("March 21, 2012");
 const d = new Date(msec);
 ```
+
+## 📌 Get Date Methods
+
+#### 🔺 The new Date() Constructor
+
+In JavaScript, date objects are created with `new Date()`.
+
+`new Date()` returns a date object with the current date and time.
 
 
 
