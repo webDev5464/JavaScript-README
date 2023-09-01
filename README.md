@@ -3068,6 +3068,113 @@ const d = new Date(2023, 11, 24);
 const d = new Date(2023, 11);
 ```
 
+## 📌 Short Dates.
+
+#### 🔺 Date Input
+
+There are generally 3 types of JavaScript date input formats:
+
+| Type       | Example                                   |
+| :--------- | :---------------------------------------- |
+| ISO Date   | "2015-03-25" (The International Standard) |
+| Short Date | "03/25/2015"                              |
+| Long Date  | "Mar 25 2015" or "25 Mar 2015"            |
+
+#### 🔺 Date Output
+
+Independent of input format, JavaScript will (by default) output dates in full text string format:
+
+```js
+Fri Sep 01 2023 12:17:14 GMT+0530 (India Standard Time)
+```
+
+### 🔺 ISO Dates
+
+ISO 8601 is the international standard for the representation of dates and times.
+
+The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format:
+
+```js
+const d = new Date("2015-03-25");
+```
+
+****
+The computed date will be relative to your time zone.
+
+Depending on your time zone, the result above will vary between March 24 and March 25.
+****
+
+#### 🔺 ISO Dates (Year and Month)
+
+ISO dates can be written without specifying the day (YYYY-MM):
+
+```js
+const d = new Date("2015-03");
+```
+
+****
+Time zones will vary the result above between February 28 and March 01.
+****
+
+#### 🔺 ISO Dates (Only Year)
+
+ISO dates can be written without month and day (YYYY):
+
+```js
+const d = new Date("2015");
+```
+
+****
+Time zones will vary the result above between December 31 2014 and January 01 2015.
+****
+
+#### 🔺 Short Dates.
+
+Short dates are written with an "MM/DD/YYYY" syntax like this:
+
+```js
+const d = new Date("03/25/2015");
+```
+
+#### 🔺 Long Dates.
+
+Long dates are most often written with a "MMM DD YYYY" syntax like this:
+
+```js
+const d = new Date("Mar 25 2015");
+```
+
+Month and day can be in any order:
+
+```js
+const d = new Date("25 Mar 2015");
+```
+
+Commas are ignored. Names are case insensitive:
+
+```js
+const d = new Date("JANUARY, 25, 2015");
+```
+
+#### 🔺 Date Input - Parsing Dates
+
+If you have a valid date string, you can use the `Date.parse()` method to convert it to milliseconds.
+
+`Date.parse()` returns the number of milliseconds between the date and January 1, 1970:
+
+```js
+let msec = Date.parse("March 21, 2012");
+```
+
+You can then use the number of milliseconds to **convert it to a date** object:
+
+```js
+let msec = Date.parse("March 21, 2012");
+const d = new Date(msec);
+```
+
+
+
 ****
 [![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.com/badshah5464/Next_Js-README.git) [![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
 ****
