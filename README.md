@@ -1,5 +1,5 @@
 ![logo](javascript.png)
-# 📝JavaScript Basic
+# 🎓 JavaScript Basic
 
 ## 📌 Statements
 
@@ -120,7 +120,7 @@ var z = x + y;
 ```
 
 ****
-**⚠️ Note** :
+📝 **Note** :
 
 - It is considered good programming practice to always declare variables before use.
 - The `var` keyword was used in all JavaScript code from 1995 to 2015.
@@ -1019,7 +1019,8 @@ console.log(typeof y);
 | object |
 
 ****
-⚠️
+⚠️ **WARNING !**
+
 Do not create Strings objects.
 
 The `new` keyword complicates the code and slows down execution speed.
@@ -1081,7 +1082,7 @@ let part = text.slice(7, 13);   // Banana
 ```
 
 ****
-⚠️ **Note :**
+📝 **Note**
 
 JavaScript counts positions from zero.
 
@@ -1134,7 +1135,7 @@ console.log(newText);
 ```
 
 ****
-⚠️ **Note**
+📝 **Note**
 
 The replace() method does not change the string it is called on.
 
@@ -1282,7 +1283,7 @@ let padded = text.padEnd(4,"x");      // 5xxx
 ```
 
 ****
- ⚠️ **Note**
+ 📝 **Note**
 
 The `padStart()` end `padEnd()` method is a string method.
 
@@ -1361,7 +1362,7 @@ let index = text.indexOf("locate");     // 7
 ```
 
 ****
-⚠️ **Note**
+📝 **Note**
 
 JavaScript counts positions from zero.
 
@@ -1413,7 +1414,7 @@ console.log(text.search(/locate/));   // 7
 ```
 
 ****
-⚠️ **Did You Notice?**
+📝 **Did You Notice?**
 
 The two methods, `indexOf()` and `search()`, are equal?
 
@@ -1557,7 +1558,7 @@ let y = 9999999999999999;  // y will be 10000000000000000
 #### 🔺 Numbers and Strings
 
 ****
-⚠️ WARNING !!
+⚠️ **WARNING !**
 
 JavaScript uses the + operator for both addition and concatenation.
 
@@ -1845,7 +1846,8 @@ console.log(cars[0]);     // Saab
 ```
 
 ****
-⚠️ **Note:** Array indexes start with 0
+📝 **Note** Array indexes start with 0
+
 [0] is the first element. [1] is the second element.
 ****
 
@@ -2027,7 +2029,7 @@ console.log(person[0] + " " + person.length)    // John 3
 ```
 
 ****
-⚠️ **The Difference Between Arrays and Objects**
+📝 **The Difference Between Arrays and Objects**
 
 In JavaScript, **arrays** use **numbered indexes**.  
 
@@ -2224,7 +2226,7 @@ console.log(fruits);
 ```
 
 ****
-⚠️ **Warning !**
+⚠️ **WARNING !**
 
 Array elements can be deleted using the JavaScript operator `delete`.
 
@@ -2339,7 +2341,7 @@ console.log(fruits.slice(1));
 ```
 
 ****
-⚠️ **Note**
+📝 **Note**
 
 The slice() method creates a new array.
 
@@ -2924,7 +2926,7 @@ const d = new Date("2023-9-1")
 ```
 
 ****
-⚠️ **Note**
+📝 **Note**
 
 Date objects are static. The "clock" is not "running".
 
@@ -2982,7 +2984,7 @@ document.getElementById("demo").innerHTML = d
 ```
 
 ****
-⚠️ **Note**
+📝 **Note**
 
 JavaScript counts months from **0** to **11**:
 
@@ -3110,11 +3112,60 @@ const d = new Date(msec);
 
 ## 📌 Get Date Methods
 
-#### 🔺 The new Date() Constructor
+| Method            | Description                                   |
+| :---------------- | :-------------------------------------------- |
+| getFullYear       | Get **year** as a four digit number (yyyy)    |
+| getMonth()        | Get **month** as a number (0-11)              |
+| getDate()         | Get **day** as a number (1-31)                |
+| getDay()          | Get **weekday** as a number (0-6)             |
+| getHours()        | Get **hour** (0-23)                           |
+| getMinutes()      | Get **minute** (0-59)                         |
+| getSeconds()      | Get **second** (0-59)                         |
+| getMilliseconds() | Get **millisecond** (0-999)                   |
+| getTime()         | Get time (milliseconds since January 1, 1970) |
 
-In JavaScript, date objects are created with `new Date()`.
+****
+📝 Note 1
+The get methods above return Local time.
 
-`new Date()` returns a date object with the current date and time.
+Universal time (UTC) is documented at the bottom of this page.
+****
+
+****
+📝 Note 2
+The get methods return information from existing date objects.
+
+In a date object, the time is static. The "clock" is not "running".
+
+The time in a date object is NOT the same as current time.
+****
+
+#### 🔺 getFullYear() Method
+
+The `getFullYear()` method returns the year of a date as a four digit number:
+
+```js
+const d = new Date();
+console.log(d.getFullYear());
+// 2023
+```
+
+****
+⚠️ **WARNING !**
+
+Old JavaScript code might use the non-standard method getYear().
+
+getYear() is supposed to return a 2-digit year.
+
+getYear() is deprecated. Do not use it!
+****
+
+
+
+
+
+
+
 
 
 

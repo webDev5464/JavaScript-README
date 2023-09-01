@@ -1,3 +1,3 @@
+const d = new Date()
 
-console.log("Hello \
-World!");
+console.log(d.getFullYear());
