@@ -18,7 +18,14 @@
   <button onclick="myFunction2()">Sort Numerically</button>
   <button onclick="myFunction3()">Random</button> -->
 
-  <p id="demo"></p>
+  <p id="demo">0.00000000000000000</p>
+  <button onclick="randomValue()">Click!</button>
+
+  <script>
+    let randomValue = () => {
+      document.getElementById("demo").innerHTML = Math.random()
+    }
+  </script>
 
   <script>
     // const points = [40, 100, 1, 5, 25, 10];

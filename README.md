@@ -3411,20 +3411,170 @@ console.log(text);
 JavaScript counts months from 0 to 11. January is 0. December is 11.
 ****
 
+## 📌 Math
 
+#### 🔺 Number to Integer
 
+There are 4 common methods to round a number to an integer:
 
+|               |                                               |
+| :------------ | :-------------------------------------------- |
+| Math.round(x) | Returns x rounded to its nearest integer      |
+| Math.ceil(x)  | Returns x rounded up to its nearest integer   |
+| Math.floor(x) | Returns x rounded down to its nearest integer |
+| Math.trunc(x) | Returns the integer part of x                 |
 
+#### 🔺 Math.round()
 
+`Math.round(x)` returns the nearest integer:
 
+```js
+console.log(Math.round(4.6))
+// 5
 
+console.log(Math.round(4.5))
+// 5 
 
+console.log(Math.round(4.4))
+// 4
+```
 
+#### 🔺 Math.ceil()
 
+`Math.ceil(x)` returns the value of x rounded up to its nearest integer:
 
+```js
+console.log(Math.ceil(4.3));
+// 5
 
+console.log(Math.ceil(4.5));
+// 5
 
+console.log(Math.ceil(4.6));
+// 5
 
+console.log(Math.ceil(4));
+// 4
+
+console.log(Math.ceil(-4.3));
+// -4
+
+console.log(Math.ceil(-4));
+// -4
+```
+
+#### 🔺 Math.floor()
+
+Math.floor(x) returns the value of x rounded down to its nearest integer:
+
+```js
+console.log(Math.floor(4.9))
+// 4
+
+console.log(Math.floor(4.7))
+// 4
+
+console.log(Math.floor(4.4))
+// 4
+
+console.log(Math.floor(4.2))
+// 4
+
+console.log(Math.floor(-4.2))
+// -5
+```
+
+#### 🔺 Math.trunc()
+
+Math.trunc(x) returns the integer part of x:
+
+```js
+console.log(Math.trunc(4.9))
+// 4
+
+console.log(Math.trunc(4.7))
+// 4
+
+console.log(Math.trunc(4.4))
+// 4
+
+console.log(Math.trunc(4.2))
+// 4
+
+console.log(Math.trunc(-4.2))
+// -4
+```
+
+#### 🔺 Math.random()
+
+Math.random() returns a random number between 0 (inclusive), and 1 (exclusive):
+
+```js
+<p id="demo"></p>
+<button onclick="randomValue()">Click!</button>
+
+<script>
+  let randomValue = () => {
+    document.getElementById("demo").innerHTML = Math.random()
+  }
+</script>
+
+// Returns a random number:
+```
+
+#### 🔺 Random Integers
+
+`Math.random()` used with `Math.floor()` can be used to return random integers.
+
+****
+There is no such thing as JavaScript integers.
+
+We are talking about numbers with no decimals here.
+****
+
+```js
+// Returns a random integer from 0 to 9:
+Math.floor(Math.random() * 10);
+
+// Returns a random integer from 0 to 10:
+Math.floor(Math.random() * 11);
+
+// Returns a random integer from 1 to 10:
+Math.floor(Math.random() * 10) + 1;
+
+// Returns a random integer from 1 to 100:
+Math.floor(Math.random() * 100) + 1;
+```
+
+#### 🔺 A Proper Random Function
+
+As you can see from the examples above, it might be a good idea to create a proper random function to use for all random integer purposes.
+
+This JavaScript function always returns a random number between min (included) and max (excluded):
+
+```js
+<button onclick="document.getElementById('demo').innerHTML = getRndInteger(0,10)">Click Me</button>
+
+<p id="demo"></p>
+
+<script>
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+</script>
+```
+
+```js
+<button onclick="document.getElementById('demo').innerHTML = getRndInteger(1,10)">Click Me</button>
+
+<p id="demo"></p>
+
+<script>
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+</script>
+```
 
 ****
 [![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.com/badshah5464/Next_Js-README.git) [![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
