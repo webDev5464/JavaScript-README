@@ -2697,7 +2697,14 @@ const number2 = numbers.map((value) => {
   return value * 2
 })
 document.getElementById("demo").innerHTML = number2
-// 90,8,18,32,50
+
+/*
+45
+,4
+,9
+,16
+,25
+*/
 ```
 
 #### 🔺 Array filter()
@@ -3178,6 +3185,239 @@ const d = new Date()
 console.log(d.getMonth() + 1);
 // 9
 ```
+
+****
+📝 **Note**
+
+You can use an array of names to return the month as a name:
+****
+
+```js
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+const d = new Date()
+let month = months[d.getMonth()]
+
+console.log(month);
+// September
+```
+
+#### 🔺 getDate() Method
+
+The `getDate()` method returns the day of a date as a number (1-31):
+
+```js
+const d = new Date()
+console.log(d.getDate());
+// 1
+```
+
+#### 🔺 getHours() Method
+
+The `getHours()` method returns the hours of a date as a number (0-23):
+
+```js
+const d = new Date()
+console.log(d.getHours());
+// 22
+```
+
+#### 🔺 getMinutes() Method
+
+The `getMinutes()` method returns the minutes of a date as a number (0-59):
+
+```js
+const d = new Date()
+console.log(d.getMinutes());
+// 15
+```
+
+#### 🔺 getSeconds() Method
+
+The `getSeconds()` method returns the seconds of a date as a number (0-59):
+
+```js
+const d = new Date()
+console.log(d.getSeconds());
+// 20
+```
+
+#### 🔺 getMilliseconds() Method
+
+The `getMilliseconds()` method returns the milliseconds of a date as a number (0-999):
+
+```js
+const d = new Date()
+console.log(d.getMilliseconds());
+// 609
+```
+
+#### 🔺 getDay() Method
+
+The `getDay()` method returns the weekday of a date as a number (0-6).
+
+```js
+const d = new Date()
+console.log(d.getDay());
+// 5
+```
+
+****
+📝 **Note**
+
+You can use an array of names, and getDay() to return weekday as a name:
+****
+
+```js
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+const d = new Date()
+console.log(days[d.getDay()]);
+// Friday
+```
+
+#### 🔺 getTime() Method
+
+The `getTime()` method returns the number of milliseconds since January 1, 1970:
+
+```js
+const d = new Date("1970-01-01")
+console.log(d.getTime());
+// 0
+```
+
+```js
+const d = new Date()
+console.log(d.getTime());
+// 1693587194392
+```
+
+#### 🔺 Date.now() Method
+
+`Date.now()` returns the number of milliseconds since January 1, 1970.
+
+```js
+// Calculate milliseconds in a year
+const minute = 1000 * 60;
+const hour = minute * 60;
+const day = hour * 24;
+const year = day * 365;
+
+let years = Math.random(Date.now() / year)
+console.log(years);
+// 54
+```
+
+## 📌 Set Date Methods
+
+Set Date methods are used for setting a part of a date:
+
+| Method            | Description                                       |
+| :---------------- | :------------------------------------------------ |
+| setDate()         | Set the day as a number (1-31)                    |
+| setFullYear()     | Set the year (optionally month and day)           |
+| setHours()        | Set the hour (0-23)                               |
+| setMilliseconds() | Set the milliseconds (0-999)                      |
+| setMinutes()      | Set the minutes (0-59)                            |
+| setMonth()        | Set the month (0-11)                              |
+| setSeconds()      | Set the seconds (0-59)                            |
+| setTime()         | Set the time (milliseconds since January 1, 1970) |
+
+#### 🔺 setFullYear() Method
+
+The `setFullYear()` method sets the year of a date object. In this example to 2020:
+
+```js
+const d = new Date()
+d.setFullYear(2023)
+document.getElementById("demo").innerHTML = d
+// Sat Sep 02 2023 02:05:29 GMT+0530 (India Standard Time)
+```
+
+#### 🔺 setMonth() Method
+
+The `setMonth()` method sets the month of a date object (0-11):
+
+```js
+const d = new Date()
+d.setMonth(8)
+// Sat Sep 02 2023 10:05:53 GMT+0530 (India Standard Time)
+```
+
+#### 🔺 setDate() Method
+
+The `setDate()` method sets the day of a date object (1-31):
+
+```js
+const d = new Date()
+d.setDate(3)
+// Sun Sep 03 2023 10:08:08 GMT+0530 (India Standard Time)
+```
+
+#### 🔺 setHours() Method
+
+The `setHours()` method sets the hours of a date object (0-23):
+
+```js
+const d = new Date()
+d.setHours(11)
+// Sat Sep 02 2023 11:08:24 GMT+0530 (India Standard Time)
+```
+
+#### 🔺 setMinutes() Method
+
+The `setMinutes()` method sets the minutes of a date object (0-59):
+
+```js
+const d = new Date()
+d.setMinutes(15)
+// Sat Sep 02 2023 10:15:58 GMT+0530 (India Standard Time)
+```
+
+#### 🔺 setSeconds() Method
+
+The `setSeconds()` method sets the seconds of a date object (0-59):
+
+```js
+const d = new Date()
+d.setSeconds(30)
+document.getElementById("demo").innerHTML = d
+// Sat Sep 02 2023 11:33:30 GMT+0530 (India Standard Time)
+```
+
+#### 🔺 Compare Dates
+
+Dates can easily be compared.
+
+The following example compares today's date with January 14, 2100:
+
+```js
+let text
+const today = new Date()
+const someDay = new Date()
+someDay.setFullYear(2100, 0, 14)
+
+if (someDay > today) {
+  text = "Today is before January 14, 2100."
+} else {
+  text = "Today is after January 14, 2100."
+}
+
+console.log(text);
+// Today is before January 14, 2100.
+```
+
+****
+JavaScript counts months from 0 to 11. January is 0. December is 11.
+****
+
+
+
+
+
+
+
+
 
 
 
