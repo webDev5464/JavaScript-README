@@ -3576,6 +3576,202 @@ function getRndInteger(min, max) {
 </script>
 ```
 
+## 📌 Booleans
+
+#### 🔺 Boolean Values
+
+Very often, in programming, you will need a data type that can only have one of two values, like
+
+- YES / NO
+- ON / OFF
+- TRUE / FALSE
+- 
+For this, JavaScript has a **Boolean** data type. It can only take the values **true** or **false**.
+
+#### 🔺 Boolean() Function
+
+You can use the Boolean() function to find out if an expression (or a variable) is true:
+
+```js
+console.log(Boolean(10 > 9));
+
+// true
+```
+
+```js
+console.log(Boolean(10 < 9));
+
+// false
+```
+
+#### 🔺 Comparisons and Conditions
+
+The chapter JS Comparisons gives a full overview of comparison operators.
+
+The chapter JS Conditions gives a full overview of conditional statements.
+
+Here are some examples:
+
+| Operator | Description  | Example              |
+| :------- | :----------- | :------------------- |
+| ==       | equal to     | if (day == "Monday") |
+| >        | greater than | if (salary > 9000)   |
+| <        | less than    | if (age < 18>)       |
+
+#### 🔺 Everything Without a "Value" is False
+
+The Boolean value of **0** (zero) is **false**:
+
+```js
+let x = 0
+console.log(Boolean(x))
+
+// false
+```
+
+The Boolean value of "" (empty string) is **false**:
+
+```js
+let x = ""
+console.log(Boolean(x))
+
+// false
+```
+
+The Boolean value of **undefined** is **false**:
+
+```js
+let x 
+console.log(Boolean(x))
+
+// false
+```
+
+The Boolean value of **null** is **false**:
+
+```js
+let x = null
+console.log(Boolean(x))
+
+// false
+```
+
+The Boolean value of **false** is (you guessed it) **false**:
+
+```js
+let x = false
+console.log(Boolean(x))
+
+// false
+```
+
+```js
+let x = 5
+let y = 5
+
+console.log(Boolean(x == y))
+// true
+```
+
+```js
+let x = 5
+let y = 6
+
+console.log(Boolean(x == y))
+// false
+```
+
+```js
+let x = 5
+let y = "5"
+
+console.log(Boolean(x === y))
+// false
+```
+
+#### 🔺 How Can it be Used
+
+Comparison operators can be used in conditional statements to compare values and take action depending on the result:
+
+```js
+if (age < 18) text = "Too young to buy alcohol";
+```
+
+#### 🔺 Conditional (Ternary) Operator
+
+JavaScript also contains a conditional operator that assigns a value to a variable based on some condition.
+
+**Syntax**
+
+```
+variablename = (condition) ? value1:value2 
+```
+
+```js
+let age = 28
+let compare =  (18 < age) ? "Too Young" : "To Small"
+console.log(compare); 
+
+// Too Young
+```
+
+```js
+let age = 18
+let compare =  (18 < age) ? "Too Young" : "To Small"
+console.log(compare); 
+// Too Small
+```
+
+```js
+let age = 18
+let compare =  (18 <= age) ? "Too Young" : "To Small"
+console.log(compare); 
+// Too Young
+```
+
+```html
+  <input type="text" id="age">
+
+  <input type="submit" value="Submit" onclick="arrowFunction()">
+
+  <p id="demo"></p>
+  
+  <script>
+    let arrowFunction = () => {
+      let text = ""
+      let age = Number(document.getElementById("age").value)
+
+      if (isNaN(age)) {
+        text = "Input is a not a number"
+      } else {
+        text = (age => 18) ? "Too young" : "Too Small"
+      }
+
+      document.getElementById("demo").innerHTML = text + " to vote"
+    }
+  </script>
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ****
 [![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.com/badshah5464/Next_Js-README.git) [![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
 ****

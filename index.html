@@ -14,37 +14,26 @@
 </head>
 
 <body>
-  <!-- <button onclick="myFunction1()">Sort Alphabetically</button>
-  <button onclick="myFunction2()">Sort Numerically</button>
-  <button onclick="myFunction3()">Random</button> -->
 
-  <p id="demo">0.00000000000000000</p>
-  <button onclick="randomValue()">Click!</button>
+  <input type="text" id="age">
 
+  <input type="submit" value="Submit" onclick="arrowFunction()">
+
+  <p id="demo"></p>
+  
   <script>
-    let randomValue = () => {
-      document.getElementById("demo").innerHTML = Math.random()
+    let arrowFunction = () => {
+      let text = ""
+      let age = Number(document.getElementById("age").value)
+
+      if (isNaN(age)) {
+        text = "Input is a not a number"
+      } else {
+        text = (age => 18) ? "Too young" : "Too Small"
+      }
+
+      document.getElementById("demo").innerHTML = text + " to vote"
     }
-  </script>
-
-  <script>
-    // const points = [40, 100, 1, 5, 25, 10];
-    // document.getElementById("demo").innerHTML = points;
-
-    // function myFunction1() {
-    //   points.sort();
-    //   document.getElementById("demo").innerHTML = points;
-    // }
-
-    // function myFunction2() {
-    //   points.sort(function (a, b) { return a - b });
-    //   document.getElementById("demo").innerHTML = points;
-    // }
-
-    // function myFunction3() {
-    //   points.sort(function () { return 0.5 - Math.random() });
-    //   document.getElementById("demo").innerHTML = points;
-    // }
   </script>
 
   <script src="./index.js"></script>
