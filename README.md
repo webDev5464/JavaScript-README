@@ -3909,12 +3909,167 @@ The `getDay()` method returns the weekday as a number between 0 and 6.
 
 This example uses the weekday number to calculate the weekday name:
 
+```js
+const x = new Date().getDay()
 
+let days
 
+switch (x) {
+  case 0:
+    days = "Sunday"
+    break
+  case 1:
+    days = "Monday"
+    break
+  case 2:
+    days = "Tuesday"
+    break
+  case 3:
+    days = "Wednesday"
+    break
+  case 4:
+    days = "Thursday"
+    break
+  case 5:
+    days = "Friday"
+    break
+  case 6:
+    days = "Saturday"
+}
 
+console.log("Today is " + days);
+```
 
+#### 🔺 break Keyword
 
+When JavaScript reaches a `break` keyword, it breaks out of the switch block.
 
+This will stop the execution inside the switch block.
+
+It is not necessary to break the last case in a switch block. The block breaks (ends) there anyway.
+
+****
+📝 **Note**
+If you omit the break statement, the next case will be executed even if the evaluation does not match the case.
+****
+
+#### 🔺 The default Keyword
+
+The `default` keyword specifies the code to run if there is no case match:
+
+The `getDay()` method returns the weekday as a number between 0 and 6.
+
+If today is neither Saturday (6) nor Sunday (0), write a default message:
+
+```js
+const x = new Date().getDay()
+
+let days
+
+switch (x) {
+  case 6:
+    days = "Saturday"
+    break
+  case 0:
+    days = "Sunday"
+    break
+  default:
+    days = "Looking forward to the Weekend"
+}
+
+console.log(days);
+```
+
+The `default` case does not have to be the last case in a switch block:
+
+```js
+let days
+
+switch (new Date().getDay()) {
+  default:
+    days = "Looking forward to the Weekend"
+    break
+  case 6:
+    days = "Saturday"
+    break
+  case 0:
+    days = "Sunday"
+}
+
+console.log(days);
+```
+
+****
+If `default` is not the last case in the switch block, remember to end the default case with a break.
+****
+
+#### 🔺 Common Code Blocks
+
+Sometimes you will want different switch cases to use the same code.
+
+In this example case 4 and 5 share the same code block, and 0 and 6 share another code block:
+
+```js
+let text
+
+switch (new Date().getDay()) {
+  case 4:
+  case 5:
+    text = "Soon it is Weekend"
+    break
+  case 0:
+  case 6:
+    text = "It is weekend"
+    break
+  default:
+    text = "Looking forward to the  Weekend"
+}
+
+console.log(text);
+```
+
+#### 🔺 Switching Details
+
+If multiple cases matches a case value, the `first` case is selected.
+
+If no matching cases are found, the program continues to the `default` label.
+
+If no default label is found, the program continues to the statement(s) `after the switch`.
+
+#### 🔺 Strict Comparison
+
+Switch cases use strict comparison (===).
+
+The values must be of the same type to match.
+
+A strict comparison can only be true if the operands are of the same type.
+
+In this example there will be no match for x:
+
+```js
+  <input type="number" id="text">
+  <button type="submit" onclick="myValue()">Submit</button>
+  <p id="result"></p>
+
+  <script>
+    let myValue = () => {
+      let value = Number(document.getElementById("text").value)
+
+      switch (value) {
+        case 0:
+          text = "Off"
+          break
+        case 1:
+          text = "On"
+          break
+        default:
+          text = "Value is not found"
+      }
+
+      document.getElementById("result").innerHTML = text
+    }
+  </script>
+```
 
 ****
 [![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.com/badshah5464/Next_Js-README.git) [![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)

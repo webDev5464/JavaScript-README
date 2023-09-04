@@ -15,8 +15,28 @@
 
 <body>
 
-  <section>
-    <p id="time"></p>
+  <section style="display: none;">
+    <input type="number" id="text">
+    <button type="submit" onclick="myValue()">Submit</button>
+    <p id="result"></p>
+
+    <script>
+      let myValue = () => {
+        let value = Number(document.getElementById("text").value)
+
+        switch (value) {
+          case 0:
+            text = "Off"
+            break
+          case 1:
+            text = "On"
+            break
+          default:
+            text = "Value is not found"
+        }
+        document.getElementById("result").innerHTML = text
+      }
+    </script>
   </section>
 
   <section style="display: none;">
