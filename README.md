@@ -4071,6 +4071,230 @@ In this example there will be no match for x:
   </script>
 ```
 
+## 📌 For Loop
+
+****
+Loops can execute a block of code a number of times.
+****
+
+***Loops*** are handy, if you want to run the same code over and over again, each time with a different value.
+
+Often this is the case when working with arrays:
+
+```js
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"]
+
+let text = ""
+
+for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>"
+}
+
+console.log(text)
+// BMW<br>Volvo<br>Saab<br>Ford<br>Fiat<br>Audi<br>
+```
+
+#### 🔺 Different Kinds of Loops
+
+JavaScript supports different kinds of loops:
+
+- `for` - loops through a block of code a number of times
+- `for/in` - loops through the properties of an object
+- `for/of` - loops through the values of an iterable object
+- `while` - loops through a block of code while a specified condition is true
+- `do/while` - also loops through a block of code while a specified condition is true
+
+#### 🔺 The For Loop
+
+The `for` statement creates a loop with 3 optional expressions:
+
+```js
+for (expression 1; expression 2; expression 3) {
+  // code block to be executed
+}
+```
+
+**Expression 1** is executed (one time) before the execution of the code block.
+
+**Expression 2** defines the condition for executing the code block.
+
+**Expression 3** is executed (every time) after the code block has been executed.
+
+```js
+for (let x = 0; x < 5; x++) {
+  console.log(x)
+}
+
+/* 
+0
+1
+2
+3
+4
+*/
+```
+
+From the example above, you can read:
+
+Expression 1 sets a variable before the loop starts (let i = 0).
+
+Expression 2 defines the condition for the loop to run (i must be less than 5).
+
+Expression 3 increases a value (i++) each time the code block in the loop has been executed.
+
+**Expression 1**
+
+Normally you will use expression 1 to initialize the variable used in the loop (let i = 0).
+
+This is not always the case. JavaScript doesn't care. Expression 1 is optional.
+
+You can initiate many values in expression 1 (separated by comma):
+
+```js
+const cars = ["BMW", "Volvo", "Saab", "Ford"]
+
+let i, len, text
+for (i = 0, len = cars.length, text = ""; i < len; i++) {
+  text += cars[i] + "<br>"
+}
+
+document.getElementById("demo").innerHTML = text
+```
+
+**Expression 2**
+
+Often expression 2 is used to evaluate the condition of the initial variable.
+
+This is not always the case. JavaScript doesn't care. Expression 2 is also optional.
+
+If expression 2 returns true, the loop will start over again. If it returns false, the loop will end.
+
+****
+If you omit expression 2, you must provide a break inside the loop. Otherwise the loop will never end. This will crash your browser. Read about breaks in a later chapter of this tutorial.
+****
+
+```js
+const cars = ["BMW", "Volvo", "Saab", "Ford"]
+
+let i = 2, len = cars.length, text = ""
+
+for (;i < len; i++) {
+  text += cars[i] + "<br>"  
+}
+
+document.getElementById("demo").innerHTML = text
+/*
+Saab
+Ford
+*/
+```
+
+**Expression 3**
+
+Often expression 3 increments the value of the initial variable.
+
+This is not always the case. JavaScript doesn't care. Expression 3 is optional.
+
+Expression 3 can do anything like negative increment (i--), positive increment (i = i + 15), or anything else.
+
+Expression 3 can also be omitted (like when you increment your values inside the loop):
+
+```js
+const cars = ["BMW", "Volvo", "Saab", "Ford"]
+
+let i = 2, len = cars.length, text = ""
+
+for (; i < len;) {
+  text += cars[i] + "<br>"
+  i++
+}
+
+document.getElementById("demo").innerHTML = text
+/*
+Saab
+Ford
+*/
+```
+
+## 📌 For In Loop
+
+The JavaScript `for in` statement loops through the properties of an Object:
+
+***Syntax***
+
+```js
+for (key in object) {
+  // code block to be executed
+}
+```
+
+```js
+const person = { fname: "John", lname: "Doe", age: 25 }
+
+let text = ""
+
+for (let x in person) {
+  text += person[x]
+}
+
+console.log(text);
+// JohnDoe25
+```
+
+**Example Explained**
+
+- The **for** **in** loop iterates over a **person** object
+- Each iteration returns a **key** (x)
+- The key is used to access the **value** of the key
+- The value of the key is **person[x]**
+
+```js
+const numbers = [45, 4, 9, 16, 25];
+let text = ""
+
+for (let x in numbers) {
+  text += numbers[x]
+}
+
+console.log(text)
+// 45491625
+```
+
+****
+⚠️ **warning**
+Do not use **for** **in** over an Array if the index **order** is important.
+
+The index order is implementation-dependent, and array values may not be accessed in the order you expect.
+
+It is better to use a **for** loop, a **for** **of** loop, or **Array.forEach()** when the order is important.
+****
+
+```js
+const numbers = [45, 4, 9, 16, 25]
+let txt = ""
+
+numbers.forEach((value, index, array) => {
+  txt += value
+})
+
+console.log(txt)
+// 45491625
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ****
 [![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.com/badshah5464/Next_Js-README.git) [![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
 ****
