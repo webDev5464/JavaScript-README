@@ -1,2 +1,8 @@
-const d = new Date("2023-12-31")
-document.getElementById("demo").innerHTML = d
+let key = "Chagan"
+
+let text = ""
+for (let x of key) {
+  text += x + "<br>"
+}
+
+console.log(text);
