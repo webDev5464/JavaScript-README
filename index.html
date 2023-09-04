@@ -15,26 +15,32 @@
 
 <body>
 
-  <input type="text" id="age">
+  <section>
+    <p id="time"></p>
+  </section>
 
-  <input type="submit" value="Submit" onclick="arrowFunction()">
+  <section style="display: none;">
+    <input type="text" id="age">
 
-  <p id="demo"></p>
-  
-  <script>
-    let arrowFunction = () => {
-      let text = ""
-      let age = Number(document.getElementById("age").value)
+    <input type="submit" value="Submit" onclick="arrowFunction()">
 
-      if (isNaN(age)) {
-        text = "Input is a not a number"
-      } else {
-        text = (age => 18) ? "Too young" : "Too Small"
+    <p id="demo"></p>
+
+    <script>
+      let arrowFunction = () => {
+        let text = ""
+        let age = Number(document.getElementById("age").value)
+
+        if (isNaN(age)) {
+          text = "Input is a not a number"
+        } else {
+          text = (age => 18) ? "Too young" : "Too Small"
+        }
+
+        document.getElementById("demo").innerHTML = text + " to vote"
       }
-
-      document.getElementById("demo").innerHTML = text + " to vote"
-    }
-  </script>
+    </script>
+  </section>
 
   <script src="./index.js"></script>
 </body>

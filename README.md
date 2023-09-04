@@ -3750,19 +3750,122 @@ console.log(compare);
       document.getElementById("demo").innerHTML = text + " to vote"
     }
   </script>
-  ```
+```
 
+## 📌 if, else, and else if
 
+****
+Conditional statements are used to perform different actions based on different conditions.
+****
 
+#### Conditional Statements
 
+Very often when you write code, you want to perform different actions for different decisions.
 
+You can use conditional statements in your code to do this.
 
+In JavaScript we have the following conditional statements:
 
+- Use `if` to specify a block of code to be executed, if a specified condition is true
 
+- Use `else` to specify a block of code to be executed, if the same condition is false
 
+- Use `else if` to specify a new condition to test, if the first condition is false
 
+- Use `switch` to specify many alternative blocks of code to be executed
 
+#### The if Statement
 
+Use the `if` statement to specify a block of JavaScript code to be executed if a condition is true.
+
+```js
+if (condition) {
+  //  block of code to be executed if the condition is true
+}
+```
+
+****
+⚠️ **warning**
+
+That if is in lowercase letters. Uppercase letters (If or IF) will generate a JavaScript error.
+****
+
+Make a "Good day" greeting if the hour is less than 18:00:
+
+```js
+if (hours < 18) {
+  console.log("Good Day")
+}
+```
+
+#### 🔺 The else Statement
+
+Use the `else` statement to specify a block of code to be executed if the condition is false.
+
+```js
+if (condition) {
+  //  block of code to be executed if the condition is true
+} else {
+  //  block of code to be executed if the condition is false
+}
+```
+
+If the hour is less than 18, create a "Good day" greeting, otherwise "Good evening":
+
+```js
+const hours = new Date().getHours()
+
+let greeting = ""
+
+if (hours < 18) {
+  greeting = "Good Day"
+} else {
+  greeting = "Good Evening"
+}
+
+console.log(greeting);
+```
+
+```js
+if (new Date().getHours() < 18) {
+  document.getElementById("time").innerHTML = "Good Day";
+} else {
+  document.getElementById("time").innerHTML = "Good Evening";
+}
+```
+
+#### 🔺 The else if Statement
+
+Use the `else if` statement to specify a new condition if the first condition is false.
+
+```js
+if (condition1) {
+  //  block of code to be executed if condition1 is true
+} else if (condition2) {
+  //  block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  //  block of code to be executed if the condition1 is false and condition2 is false
+}
+```
+
+If time is less than 10:00, create a "Good morning" greeting, if not, but time is less than 20:00, create a "Good day" greeting, otherwise a "Good evening":
+
+```js
+const hours = new Date().getHours()
+
+let greeting = ""
+
+if (hours < 10) {
+  greeting = "Good Morning"
+} else if (hours < 20) {
+  greeting = "Good Day"
+}
+else {
+  greeting = "Good Evening"
+}
+
+console.log(greeting);
+```
 
 
 
