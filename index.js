@@ -1,8 +1,12 @@
-let key = "Chagan"
-
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
 let text = ""
-for (let x of key) {
-  text += x + "<br>"
+let i = 0
+
+while (cars[i]) {
+  text += cars[i] + "<br>"
+  i++ 
 }
 
 console.log(text);
+
+// BMW<br>Volvo<br>Saab<br>Ford<br>

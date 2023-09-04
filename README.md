@@ -1,4 +1,4 @@
-![logo](javascript.png)
+ ![logo](javascript.png)
 # 🎓 JavaScript Basic
 
 ## 📌 Statements
@@ -4280,6 +4280,175 @@ numbers.forEach((value, index, array) => {
 console.log(txt)
 // 45491625
 ```
+
+## 🔺 The For Of Loop
+
+The JavaScript `for of` statement loops through the values of an iterable object.
+
+It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:
+
+***Syntax***
+
+```js
+for (variable of iterable) {
+  // code block to be executed
+}
+```
+
+*variable* - For every iteration the value of the next property is assigned to the variable. Variable can be declared with `const`, `let`, or `var`.
+
+#### 🔺 Looping over an Array
+
+```js
+const cars = ["BMW", "Volvo", "Mini"];
+
+let text = ""
+for (let x of cars) {
+  text += x + "<br>"
+}
+
+console.log(text)
+// BMW<br>Volvo<br>Mini<br>
+```
+
+#### 🔺 Looping over a String
+
+```js
+const cars = "JavaScript"
+
+let text = ""
+for (let x of cars) {
+  text += x + "<br>"
+}
+
+console.log(text)
+// J<br>a<br>v<br>a<br>S<br>c<br>r<br>i<br>p<br>t<br>
+```
+
+## 📌 While Loop
+
+Loops can execute a block of code as long as a specified condition is true.
+
+The `while` loop loops through a block of code as long as a specified condition is true.
+
+***Syntax***
+
+```js
+while (condition) {
+  // code block to be executed
+}
+```
+
+In the following example, the code in the loop will run, over and over again, as long as a variable (i) is less than 10:
+
+```js
+let text = ""
+let i = 0
+while (i < 10) {
+  text += "<br>The Number is " + i
+  i++
+}
+
+console.log(text);
+
+/*
+<br>The Number is 0
+<br>The Number is 1
+<br>The Number is 2
+<br>The Number is 3
+<br>The Number is 4
+<br>The Number is 5
+<br>The Number is 6
+<br>The Number is 7
+<br>The Number is 8
+<br>The Number is 9
+*/
+```
+
+#### 🔺 The Do While Loop
+
+The `do while` loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+```js
+do {
+  // code block to be executed
+}
+while (condition);
+```
+
+The example below uses a `do while` loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:
+
+```js
+let text = ""
+let i = 0
+
+do {
+  text += "<br>The Number is " + i
+  i++
+} while (i < 10)
+
+console.log(text);
+
+/*
+<br>The Number is 0
+<br>The Number is 1
+<br>The Number is 2
+<br>The Number is 3
+<br>The Number is 4
+<br>The Number is 5
+<br>The Number is 6
+<br>The Number is 7
+<br>The Number is 8
+<br>The Number is 9
+*/
+```
+
+#### 🔺 Comparing For and While
+
+If you have read the previous chapter, about the for loop, you will discover that a while loop is much the same as a for loop, with statement 1 and statement 3 omitted.
+
+The loop in this example uses a `for` loop to collect the car names from the cars array:
+
+```js
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+let text = ""
+let i = 0
+
+for (; cars[i];) {
+  text += cars[i] + "<br>"
+  i++
+}
+
+console.log(text);
+
+// BMW<br>Volvo<br>Saab<br>Ford<br>
+```
+
+```js
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+let text = ""
+let i = 0
+
+while (cars[i]) {
+  text += cars[i] + "<br>"
+  i++ 
+}
+
+console.log(text);
+
+// BMW<br>Volvo<br>Saab<br>Ford<br>
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
