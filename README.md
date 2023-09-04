@@ -2698,12 +2698,12 @@ const number2 = numbers.map((value) => {
 })
 document.getElementById("demo").innerHTML = number2
 
-/*
-45
-,4
-,9
-,16
-,25
+/* 
+90, 
+8, 
+18, 
+32, 
+50 
 */
 ```
 
