@@ -4556,6 +4556,194 @@ Errors can be coding errors made by the programmer, errors due to wrong input, a
 
 In this example we misspelled "alert" as "adddlert" to deliberately produce an error:
 
+```js
+try {
+  textAlert("Hello World")
+} catch (err) {
+  console.log(err.message);
+}
+```
+
+#### try and catch
+
+The `try` statement allows you to define a block of code to be tested for errors while it is being executed.
+
+The `catch` statement allows you to define a block of code to be executed, if an error occurs in the try block.
+
+The JavaScript statements `try` and `catch` come in pairs:
+
+```
+try {
+  Block of code to try
+}
+catch(err) {
+  Block of code to handle errors
+}
+```
+
+#### The throw Statement
+
+The `throw` statement allows you to create a custom error.
+
+Technically you can **throw an exception (throw an error)**.
+
+The exception can be a JavaScript `String`, a `Number`, a `Boolean` or an `Object`:
+
+```js
+throw "Too big";    // throw a text
+throw 500;          // throw a number
+```
+
+If you use `throw` together with `try` and `catch`, you can control program flow and generate custom error messages.
+
+```js
+<input type="text" id="input">
+<button type="submit" onclick="resultFunction()">Test Input!</button>
+<p id="result"></p>
+
+<script>
+  let resultFunction = () => {
+    const result = document.getElementById("result")
+    result.innerHTML = ""
+    let input = document.getElementById("input").value
+
+    try {
+      if (input.trim() == "") throw "empty"
+      if (isNaN(input)) throw "Not a Number!"
+      input = Number(input)
+      if (input < 5) throw "too low"
+      if (input > 10) throw "too high"          
+    } catch (err) {
+      result.innerHTML = "input is " + err
+    }
+  }
+</script>
+```
+
+### 🔺 The finally Statement
+
+The `finally` statement lets you execute code, after try and catch, regardless of the result:
+
+```js
+try {
+  Block of code to try
+}
+catch(err) {
+  Block of code to handle errors
+}
+finally {
+  Block of code to be executed regardless of the try / catch result
+}
+```
+
+```js
+<input type="text" id="input">
+<button onclick="resultFunction()">Test Input!</button>
+<p id="result"></p>
+
+<script>
+  let resultFunction = () => {
+    let result = document.getElementById("result")
+    result.innerHTML = ""
+    let input = document.getElementById("input").value
+
+    try {
+      if (input.trim() == "") throw "is empty"
+      if (isNaN(input)) throw "is not a number"
+      input = Number(input)
+      if (input < 5) throw "too low"
+      if (input > 10) throw "too high"
+    } catch (err) {
+      result.innerHTML = "input is " + err
+    } finally {
+      document.getElementById("input").value = ""
+    }
+  }
+</script>
+```
+
+#### 🔺 Error Object Properties
+
+| Property | Description                                 |
+| :------- | :------------------------------------------ |
+| name     | set or returns an error name                |
+| message  | set or returns and error message (a string) |
+
+#### 🔺 Error Name Values
+
+Six different values can be returned by the error name property:
+
+| Error name     | Description                                  |
+| :------------- | :------------------------------------------- |
+| EvalError      | An error has occurred in the eval() function |
+| RangeError     | A number "out of range" has occurred         |
+| ReferenceError | An illegal reference has occurred            |
+| SyntaxError    | A syntax error has occurred                  |
+| TypeError      | A type error has occurred                    |
+| URIError       | An error in encodeURI() has occurred         |
+
+The six different values are described below.
+
+#### 🔺 Range Error
+
+A `RangeError` is thrown if you use a number that is outside the range of legal values.
+
+For example: You cannot set the number of significant digits of a number to 500.
+
+```js
+let num = 1
+
+try {
+  num.toPrecision(500)      // A number cannot have 500 significate digits
+} catch (err) {
+  console.log(err.name);
+}
+// RangeError
+```
+
+#### 🔺 Reference Error
+
+A `ReferenceError` is thrown if you use (reference) a variable that has not been declared:
+
+```js
+let x = 5
+try {
+  x = y + 1     // y cannot be used (reference)
+} catch (err) {
+  console.log(err.name);
+}
+// ReferenceError
+```
+
+#### 🔺 Syntax Error
+
+A `SyntaxError` is thrown if you try to evaluate code with a syntax error.
+
+```js
+try {
+  eval("alert('Hello World)") //
+} catch(err) {
+  console.log(err.name);
+}
+// SyntaxError
+```
+
+#### 🔺 Type Error
+
+A `TypeError` is thrown if you use a value that is outside the range of expected types:
+
+```js
+let num = 1
+try {
+  num.toUpperCase()      // You can not convert a number to upper case.
+} catch (err) {
+  console.log(err.name);
+}
+// TypeError
+```
+
+
+
 
 
 

@@ -27,6 +27,56 @@
   <div id="demo"></div>
 
   <!-- <section>
+    <input type="text" id="input">
+    <button onclick="resultFunction()">Test Input!</button>
+    <p id="result"></p>
+
+    <script>
+      let resultFunction = () => {
+        let result = document.getElementById("result")
+        result.innerHTML = ""
+        let input = document.getElementById("input").value
+
+        try {
+          if (input.trim() == "") throw "is empty"
+          if (isNaN(input)) throw "is not a number"
+          input = Number(input)
+          if (input < 5) throw "too low"
+          if (input > 10) throw "too high"
+        } catch (err) {
+          result.innerHTML = "input is " + err
+        } finally {
+          document.getElementById("input").value = ""
+        }
+      }
+    </script>
+  </section> -->
+
+  <!-- <section>
+    <input type="text" id="input">
+    <button type="submit" onclick="resultFunction()">Test Input!</button>
+    <p id="result"></p>
+
+    <script>
+      let resultFunction = () => {
+        const result = document.getElementById("result")
+        result.innerHTML = ""
+        let input = document.getElementById("input").value
+
+        try {
+          if (input.trim() == "") throw "empty"
+          if (isNaN(input)) throw "Not a Number!"
+          input = Number(input)
+          if (input < 5) throw "too low"
+          if (input > 10) throw "too high"          
+        } catch (err) {
+          result.innerHTML = "input is " + err
+        }
+      }
+    </script>
+  </section> -->
+
+  <!-- <section>
     <input type="number" id="text">
     <button type="submit" onclick="myValue()">Submit</button>
     <p id="result"></p>
