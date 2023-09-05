@@ -4536,7 +4536,25 @@ Volvo
 */
 ```
 
+## 📌 Errors
 
+***Throw, and Try...Catch...Finally***
+
+The `try` statement defines a code block to run (to try).
+
+The `catch` statement defines a code block to handle any error.
+
+The `finally` statement defines a code block to run regardless of the result.
+
+The `throw` statement defines a custom error.
+
+#### 🔺 Errors Will Happen!
+
+When executing JavaScript code, different errors can occur.
+
+Errors can be coding errors made by the programmer, errors due to wrong input, and other unforeseeable things.
+
+In this example we misspelled "alert" as "adddlert" to deliberately produce an error:
 
 
 
