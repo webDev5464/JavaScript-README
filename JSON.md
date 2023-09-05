@@ -25,8 +25,13 @@ This JSON syntax defines an employees object: an array of 3 employee records (ob
 }
 ```
 
-```
-JSON Syntax Rules
+In the example above, the object "employees" is an array. It contains three objects.
+
+Each object is a record of a person (with a first name and a last name).
+
+****
+#### 🔺 JSON Syntax Rules
+
 1. The top level must be either an object or an array.
 2. An object begins with curly braces {}.
 3. A property name in double quotes "".
@@ -40,4 +45,37 @@ JSON Syntax Rules
 11. Objects may contain other objects inside them.
 12. Arrays can only have elements that are themselves objects or arrays.
 13. Comments start with // and extend until the end of line.
+****
+
+#### 🔺 Converting a JSON Text to a JavaScript Object
+
+A common use of JSON is to read data from a web server, and display the data in a web page.
+
+For simplicity, this can be demonstrated using a string as input.
+
+First, create a JavaScript string containing JSON syntax:
+
+```js
+let text = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+```
+
+Then, use the JavaScript built-in function `JSON.parse()` to convert the string into a JavaScript object:
+
+```js
+const obj = JSON.parse(text);
+```
+
+```js
+let Data =
+  '{ "employees" : [' +
+  '{ "firstName":"John" , "lastName":"Doe" },' +
+  '{ "firstName":"Anna" , "lastName":"Smith" },' +
+  '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+const obj = JSON.parse(Data);
+console.log(obj.employees[1].firstName + " " + obj.employees[1].lastName);
+// Anna Smith
 ```

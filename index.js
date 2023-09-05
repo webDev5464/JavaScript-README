@@ -1,12 +1,9 @@
-{
-  "employees": [
-    { "firstName": "John", "lastName": "Doe" },
-    { "firstName": "Anna", "lastName": "Smith" },
-    { "firstName": "Peter", "lastName": "Jones" },
-    { "firstName": "Mary", "lastName": "Williams" },
-    { "firstName": "Rose", "lastName": "Brown" },
-    { "firstName": "Scott", "lastName": "White" },
-    { "firstName": "Elizabeth", "lastName": "Black" },
-    { "firstName": "James", "lastName": "Green" }
-  ]
-}
+let Data =
+  '{ "employees" : [' +
+  '{ "firstName":"John" , "lastName":"Doe" },' +
+  '{ "firstName":"Anna" , "lastName":"Smith" },' +
+  '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+const obj = JSON.parse(Data);
+console.log(obj.employees[1].firstName + " " + obj.employees[1].lastName);
+// Anna Smith
