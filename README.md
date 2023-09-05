@@ -4742,17 +4742,63 @@ try {
 // TypeError
 ```
 
+#### 🔺 Arrow Function
 
+****
+Arrow functions were introduced in ES6.
 
+Arrow functions allow us to write shorter function syntax:
+****
 
+```js
+let myFunction = (a, b) => { a * b }
+console.log(myFunction(2, 5));
+```
 
+**Before Arrow**
 
+```js
+let hello = function () {
+  return "Hello world"
+}
 
+console.log(hello());
+// Hello World!
+```
 
+**With Arrow Function**
 
+```js
+let hello = () => {
+  return "Hello World!"
+}
+console.log(hello());
+// Hello World!
+```
 
+It gets shorter! If the function has only one statement, and the statement `returns` a value, you can remove the brackets and the return keyword:
 
+```js
+let hello = (value) => {
+  return "Hello " + value
+}
+console.log(hello("World!"));
+// Hello World!
+```
 
+In fact, if you have only one parameter, you can skip the parentheses as well:
+
+**Arrow Function Without Parentheses:**
+
+```js
+let hello = value => "Hello " + value
+console.log(hello("World!"));
+// Hello World!
+```
+
+## 🎓 What is JSON ?
+
+- [Click end learn about JSON](./JSON.md)
 
 
 
