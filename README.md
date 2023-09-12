@@ -3585,7 +3585,7 @@ Very often, in programming, you will need a data type that can only have one of 
 - YES / NO
 - ON / OFF
 - TRUE / FALSE
-- 
+
 For this, JavaScript has a **Boolean** data type. It can only take the values **true** or **false**.
 
 #### 🔺 Boolean() Function
@@ -3616,7 +3616,7 @@ Here are some examples:
 | :------- | :----------- | :------------------- |
 | ==       | equal to     | if (day == "Monday") |
 | >        | greater than | if (salary > 9000)   |
-| <        | less than    | if (age < 18>)       |
+| <        | less than    | if (age < 18)        |
 
 #### 🔺 Everything Without a "Value" is False
 
