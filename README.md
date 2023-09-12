@@ -3873,7 +3873,7 @@ else {
 console.log(greeting);
 ```
 
-#### 🔺 Switch Statement
+## 📌 Switch Statement
 
 ****
 The `switch` statement is used to perform different actions based on different conditions.
