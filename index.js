@@ -1,4 +1,3 @@
-let x = 15 * 5;
-debugger;
-console.log(x); 
-// 75
+let age = 18;
+let compare = age >= 18 ? "Too Young" : "To Small";
+console.log(compare);
