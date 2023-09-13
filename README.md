@@ -438,9 +438,9 @@ text += "World!";
 
 document.getElementById("demo").innerHTML = text;
 ```
-| result       |
-| :----------- |
-| Hello World! |
+| result      |
+| :---------- |
+| HelloWorld! |
 
 #### 🔺 The `-=` Operators
 
@@ -3052,7 +3052,7 @@ Independent of input format, JavaScript will (by default) output dates in full t
 Fri Sep 01 2023 12:17:14 GMT+0530 (India Standard Time)
 ```
 
-### 🔺 ISO Dates
+#### 🔺 ISO Dates
 
 ISO 8601 is the international standard for the representation of dates and times.
 
@@ -3167,7 +3167,7 @@ getYear() is supposed to return a 2-digit year.
 getYear() is deprecated. Do not use it!
 ****
 
-####  getMonth() Method
+#### 🔺 getMonth() Method
 
 The `getMonth()` method returns the month of a date as a number (0-11).
 
@@ -3708,24 +3708,23 @@ variablename = (condition) ? value1:value2
 ```
 
 ```js
-let age = 28
-let compare =  (18 < age) ? "Too Young" : "To Small"
-console.log(compare); 
-
+let age = 28;
+let compare = age > 18 ? "Too Young" : "To Small";
+console.log(compare);
 // Too Young
 ```
 
 ```js
-let age = 18
-let compare =  (18 < age) ? "Too Young" : "To Small"
-console.log(compare); 
+let age = 18;
+let compare = age > 18 ? "Too Young" : "To Small";
+console.log(compare);
 // Too Small
 ```
 
 ```js
-let age = 18
-let compare =  (18 <= age) ? "Too Young" : "To Small"
-console.log(compare); 
+let age = 18;
+let compare = age >= 18 ? "Too Young" : "To Small";
+console.log(compare);
 // Too Young
 ```
 
@@ -3758,7 +3757,7 @@ console.log(compare);
 Conditional statements are used to perform different actions based on different conditions.
 ****
 
-#### Conditional Statements
+#### 🔺 Conditional Statements
 
 Very often when you write code, you want to perform different actions for different decisions.
 
@@ -3774,7 +3773,7 @@ In JavaScript we have the following conditional statements:
 
 - Use `switch` to specify many alternative blocks of code to be executed
 
-#### The if Statement
+#### 🔺 The if Statement
 
 Use the `if` statement to specify a block of JavaScript code to be executed if a condition is true.
 
@@ -4281,7 +4280,7 @@ console.log(txt)
 // 45491625
 ```
 
-## 🔺 The For Of Loop
+#### 🔺 The For Of Loop
 
 The JavaScript `for of` statement loops through the values of an iterable object.
 
@@ -4564,7 +4563,7 @@ try {
 }
 ```
 
-#### try and catch
+#### 🔺 try and catch
 
 The `try` statement allows you to define a block of code to be tested for errors while it is being executed.
 
@@ -4581,7 +4580,7 @@ catch(err) {
 }
 ```
 
-#### The throw Statement
+#### 🔺 The throw Statement
 
 The `throw` statement allows you to create a custom error.
 
