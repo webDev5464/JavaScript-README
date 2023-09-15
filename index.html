@@ -5,125 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    body {
-      background-color: black;
-      color: white;
-    }
-
-    .productImage {
-      width: 200px;
-    }
-
-    .productCard {
-      width: 50vw;
-      background-color: wheat;
-      color: black;
-    }
-  </style>
 </head>
 
 <body>
-  <div id="demo"></div>
+  <input type="text" id="input">
+  <button type="submit" onclick="resultFunction()">Test Input!</button>
+  <p id="result"></p>
 
-  <!-- <section>
-    <input type="text" id="input">
-    <button onclick="resultFunction()">Test Input!</button>
-    <p id="result"></p>
+  <script>
+    let resultFunction = () => {
+      const result = document.getElementById("result")
+      result.innerHTML = ""
+      let input = document.getElementById("input").value
 
-    <script>
-      let resultFunction = () => {
-        let result = document.getElementById("result")
-        result.innerHTML = ""
-        let input = document.getElementById("input").value
-
-        try {
-          if (input.trim() == "") throw "is empty"
-          if (isNaN(input)) throw "is not a number"
-          input = Number(input)
-          if (input < 5) throw "too low"
-          if (input > 10) throw "too high"
-        } catch (err) {
-          result.innerHTML = "input is " + err
-        } finally {
-          document.getElementById("input").value = ""
-        }
+      try {
+        if (input.trim() == "") throw "empty"
+        if (isNaN(input)) throw "Not a Number!"
+        input = Number(input)
+        if (input < 5) throw "too low"
+        if (input > 10) throw "too high"
+      } catch (e) {
+        result.innerHTML = "input is " + e
+      } finally {
+        result.innerHTML = "Done"
       }
-    </script>
-  </section> -->
-
-  <!-- <section>
-    <input type="text" id="input">
-    <button type="submit" onclick="resultFunction()">Test Input!</button>
-    <p id="result"></p>
-
-    <script>
-      let resultFunction = () => {
-        const result = document.getElementById("result")
-        result.innerHTML = ""
-        let input = document.getElementById("input").value
-
-        try {
-          if (input.trim() == "") throw "empty"
-          if (isNaN(input)) throw "Not a Number!"
-          input = Number(input)
-          if (input < 5) throw "too low"
-          if (input > 10) throw "too high"          
-        } catch (err) {
-          result.innerHTML = "input is " + err
-        }
-      }
-    </script>
-  </section> -->
-
-  <!-- <section>
-    <input type="number" id="text">
-    <button type="submit" onclick="myValue()">Submit</button>
-    <p id="result"></p>
-
-    <script>
-      let myValue = () => {
-        let value = Number(document.getElementById("text").value)
-
-        switch (value) {
-          case 0:
-            text = "Off"
-            break
-          case 1:
-            text = "On"
-            break
-          default:
-            text = "Value is not found"
-        }
-        document.getElementById("result").innerHTML = text
-      }
-    </script>
-  </section> -->
-
-  <!-- <section>
-    <input type="text" id="age">
-
-    <input type="submit" value="Submit" onclick="arrowFunction()">
-
-    <p id="demo"></p>
-
-    <script>
-      let arrowFunction = () => {
-        let text = ""
-        let age = Number(document.getElementById("age").value)
-
-        if (isNaN(age)) {
-          text = "Input is a not a number"
-        } else {
-          text = (age => 18) ? "Too young" : "Too Small"
-        }
-
-        document.getElementById("demo").innerHTML = text + " to vote"
-      }
-    </script>
-  </section> -->
-
-  <script src="./index.js"></script>
+    }
+  </script>
 </body>
 
 </html>
