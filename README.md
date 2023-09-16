@@ -1,4 +1,4 @@
- ![logo](javascript.png)
+ ![logo](javascript.png) ddddd
 # 🎓 JavaScript Basic
 
 ## 📌 Statements
