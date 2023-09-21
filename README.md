@@ -1443,7 +1443,7 @@ Perform a global, case-insensitive search for "ain":
 
 ```js
 let text = "The rain in SPAIN stays mainly in the plain";
-text.match(/ain/g);   // 3 [ 'ain', 'ain', 'ain'  c]
+text.match(/ain/g);   // 3 [ 'ain', 'ain', 'ain' ]
 ```
 
 Perform a global, case-insensitive search for "ain":
