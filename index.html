@@ -4,33 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>JavaScript Testing File</title>
 </head>
 
 <body>
-  <input type="text" id="input">
-  <button type="submit" onclick="resultFunction()">Test Input!</button>
-  <p id="result"></p>
+
+  <div id="main">
+    <p>Hello World</p>
+    <p>John Doe</p>
+  </div>
+
+  <p>My Age is 22</p>
+
+  <p id="demo"></p>
 
   <script>
-    let resultFunction = () => {
-      const result = document.getElementById("result")
-      result.innerHTML = ""
-      let input = document.getElementById("input").value
+    const x = document.getElementById("main")
+    const y = x.getElementsByTagName("p")
 
-      try {
-        if (input.trim() == "") throw "empty"
-        if (isNaN(input)) throw "Not a Number!"
-        input = Number(input)
-        if (input < 5) throw "too low"
-        if (input > 10) throw "too high"
-      } catch (e) {
-        result.innerHTML = "input is " + e
-      } finally {
-        result.innerHTML = "Done"
-      }
-    }
+    document.getElementById("demo").innerHTML = 'This second paragraph (index 0) inside "main" is: ' + y[1].innerHTML
   </script>
+
+  <script src="./index.js"></script>
 </body>
 
 </html>

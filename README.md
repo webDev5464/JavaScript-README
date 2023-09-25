@@ -4798,15 +4798,228 @@ console.log(hello("World!"));
 ****
 ****
 
-## 🎓 What is JSON ?
+<!-- ## 🎓 What is JSON ? -->
 
 <!-- - [Click end learn about JSON](./JSON.md) -->
 
-🚧 ***Under Working***
+<!-- 🚧 ***Under Working*** -->
 
 ## 🎓 HTML DOM
 
-🚧 ***Under Working***
+### 📌 The HTML DOM (Document Object Model)
+
+The HTML DOM model is constructed as a tree of Objects:
+
+![DOM_Tree](./pic_htmltree.gif)
+
+With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+
+- JavaScript can change all the HTML elements in the page
+- JavaScript can change all the HTML attributes in the page
+- JavaScript can change all the CSS styles in the page
+- JavaScript can remove existing HTML elements and attributes
+- JavaScript can add new HTML elements and attributes
+- JavaScript can react to all existing HTML events in the page
+- JavaScript can create new HTML events in the page
+
+#### 🔺 What is the HTML DOM?
+
+The HTML DOM is a standard **object** model and **programming interface** for HTML. It defines:
+
+- The HTML elements as **objects**
+- The **properties** of all HTML elements
+- The **methods** to access all HTML elements
+- The **events** for all HTML elements
+
+In other words: **The HTML DOM is a standard for how to get, change, add, or delete HTML elements.**
+
+#### 🔺 DOM Method
+
+The following example changes the content (the `innerHTML`) of the `<p>` element with `id="demo"`:
+
+```html
+<html>
+  <body>
+
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML = "Hello World!"
+    </script>
+
+  </body>
+</html>
+```
+
+In the example above, `getElementById` is a **method**, while `innerHTML` is a **property**.
+
+#### 🔺 DOM Document
+
+The document object represents your web page.
+
+If you want to access any element in an HTML page, you always start with accessing the document object.
+
+Below are some examples of how you can use the document object to access and manipulate HTML.
+
+****
+
+**Finding HTML Elements**
+
+| Method                                 | Description                   |
+| -------------------------------------- | ----------------------------- |
+| document.getElementById(*id*)          | Find an element by element id |
+| document.getElementByTagName(*name*)   | Find Element by tag name      |
+| document.getElementByClassName(*name*) | Find Element bt class name    |
+
+****
+
+**Changing HTML Element**
+
+| Property                             | Description                                   |
+| ------------------------------------ | --------------------------------------------- |
+| element.innerHTML = new html content | Change the inner HTML of an element           |
+| element.attribute = new value        | Change the attribute value of an HTMl element |
+| element.style.property = new style   | Change the style of an HTML element           |
+| **Method**                           | **Description**                               |
+| element.setAttribute                 | Change the attribute value of an HTML element |
+
+****
+
+**Adding and Deleting Elements**
+
+| Method                            | Description                       |
+| --------------------------------- | --------------------------------- |
+| document.createElement(*element*) | Create an HTML element            |
+| document.removeChild(*element*)   | Remove an HTML element            |
+| document.appendChild(*element*)   | Add an HTML element               |
+| document.replaceChild(*new, old*) | Replace an HTML element           |
+| document.write(*text*)            | Write into the HTML output stream |
+
+****
+
+**Adding Events Handlers**
+
+| Method                                                     | Description                                   |
+| ---------------------------------------------------------- | --------------------------------------------- |
+| document.getElementById(*id*).onclick = function(){*code*} | Adding event handler code to an onclick event |
+
+****
+
+**Finding HTML Objects**
+
+The first HTML DOM Level 1 (1998), defined 11 HTML objects, object collections, and properties. These are still valid in HTML5.
+
+Later, in HTML DOM Level 3, more objects, collections, and properties were added.
+
+| Property                     | Description                                                    | DOM |
+| ---------------------------- | -------------------------------------------------------------- | --- |
+| document.anchors             | Returns all <a> elements that have a name attribute            | 1   |
+| document.applets             | `Deprecated`                                                   | 1   |
+| document.baseURI             | Returns the absolute base URI of the document                  | 3   |
+| document.body                | Returns the <body> element                                     | 1   |
+| document.cookie              | Returns the document's cookie                                  | 1   |
+| document.doctype             | Returns the document's doctype                                 | 3   |
+| document.documentElement     | Returns the <html> element                                     | 3   |
+| document.documentMode        | Returns the mode used by the browser                           | 3   |
+| document.documentURI         | Returns the URI of the document                                | 3   |
+| document.domain              | Returns the domain name of the document server                 | 1   |
+| document.domConfig           | `Obsolete.`                                                    | 3   |
+| document.embeds              | Returns all <embed> elements                                   | 3   |
+| document.forms               | Returns all <form> elements                                    | 1   |
+| document.head                | Returns the <head> element                                     | 3   |
+| document.images              | Returns all <img> elements                                     | 1   |
+| document.implementation      | Returns the DOM implementation                                 | 3   |
+| document.inputEncoding       | Returns the document's encoding (character set)                | 3   |
+| document.lastModified        | Returns the date and time the document was updated             | 3   |
+| document.links               | Returns all <area> and <a> elements that have a href attribute | 1   |
+| document.readyState          | Returns the (loading) status of the document                   | 3   |
+| document.referrer            | Returns the URI of the referrer (the linking document)         | 1   |
+| document.scripts             | Returns all <script> elements                                  | 3   |
+| document.strictErrorChecking | Returns if error checking is enforced                          | 3   |
+| document.title               | Returns the <title> element                                    | 1   |
+| document.URL                 | Returns the complete URL of the document                       | 1   |
+
+#### 🔺 DOM Element
+
+**Finding Element by id**
+
+The easiest way to find an HTML element in the DOM, is by using the element id.
+
+This example finds the element with `id="intro"`:
+
+```html
+<p id="intro">Finding HTML Element bt id</p>
+
+<p id="demo"></p>
+
+<script>
+  const element = document.getElementById("intro")
+
+  document.getElementById("demo").innerHTML = "The text from the intro paragraph is: " + element.innerHTML
+</script>
+```
+
+| Result                                                           |
+| ---------------------------------------------------------------- |
+| The text from the intro paragraph is: Finding HTML Element bt id |
+
+If the element is found, the return method will return the element as an object (in element).
+
+If the element is not found, element will contain `null`.
+
+****
+
+**Finding Element by Tag Name**
+
+This example finds all `<p>` elements:
+
+```html
+<p>Hello World</p>
+
+<p>John Doe</p>
+
+<p>My Age is 22</p>
+
+<p id="demo"></p>
+
+<script>
+  const element = document.getElementsByTagName("P")
+
+  document.getElementById("demo").innerHTML = "The text in first paragraph (index 0) is: " + element[0].innerHTML
+</script>
+```
+
+| result                                                |
+| ----------------------------------------------------- |
+| The text in first paragraph (index 0) is: Hello World |
+
+This example finds the element with `id="main"`, and then finds all `<p>` elements inside `"main"`:
+
+```html
+  <div id="main">
+    <p>Hello World</p>
+    <p>John Doe</p>
+  </div>
+
+  <p>My Age is 22</p>
+
+  <p id="demo"></p>
+
+  <script>
+    const x = document.getElementById("main")
+    const y = x.getElementsByTagName("p")
+
+    document.getElementById("demo").innerHTML = 'This second paragraph (index 0) inside "main" is: ' + y[1].innerHTML
+  </script>
+```
+
+| result                                                     |
+| ---------------------------------------------------------- |
+| This second paragraph (index 0) inside "main" is: John Doe |
+
+****
+
+**Find Element by Tag Name**
 
 ## 🎓 Browser BOM
 
