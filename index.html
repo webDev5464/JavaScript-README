@@ -9,20 +9,13 @@
 
 <body>
 
-  <div id="main">
-    <p>Hello World</p>
-    <p>John Doe</p>
-  </div>
-
-  <p>My Age is 22</p>
+  <h1>Hello World</h1>
+  <p>This is a paragraph.</p>
 
   <p id="demo"></p>
 
   <script>
-    const x = document.getElementById("main")
-    const y = x.getElementsByTagName("p")
-
-    document.getElementById("demo").innerHTML = 'This second paragraph (index 0) inside "main" is: ' + y[1].innerHTML
+    document.getElementById("demo").innerHTML = document.body.innerHTML
   </script>
 
   <script src="./index.js"></script>

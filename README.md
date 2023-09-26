@@ -4806,7 +4806,7 @@ console.log(hello("World!"));
 
 ## 🎓 HTML DOM
 
-### 📌 The HTML DOM (Document Object Model)
+#### 🔺 The HTML DOM (Document Object Model)
 
 The HTML DOM model is constructed as a tree of Objects:
 
@@ -5019,7 +5019,55 @@ This example finds the element with `id="main"`, and then finds all `<p>` elemen
 
 ****
 
-**Find Element by Tag Name**
+**Finding Elements by Class Name**
+
+If you want to find all elements with the same class name, use `getElementByClassName()`.
+
+This example returns a list of all elements with `class-"intro"`.
+
+```html
+  <p class="into">Hello World</p>
+  <p class="into">John Doe</p>
+  <p>My Age is 22</p>
+
+  <p id="demo"></p>
+
+  <script>
+    const x = document.getElementsByClassName("into")
+    document.getElementById("demo").innerHTML = `My name is <b>${x[1].innerHTML}</b>`
+  </script>
+```
+
+****
+
+**Using document.anchors**
+
+```html
+  <a name="HTML" href=""></a>
+  <a name="CSS" href=""></a>
+  <a name="JavaScript" href=""></a>
+
+  <p id="demo"></p>
+
+  <script>
+    document.getElementById("demo").innerHTML = `Number of anchor are: ${document.anchors.length}`
+  </script>
+```
+
+****
+
+**document.body**
+
+```html
+  <h1>Hello World</h1>
+  <p>This is a paragraph.</p>
+
+  <p id="demo"></p>
+
+  <script>
+    document.getElementById("demo").innerHTML = document.body.innerHTML
+  </script>
+```
 
 ## 🎓 Browser BOM
 
