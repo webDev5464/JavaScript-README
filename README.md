@@ -5038,6 +5038,10 @@ This example returns a list of all elements with `class-"intro"`.
   </script>
 ```
 
+| result              |
+| ------------------- |
+| My name is John Doe |
+
 ****
 
 **Using document.anchors**
@@ -5054,6 +5058,10 @@ This example returns a list of all elements with `class-"intro"`.
   </script>
 ```
 
+| result                  |
+| ----------------------- |
+| Number of anchor are: 3 |
+
 ****
 
 **document.body**
@@ -5068,6 +5076,118 @@ This example returns a list of all elements with `class-"intro"`.
     document.getElementById("demo").innerHTML = document.body.innerHTML
   </script>
 ```
+
+| result               |
+| -------------------- |
+| Hello World          |
+| This is a paragraph. |
+|                      |
+| Hello World          |
+| This is a paragraph. |
+
+****
+
+**document.forms**
+
+```html
+  <form action="">
+    <label for="fName">First name : </label>
+    <input type="text" name="fName" id="fName">
+  </form>
+
+  <p id="demo"></p>
+
+  <script>
+    document.getElementById("demo").innerHTML = `Number Of Forms : ${document.forms.length}`
+  </script>
+```
+
+| result              |
+| ------------------- |
+| Number Of Forms : 1 |
+
+****
+
+**document.head**
+
+```html
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+document.head;
+</script>
+```
+
+| result                   |
+| ------------------------ |
+| [object HTMLHeadElement] |
+
+****
+
+**document.image**
+
+```html
+<img src="./code_black_bg.png" alt="CodeImage">
+<img src="./code_white_bg.png" alt="CodeImage">
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Number of images: " + document.images.length;
+</script>
+```
+
+| result              |
+| ------------------- |
+| Number of images: 2 |
+
+****
+
+**document.links**
+
+```html
+<p><a href="./html/intro.html">HTML</a><br><a href="./css/intro.html">CSS</a></p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Number of links: " + document.links.length;
+</script>
+```
+
+| result             |
+| ------------------ |
+| Number of links: 2 |
+
+****
+
+**document.title**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JavaScript Documentation</title>
+</head>
+
+<body>
+  <p id="demo"></p>
+
+  <script>
+    document.getElementById("demo").innerHTML = `The title of this document is: <b>${document.title}</b>`
+  </script>
+</body>
+
+</html>
+```
+
+| result                                                      |
+| ----------------------------------------------------------- |
+| The title of this document is: **JavaScript Documentation** |
 
 ## 🎓 Browser BOM
 
