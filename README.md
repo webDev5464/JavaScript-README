@@ -1,15 +1,16 @@
- ![logo](javascript.png)
+![logo](javascript.png)
+
 # 🎓 JavaScript Basic
 
 ## 📌 Statements
 
 ```js
-let x, y, z;    // Statement 1
-x = 5;          // Statement 2
-y = 6;          // Statement 3
-z = x + y;      // Statement 4
+let x, y, z; // Statement 1
+x = 5; // Statement 2
+y = 6; // Statement 3
+z = x + y; // Statement 4
 
-console.log(z)
+console.log(z);
 ```
 
 | result |
@@ -18,7 +19,7 @@ console.log(z)
 
 - JavaScript statement are composed of : `valuess`, `Operators`, `Expressions`, `Keywords` and `Comments`.
 
-**This statement tells the browser to write *"Hello World!"* inside an HTML element with *id="demo"*.**
+**This statement tells the browser to write _"Hello World!"_ inside an HTML element with _id="demo"_.**
 
 ```js
 document.getElementById("demo").innerHTML = "Hello World!";
@@ -29,10 +30,10 @@ document.getElementById("demo").innerHTML = "Hello World!";
 Add a semicolon at the end of each executable statement.
 
 ```js
-let a, b, c;  // Declare 3 variables
-a = 5;        // Assign the value 5 to a
-b = 6;        // Assign the value 6 to b
-c = a + b;    // Assign the sum of a and b to c
+let a, b, c; // Declare 3 variables
+a = 5; // Assign the value 5 to a
+b = 6; // Assign the value 6 to b
+c = a + b; // Assign the sum of a and b to c
 ```
 
 | result |
@@ -54,7 +55,7 @@ JavaScript statements often start with a keyword to identify the JavaScript acti
 | switch   | Marks a block of statements to be executed in different cases |
 | for      | Marks a block of statements to be executed in a loop          |
 | function | Declares a function                                           |
-| return   | Exist a  function                                             |
+| return   | Exist a function                                              |
 | try      | Implements error handling to a block of statements            |
 
 ## 📌 syntax
@@ -83,7 +84,7 @@ let z = x + y;
 
 ```js
 // Change Heading:
-document.getElementById("myH").innerHTML ="My first page.";
+document.getElementById("myH").innerHTML = "My first page.";
 
 let x = 5; // Declare x, give it the value of 5.
 ```
@@ -119,7 +120,8 @@ var y = 6;
 var z = x + y;
 ```
 
-****
+---
+
 📝 **Note** :
 
 - It is considered good programming practice to always declare variables before use.
@@ -127,10 +129,10 @@ var z = x + y;
 - The `let` and `const` keywords were added to JavaScript in 2015.
 - The `var` keyword should only be used in code written for older browsers.
 
-****
+---
 
 ```js
-// using let 
+// using let
 let x = 5;
 let y = 6;
 let z = x + y;
@@ -142,10 +144,10 @@ console.log(z);
 | 11     |
 
 ```js
-// using const 
+// using const
 const a = "Hello";
 const b = "World!";
-const c = a + ' ' + b;
+const c = a + " " + b;
 console.log(c);
 ```
 
@@ -167,8 +169,8 @@ console.log(c);
 <p id="demo"></p>
 
 <script>
-let carName = "Volvo";
-document.getElementById("demo").innerHTML = carName;
+  let carName = "Volvo";
+  document.getElementById("demo").innerHTML = carName;
 </script>
 ```
 
@@ -182,8 +184,10 @@ let $$$ = 2;
 let $myMoney = 5;
 ```
 
-#### 🔺 Underscore (_)
-Since JavaScript treats underscore as a letter, identifiers containing_ are valid variable names:
+#### 🔺 Underscore (\_)
+
+Since JavaScript treats underscore as a letter, identifiers containing\_ are valid variable names:
+
 ```js
 let _lastName = "Johnson";
 let _x = 2;
@@ -193,34 +197,39 @@ let _100 = 5;
 ## 📌 Block scope
 
 #### 🔺 let Block Scope
+
 Variables declared inside a { } block cannot be accessed from outside the block:
+
 ```js
 {
-    let x = 2;
+  let x = 2;
 }
 // x can not be use here!
 ```
+
 Redeclaring a variable inside a block will not redeclare the variable outside the block:
+
 ```js
 let x = 10;
 // x is here 10
 
 {
-    let x = 2;
-    // x is here 2
+  let x = 2;
+  // x is here 2
 }
 
 // x is here 10
 ```
 
 #### 🔺 const Block Scope
+
 ```js
 const x = 10;
 // x here is 10
 
 {
-    const x = 5;
-    // x here is 5
+  const x = 5;
+  // x here is 5
 }
 
 // x is here is 10
@@ -229,6 +238,7 @@ const x = 10;
 ## 📌 Operators
 
 The **Assignment Operator** (`=`) assign value a varibale.
+
 ```js
 // Assign the value 5 to x
 let x = 5;
@@ -239,7 +249,9 @@ let z = x + y;
 ```
 
 #### 🔺 Addition Operators
+
 The **Addition Operators** (`+`) adds numbers:
+
 ```js
 let x = 5;
 let y = 2;
@@ -247,7 +259,9 @@ let z = x + y;
 ```
 
 #### 🔺 Multiplication
+
 The **Multiplication Operators** (`*`) multiplees numbers:
+
 ```js
 let x = 5;
 let y = 2;
@@ -255,6 +269,7 @@ let z = x * y;
 ```
 
 ## 📌 Type of Operators
+
 - Arithmetic Operators
 - Assignment Operators
 - Comparison Operators
@@ -265,110 +280,136 @@ let z = x * y;
 - Type Operators
 
 ## 📌 Arithmetic Operators
+
 | Operator | Description    |
 | :------- | :------------- |
 | +        | Addition       |
 | -        | Subtraction    |
-| *        | Multiplication |
-| **       | Exponentiation |
+| \*       | Multiplication |
+| \*\*     | Exponentiation |
 | /        | Division       |
 | %        | Modulus        |
 | ++       | Increment      |
 | --       | Decrement      |
 
 #### 🔺 Adding
+
 The **adding** operator (`+`) adds numbers:
+
 ```js
 let x = 5;
 let y = 2;
 let z = x + y;
 ```
+
 | result |
 | :----- |
 | 7      |
 
 #### 🔺 Subtracting
+
 The **subtraction** operator (`-`) subtracts nymbers.
+
 ```js
 let x = 5;
 let y = 2;
 let z = x - y;
 ```
+
 | result |
 | :----- |
 | 3      |
 
 #### 🔺 Multiplying
+
 The **multiplication** operator (`*`) multiplies numbers.
+
 ```js
 let x = 5;
 let y = 2;
 let z = x * y;
 ```
+
 | result |
 | :----- |
 | 10     |
 
 #### 🔺 Dividing
+
 The **division** operator (`/`) divides numbers.
+
 ```js
 let x = 5;
 let y = 2;
 let z = x / y;
 ```
+
 | result |
 | :----- |
 | 2.5    |
 
 #### 🔺 Remainder
+
 The **modulus** operator (`%`) returns the division remainder.
+
 ```js
 let x = 5;
 let y = 2;
 let z = x % y;
 ```
+
 | result |
 | :----- |
 | 1      |
 
 #### 🔺 Incrementing
+
 The **increment** operator (`++`) increments numbers.
+
 ```js
 let x = 5;
 x++;
 let z = x;
 ```
+
 | result |
 | :----- |
 | 6      |
 
 #### 🔺 Decrementing
+
 The **decrement** operator (`--`) decrements numbers.
+
 ```js
 let x = 5;
 x--;
 let z = x;
 ```
+
 | result |
 | :----- |
 | 4      |
 
 #### 🔺 Exponentiation
+
 The **exponentiation** operator (`**`) raises the first operand to the power of the second operand.
+
 ```js
 let x = 5;
 let z = x ** 2;
 ```
+
 | result |
 | :----- |
 | 25     |
 
-x ** y produces the same result as `Math.pow(x,y)`:
+x \*\* y produces the same result as `Math.pow(x,y)`:
 
 ```js
 let x = 5;
-let z = Math.pow(x,2);
+let z = Math.pow(x, 2);
 ```
+
 | result |
 | :----- |
 | 25     |
@@ -377,17 +418,18 @@ let z = Math.pow(x,2);
 
 Assignment operators assign values to JavaScript variables.
 
-| Operator | Example  | Same As    |
-| :------- | :------- | :--------- |
-| =        | x=y      | x=y        |
-| +=       | x + = y  | x = x + y  |
-| -=       | x - = y  | x = x - y  |
-| *=       | x * = y  | x = x * y  |
-| /=       | x / = y  | x = x / y  |
-| %=       | x % = y  | x = x % y  |
-| **=      | x ** = y | x = x ** y |
+| Operator | Example    | Same As      |
+| :------- | :--------- | :----------- |
+| =        | x=y        | x=y          |
+| +=       | x + = y    | x = x + y    |
+| -=       | x - = y    | x = x - y    |
+| \*=      | x \* = y   | x = x \* y   |
+| /=       | x / = y    | x = x / y    |
+| %=       | x % = y    | x = x % y    |
+| \*\*=    | x \*\* = y | x = x \*\* y |
 
 #### 🔺 The `=` Operator
+
 The **Simple Assignment Operator** assigns a value to a variable.
 
 ```js
@@ -396,11 +438,12 @@ let x = 10;
 // For debugging
 console.log(x);
 ```
+
 | result |
 | :----- |
 | 10     |
 
-****
+---
 
 ```js
 let x = 10;
@@ -408,6 +451,7 @@ let y = 5 + x;
 
 console.log(y);
 ```
+
 | result |
 | :----- |
 | 15     |
@@ -416,17 +460,18 @@ console.log(y);
 
 The **Addition Assignment Operator** adds a value to a variable.
 
-```js 
+```js
 let x = 10;
 x += 6;
 
 console.log(x);
 ```
+
 | result |
 | :----- |
 | 16     |
 
-****
+---
 
 ```html
 <p id="demo"></p>
@@ -438,6 +483,7 @@ text += "World!";
 
 document.getElementById("demo").innerHTML = text;
 ```
+
 | result      |
 | :---------- |
 | HelloWorld! |
@@ -459,6 +505,7 @@ The **Multiplication Assignment Operator** multiplies a variable.
 let x = 10;
 x *= 5;
 ```
+
 | result |
 | :----- |
 | 50     |
@@ -466,30 +513,38 @@ x *= 5;
 #### 🔺 The `**=` Operators
 
 The **Exponentiation Assignment Operator** raises a variable to the power of the operand.
+
 ```js
 let x = 10;
 x **= 5;
 ```
+
 | Result |
 | :----- |
 | 100000 |
 
 #### 🔺 The `/=` Operators
+
 The **Division Assignment Operator** divides a variable.
+
 ```js
 let x = 10;
 x /= 5;
 ```
+
 | Result |
 | :----- |
 | 2      |
 
 #### 🔺 The `%=` Operators
+
 The **Remainder Assignment Operator** assigns a remainder to a variable.
+
 ```js
 let x = 10;
 x %= 5;
 ```
+
 | Result |
 | :----- |
 | 0      |
@@ -522,24 +577,25 @@ The Object data type can contain:
 
 **2.** An array
 
-**3.** A date   
+**3.** A date
 
-****
+---
+
 ```js
 // Numbers:
 let length = 16;
 let weight = 7.5;
 
 // String:
-let x = "Hello"
-let y = "John Doe"
+let x = "Hello";
+let y = "John Doe";
 
 // Booleans:
-let x =  true;
+let x = true;
 let y = false;
 
 // Object:
-const person = {firstName : "John", lastName : "Doe"};
+const person = { firstName: "John", lastName: "Doe" };
 
 // Array object:
 const cars = ["Saad", "volvo", "BMW"];
@@ -547,7 +603,8 @@ const cars = ["Saad", "volvo", "BMW"];
 // Date Object:
 const date = new Date("2023-09-11");
 ```
-****
+
+---
 
 **Note :** A JavaScript variable can hold any type of data.
 
@@ -562,6 +619,7 @@ Without data types, a computer cannot safely solve this:
 ```js
 let x = 16 + "Volvo";
 ```
+
 | result  |
 | :------ |
 | 16Volvo |
@@ -573,6 +631,7 @@ JavaScript will treat the example above as:
 ```js
 let x = "16" + "Volvo";
 ```
+
 | result  |
 | :------ |
 | 16Volvo |
@@ -584,6 +643,7 @@ JavaScript evaluates expressions from left to right. Different sequences can pro
 ```js
 let x = 16 + 4 + "Volvo";
 ```
+
 | result  |
 | :------ |
 | 20Volvo |
@@ -593,6 +653,7 @@ let x = 16 + 4 + "Volvo";
 ```js
 let x = "Volvo" + 16 + 4;
 ```
+
 | result   |
 | :------- |
 | Volvo164 |
@@ -604,7 +665,7 @@ JavaScript has dynamic types. This means that the same variable can be used to h
 ```js
 let x;
 x = 5;
-x = "John"
+x = "John";
 
 console.log(x);
 ```
@@ -613,13 +674,12 @@ console.log(x);
 | :----- |
 | john   |
 
-
 ```js
 let x;
 x = 5;
 console.log(x);
 
-x = "John"
+x = "John";
 ```
 
 | result |
@@ -634,10 +694,10 @@ Strings are written with quotes. You can use single or double quotes:
 
 ```js
 // Using dubble quotes:
-let carName = "Volvo xc60"
+let carName = "Volvo xc60";
 
 // Using single quotes:
-let carName = 'Volvo xc60'
+let carName = "Volvo xc60";
 ```
 
 You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
@@ -661,7 +721,7 @@ Numbers can be written with, or without decimals:
 
 ```js
 // With decimals:
-let x1 = 34.00;
+let x1 = 34.0;
 
 // Without decimals:
 let x2 = 34;
@@ -686,8 +746,8 @@ let x = 5;
 let y = 5;
 let z = 6;
 
-console.log(x == y) // true
-console.log(x == z) // false
+console.log(x == y); // true
+console.log(x == z); // false
 ```
 
 #### 🔺 Arrays
@@ -700,7 +760,7 @@ The following code declares (creates) an array called `cars`, containing three i
 
 ```js
 const cars = ["Saab", "Volvo", "BMW"];
-console.log(cars[0])
+console.log(cars[0]);
 ```
 
 | result |
@@ -716,9 +776,14 @@ JavaScript objects are written with curly braces `{}`.
 Object properties are written as name:value pairs, separated by commas.
 
 ```js
-const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue",
+};
 
-console.log(person.firstName + " is " + person.age + " years old.")
+console.log(person.firstName + " is " + person.age + " years old.");
 ```
 
 | result                |
@@ -733,6 +798,7 @@ In JavaScript, a variable without a value, has the value `undefined`. The type i
 let car;
 console.log(car);
 ```
+
 | result    |
 | :-------- |
 | undefined |
@@ -744,25 +810,28 @@ An empty value has nothing to do with `undefined`.
 An empty string has both a legal value and a type.
 
 ```js
-let car = "";    // The value is "", the typeof is "string"
+let car = ""; // The value is "", the typeof is "string"
 ```
 
 ## 📌 Functions
 
-****
+---
+
 A JavaScript function is a block of code designed to perform a particular task.
 
 A JavaScript function is executed when "something" invokes it (calls it).
-****
+
+---
 
 ```js
 function myFunction(p1, p2) {
-    return p1 * p2
-};
+  return p1 * p2;
+}
 
 let result = myFunction(4, 7);
 console.log(result);
 ```
+
 | result |
 | :----- |
 | 28     |
@@ -780,12 +849,13 @@ function name(parameter1, parameter2, parameter3) {
 - A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
 - Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
 - The parentheses may include parameter names separated by commas:
-**(parameter1, parameter2, ...)**
+  **(parameter1, parameter2, ...)**
 - Function `parameters` are listed inside the parentheses () in the function definition.
 - Function `arguments` are the values received by the function when it is invoked.
 - Inside the function, the arguments (the parameters) behave as local variables.
 
 #### 🔺 Invocation
+
 The code inside the function will execute when "something" `invokes` (calls) the function:
 
 - When an event occurs (when a user clicks a button)
@@ -794,27 +864,30 @@ The code inside the function will execute when "something" `invokes` (calls) the
 
 You will learn a lot more about function invocation later in this tutorial.
 
-```js 
+```js
 let x = myFunction(4, 3);
-console.log(x)
+console.log(x);
 
 function myFunction(a, b) {
-    return a * b
-};
+  return a * b;
+}
 ```
 
 | result |
 | :----- |
 | 12     |
 
-****
+---
+
 #### 🔺 Whay Functions?
+
 With functions you can reuse code
 
 You can write code that can be used many times.
 
 You can use the same code with different arguments, to produce different results.
-****
+
+---
 
 #### 🔺 The `()` Operators
 
@@ -822,12 +895,12 @@ The () operators invokes (calls) the function:
 
 ```js
 function toCelsius(f) {
-    return (5/9) * (f-32);
-};
+  return (5 / 9) * (f - 32);
+}
 
 let value = toCelsius(77);
 
-console.log(value);     // result : 25
+console.log(value); // result : 25
 ```
 
 #### 🔺 Local Variables
@@ -847,7 +920,7 @@ function carDetail() {
   console.log(text);
 }
 
-carDetail()
+carDetail();
 ```
 
 | result                |
@@ -866,17 +939,16 @@ let person = "John";
 This code assigns a **many values** (John, Doe, 24) to a `variable` named car:
 
 ```js
-const person = {firstName: "John", lastName: "Doe", age: 24};
+const person = { firstName: "John", lastName: "Doe", age: 24 };
 
 console.log(person.firstName + " " + person.lastName);
-console.log(person.firstName + " is " + person.age + " years old.")
+console.log(person.firstName + " is " + person.age + " years old.");
 ```
 
 | result                |
 | :-------------------- |
 | John Doe              |
 | John is 24 years old. |
-
 
 #### 🔺 Object Method
 
@@ -894,7 +966,7 @@ Methods are stored in properties as `function definitions`.
 | eyeColor  | Brown                                                    |
 | fullName  | function() {return this.firstName + " " + this.lastName} |
 
-*A method is function stored as a property.*
+_A method is function stored as a property._
 
 ```js
 const person = {
@@ -903,10 +975,8 @@ const person = {
   age: 24,
   eyeColor: "Brown",
   fullName: function () {
-    return (
-      this.firstName + " " + this.lastName
-    )
-  }
+    return this.firstName + " " + this.lastName;
+  },
 };
 
 console.log(person.fullName());
@@ -927,14 +997,14 @@ In the example above, `this` refer to **person object.**
 A JavaScript string is zero or more characters written inside quotes.
 
 ```js
-let text = "Hello World"
+let text = "Hello World";
 ```
 
 **You can use single or duble quotes :**
 
 ```js
 let text01 = "Hello World";
-let text02 = 'Hello World';
+let text02 = "Hello World";
 ```
 
 You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
@@ -951,8 +1021,9 @@ To find the length of a string, use the built-in `length` property:
 
 ```js
 let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-console.log(text.length)
+console.log(text.length);
 ```
+
 | result |
 | :----- |
 | 26     |
@@ -977,19 +1048,19 @@ The backslash (`\`) escape character turns special characters into string charac
 | \"   | "      | Dubble Quote |
 | \\   | \      | Backslash    |
 
-The sequence `\"`  inserts a double quote in a string:
+The sequence `\"` inserts a double quote in a string:
 
 ```js
-let text = "We are the so-called \"Vikings\" from the north.";
+let text = 'We are the so-called "Vikings" from the north.';
 ```
 
-The sequence `\'`  inserts a single quote in a string:
+The sequence `\'` inserts a single quote in a string:
 
 ```js
-let text= 'It\'s alright.';
+let text = "It's alright.";
 ```
 
-The sequence `\\`  inserts a backslash in a string:
+The sequence `\\` inserts a backslash in a string:
 
 ```js
 let text = "The character \\ is called backslash.";
@@ -998,7 +1069,8 @@ let text = "The character \\ is called backslash.";
 You can also break up a code line within a text string with a single backslash:
 
 ```js
-document.getElementById("demo").innerHTML = "Hello \
+document.getElementById("demo").innerHTML =
+  "Hello \
 World!";
 ```
 
@@ -1010,7 +1082,7 @@ But stringscan be also defined as object with the keyword `new`:
 
 ```js
 let x = "John Doe";
-let y = new String(x)
+let y = new String(x);
 console.log(typeof y);
 ```
 
@@ -1018,7 +1090,8 @@ console.log(typeof y);
 | :----- |
 | object |
 
-****
+---
+
 ⚠️ **WARNING !**
 
 Do not create Strings objects.
@@ -1026,22 +1099,23 @@ Do not create Strings objects.
 The `new` keyword complicates the code and slows down execution speed.
 
 String objects can produce unexpected results:
-****
 
-When using the `==` operator, x and y are **equal**:  
+---
+
+When using the `==` operator, x and y are **equal**:
 
 ```js
 let x = "John Doe";
-let y = new String(x)
-console.log(x == y);    // true
+let y = new String(x);
+console.log(x == y); // true
 ```
 
 When using the `===` operator, x and y are not **equal**:
 
 ```js
 let x = "John Doe";
-let y = new String(x)
-console.log(x === y);   // false
+let y = new String(x);
+console.log(x === y); // false
 ```
 
 Note the difference between `(x==y)` and `(x===y)`.
@@ -1067,7 +1141,7 @@ The `length` property returns the length of a string.
 ```js
 let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let length = text.length;
-console.log(length)   // 26
+console.log(length); // 26
 ```
 
 #### 🔺 String slice()
@@ -1078,10 +1152,11 @@ The method takes 2 parameters: start position, and end position (end not include
 
 ```js
 let text = "Apple, Banana, Kiwi";
-let part = text.slice(7, 13);   // Banana
+let part = text.slice(7, 13); // Banana
 ```
 
-****
+---
+
 📝 **Note**
 
 JavaScript counts positions from zero.
@@ -1089,27 +1164,28 @@ JavaScript counts positions from zero.
 First position is 0.
 
 Second position is 1.
-****
+
+---
 
 If you omit the second parameter, the method will slice out the rest of the string:
 
 ```js
 let text = "Apple, Banana, Kiwi";
-let part = text.slice(7);   // banana, Kiwi
+let part = text.slice(7); // banana, Kiwi
 ```
 
-If a parameter is negative, the position is counted from the end of the string:  
+If a parameter is negative, the position is counted from the end of the string:
 
 ```js
 let text = "Apple, Banana, Kiwi";
-let part = text.slice(-12);   // Banana, Kiwi
+let part = text.slice(-12); // Banana, Kiwi
 ```
 
 This example slices out a portion of a string from position -12 to position -6:
 
 ```js
 let text = "Apple, Banana, Kiwi";
-let part = text.slice(-12, -6);   // Banana
+let part = text.slice(-12, -6); // Banana
 ```
 
 #### 🔺String substring()
@@ -1120,7 +1196,7 @@ The difference is that start and end values less than 0 are treated as 0 in `sub
 
 ```js
 let str = "Apple, Banana, Kiwi";
-let part = str.substring(7, 13);    // Banana
+let part = str.substring(7, 13); // Banana
 ```
 
 #### 🔺 Replacing String Content
@@ -1130,11 +1206,12 @@ The `replace()` method replaces a specified value with another value in a string
 ```js
 let text = "Please visit Microsoft!";
 let newText = text.replace("Microsoft", "CodeWithDw");
-console.log(newText);   
+console.log(newText);
 // Please visit CodeWithDw!
 ```
 
-****
+---
+
 📝 **Note**
 
 The replace() method does not change the string it is called on.
@@ -1144,13 +1221,14 @@ The replace() method returns a new string.
 The replace() method replaces only the first match
 
 If you want to replace all matches, use a regular expression with the /g flag set. See examples below.
-****
+
+---
 
 To replace all matches, use a regular expression with a `/g` flag (global match):
 
 ```js
 let text = "Please visit Microsoft and Microsoft!";
-let newText = text.replace(/Microsoft/g, "CodeWithDw");    
+let newText = text.replace(/Microsoft/g, "CodeWithDw");
 // Please visit CodeWithDw and CodeWithDw!
 ```
 
@@ -1158,7 +1236,7 @@ To replace case insensitive, use a regular expression with an `/i` flag (insensi
 
 ```js
 let text = "Please visit Microsoft!";
-let newText = text.replace(/MICROSOFT/i, "CodeWithDw");    
+let newText = text.replace(/MICROSOFT/i, "CodeWithDw");
 // Please visit CodeWithDw!
 ```
 
@@ -1168,9 +1246,9 @@ In 2021, JavaScript introduced the string method `replaceAll()`:
 
 ```js
 let text = "I love cats. Cats are very easy to love. Cats are very popular.";
-text = text.replaceAll("Cats","Dogs");
-text = text.replaceAll("cats","dogs");
-console.log(text)
+text = text.replaceAll("Cats", "Dogs");
+text = text.replaceAll("cats", "dogs");
+console.log(text);
 // I love dogs. Dogs are very easy to love. Dogs are very popular.
 ```
 
@@ -1180,22 +1258,22 @@ If the parameter is a regular expression, the global flag (g) must be set, other
 
 ```js
 let text = "I love cats. Cats are very easy to love. Cats are very popular";
-text = text.replaceAll(/Cats/g,"Dogs");
-text = text.replaceAll(/cats/g,"dogs");
+text = text.replaceAll(/Cats/g, "Dogs");
+text = text.replaceAll(/cats/g, "dogs");
 ```
 
-#### 🔺  String toUpperCase()
+#### 🔺 String toUpperCase()
 
 ```js
 let text1 = "Hello World!";
-let text2 = text1.toUpperCase();    // HELLO WORLD!
+let text2 = text1.toUpperCase(); // HELLO WORLD!
 ```
 
 #### 🔺 String toLowerCase()
 
 ```js
-let text1 = "Hello World!";     
-let text2 = text1.toLowerCase();    // hello world!
+let text1 = "Hello World!";
+let text2 = text1.toLowerCase(); // hello world!
 ```
 
 #### 🔺 String concat()
@@ -1206,8 +1284,9 @@ let text2 = text1.toLowerCase();    // hello world!
 let text1 = "Hello";
 let text2 = "World";
 let text3 = text1.concat(" ", text2);
-console.log(text3)
+console.log(text3);
 ```
+
 | result      |
 | :---------- |
 | Hello World |
@@ -1224,8 +1303,8 @@ text = "Hello".concat(" ", "World!");
 The `trim()` method removes whitespace from both sides of a string:
 
 ```js
-let text1 = "     Hello World!     ";     // length 22
-let text2 = text1.trim();                 // length 12
+let text1 = "     Hello World!     "; // length 22
+let text2 = text1.trim(); // length 12
 ```
 
 #### 🔺String trimStart()
@@ -1233,8 +1312,8 @@ let text2 = text1.trim();                 // length 12
 The `trimStart()` method works like trim(), but removes whitespace only from the start of a string.
 
 ```js
-let text1 = "     Hello World!     ";     // length 22
-let text2 = text1.trimStart();            // length 17
+let text1 = "     Hello World!     "; // length 22
+let text2 = text1.trimStart(); // length 17
 ```
 
 #### 🔺 String trimEnd()
@@ -1242,8 +1321,8 @@ let text2 = text1.trimStart();            // length 17
 The `trimEnd()` method works like `trim()`, but removes whitespace only from the end of a string.
 
 ```js
-let text1 = "     Hello World!     ";     // length 22
-let text2 = text1.trimEnd();              // length 17
+let text1 = "     Hello World!     "; // length 22
+let text2 = text1.trimEnd(); // length 17
 ```
 
 #### 🔺 String padStart()
@@ -1256,14 +1335,14 @@ Pad a string with "0" until it reaches the length 4:
 
 ```js
 let text = "5";
-let padded = text.padStart(4,"0");      // 0005
+let padded = text.padStart(4, "0"); // 0005
 ```
 
 Pad a string with "x" until it reaches the length 4:
 
 ```js
 let text = "5";
-let padded = text.padStart(4,"x");      // xxx5
+let padded = text.padStart(4, "x"); // xxx5
 ```
 
 #### 🔺 String padEnd()
@@ -1274,28 +1353,31 @@ It pads a string with another string (multiple times) until it reaches a given l
 
 ```js
 let text = "5";
-let padded = text.padEnd(4,"0");      // 5000
+let padded = text.padEnd(4, "0"); // 5000
 ```
 
 ```js
 let text = "5";
-let padded = text.padEnd(4,"x");      // 5xxx
+let padded = text.padEnd(4, "x"); // 5xxx
 ```
 
-****
- 📝 **Note**
+---
+
+📝 **Note**
 
 The `padStart()` end `padEnd()` method is a string method.
 
 To pad a number, convert the number to a string first.
 
-***How to convert number to string ?***
+**_How to convert number to string ?_**
+
 ```js
 let x = 5;
 x = toString(x);
-console.log(typeof x);    // string
+console.log(typeof x); // string
 ```
-****
+
+---
 
 #### 🔺 String charAt()
 
@@ -1303,7 +1385,7 @@ The `charAt()` method returns the character at a specified index (position) in a
 
 ```js
 let text = "HELLO WORLD";
-let char = text.charAt(0);    // H
+let char = text.charAt(0); // H
 ```
 
 #### 🔺 String split()
@@ -1312,9 +1394,9 @@ A string can be converted to an array with the `split()` method:
 
 ```js
 let text = "a,b,c,d,e,f";
-console.log(text[1]);              // ,
-const myArray = text.split(","); 
-console.log(myArray[1]);           // b
+console.log(text[1]); // ,
+const myArray = text.split(",");
+console.log(myArray[1]); // b
 ```
 
 If the separator is omitted, the returned array will contain the whole string in index [0].
@@ -1323,13 +1405,13 @@ If the separator is "", the returned array will be an array of single characters
 
 ```js
 let word = "H,e,l,l,o";
-word = word.split(",")
+word = word.split(",");
 
-let len = word.length
+let len = word.length;
 
-let text = ""
+let text = "";
 for (let x = 0; x < len; x++) {
-  text += word[x] + "<br>"
+  text += word[x] + "<br>";
 }
 
 document.getElementById("demo").innerHTML = text;
@@ -1358,16 +1440,18 @@ The `indexOf()` method returns the index (position) the first occurrence of a st
 
 ```js
 let text = "Please locate where 'locate' occurs!";
-let index = text.indexOf("locate");     // 7
+let index = text.indexOf("locate"); // 7
 ```
 
-****
+---
+
 📝 **Note**
 
 JavaScript counts positions from zero.
 
 0 is the first position in a string, 1 is the second, 2 is the third, ...
-****
+
+---
 
 #### 🔺 String lastIndexOf()
 
@@ -1375,28 +1459,28 @@ The `lastIndexOf()` method returns the index of the last occurrence of a specifi
 
 ```js
 let text = "Please locate where 'locate' occurs!";
-let index = text.lastIndexOf("locate");     // 21
+let index = text.lastIndexOf("locate"); // 21
 ```
 
 Both indexOf(), and lastIndexOf() return -1 if the text is not found:
 
 ```js
 let text = "Please locate where 'locate' occurs!";
-let index = text.indexOf("John");     // -1
+let index = text.indexOf("John"); // -1
 ```
 
 Both methods accept a second parameter as the starting position for the search:
 
 ```js
 let text = "Please locate where 'locate' occurs!";
-let index = text.indexOf("locate", 15);     // 21
+let index = text.indexOf("locate", 15); // 21
 ```
 
 The `lastIndexOf()` methods searches backwards (from the end to the beginning), meaning: if the second parameter is `15`, the search starts at position 15, and searches to the beginning of the string.
 
 ```js
 let text = "Please locate where 'locate' occurs!";
-let lastIndex = text.lastIndexOf("locate", 15);     // 7
+let lastIndex = text.lastIndexOf("locate", 15); // 7
 ```
 
 #### 🔺 String search()
@@ -1405,15 +1489,16 @@ The `search()` method searches a string for a string (or a regular expression) a
 
 ```js
 let text = "Please locate where 'locate' occurs!";
-console.log(text.search("locate"));   // 7
+console.log(text.search("locate")); // 7
 ```
 
 ```js
 let text = "Please locate where 'locate' occurs!";
-console.log(text.search(/locate/));   // 7
+console.log(text.search(/locate/)); // 7
 ```
 
-****
+---
+
 📝 **Did You Notice?**
 
 The two methods, `indexOf()` and `search()`, are equal?
@@ -1422,11 +1507,12 @@ The two methods, indexOf() and search(), are equal?
 
 The two methods are **NOT** equal. These are the differences:
 
--  The `search()` method cannot take a second start position argument.
+- The `search()` method cannot take a second start position argument.
 - The `indexOf()` method cannot take powerful search values (regular expressions).
 
 You will learn more about regular expressions in a later chapter.
-****
+
+---
 
 #### 🔺 String match()
 
@@ -1436,26 +1522,27 @@ Perform a search for "ain":
 
 ```js
 let text = "The rain in SPAIN stays mainly in the plain";
-text.match("ain");    // 5
+text.match("ain"); // 5
 ```
 
 Perform a global, case-insensitive search for "ain":
 
 ```js
 let text = "The rain in SPAIN stays mainly in the plain";
-text.match(/ain/g);   // 3 [ 'ain', 'ain', 'ain' ]
+text.match(/ain/g); // 3 [ 'ain', 'ain', 'ain' ]
 ```
 
 Perform a global, case-insensitive search for "ain":
 
 ```js
 let text = "The rain in SPAIN stays mainly in the plain";
-text.match(/ain/gi);    // 4 [ 'ain', 'AIN', 'ain', 'ain' ]
+text.match(/ain/gi); // 4 [ 'ain', 'AIN', 'ain', 'ain' ]
 ```
 
 ## 📌 String Templates
 
-****
+---
+
 Synonyms:
 
 - Template
@@ -1463,7 +1550,8 @@ Synonyms:
 - Template Strings
 - String Templates
 - Back-Tics Syntax
-****
+
+---
 
 #### 🔺 Back-Tics Syntax
 
@@ -1486,8 +1574,7 @@ let text = `He's often called "Johnny"`;
 **Template literals** allows multiline strings:
 
 ```js
-let text =
-`The quick
+let text = `The quick
 brown fox
 jumps over
 the lazy dog`;
@@ -1535,15 +1622,15 @@ document.getElementById("demo").innerHTML = html;
 ## 📌 Numbers
 
 ```js
-let x = 3.14;   // A number with decimals
-let y = 3;      // A number without decimals
+let x = 3.14; // A number with decimals
+let y = 3; // A number without decimals
 ```
 
 Extra large or extra small numbers can be written with scientific (exponent) notation:
 
 ```js
-let x = 123e5;    // 12300000
-let y = 123e-5;   // 0.00123
+let x = 123e5; // 12300000
+let y = 123e-5; // 0.00123
 ```
 
 #### 🔺 Integer Precision
@@ -1551,19 +1638,21 @@ let y = 123e-5;   // 0.00123
 Integers (numbers without a period or exponent notation) are accurate up to 15 digits.
 
 ```js
-let x = 999999999999999;   // x will be 999999999999999
-let y = 9999999999999999;  // y will be 10000000000000000
+let x = 999999999999999; // x will be 999999999999999
+let y = 9999999999999999; // y will be 10000000000000000
 ```
 
 #### 🔺 Numbers and Strings
 
-****
+---
+
 ⚠️ **WARNING !**
 
 JavaScript uses the + operator for both addition and concatenation.
 
 Numbers are added. Strings are concatenated.
-****
+
+---
 
 If you add two numbers, the result will be a number:
 
@@ -1573,6 +1662,7 @@ let y = 20;
 let z = x + y;
 console.log(z);
 ```
+
 | result |
 | :----- |
 | 30     |
@@ -1585,6 +1675,7 @@ let y = "20";
 let z = x + y;
 console.log(z);
 ```
+
 | result |
 | :----- |
 | 1020   |
@@ -1595,8 +1686,9 @@ If you add a number and a string, the result will be a string concatenation:
 let x = 10;
 let y = "20";
 let z = x + y;
-console.log(z)
+console.log(z);
 ```
+
 | result |
 | :----- |
 | 1020   |
@@ -1616,28 +1708,31 @@ let x = 10;
 let y = 20;
 let z = "30";
 let result = x + y + z;
-console.log(result)
+console.log(result);
 ```
+
 | result |
 | :----- |
 | 3030   |
 
-****
+---
+
 The JavaScript interpreter works from left to right.
 
 First 10 + 20 is added because x and y are both numbers.
 
 Then 30 + "30" is concatenated because z is a string.
-****
+
+---
 
 #### 🔺 Numeric Strings
 
 JavaScript strings can have numeric content:
 
 ```js
-let x = 100;         // x is a number
+let x = 100; // x is a number
 
-let y = "100";       // y is a string
+let y = "100"; // y is a string
 ```
 
 #### 🔺 NaN - Not a Number
@@ -1648,8 +1743,9 @@ Trying to do arithmetic with a non-numeric string will result in `NaN` (Not a Nu
 
 ```js
 let x = 100 / "Apple";
-console.log(x)
+console.log(x);
 ```
+
 | result |
 | :----- |
 | NaN    |
@@ -1660,8 +1756,8 @@ But numbers can also be defined as objects with the keyword new:
 
 ```js
 let x = 123;
-let y = new Number(x)
-console.log(typeof y)
+let y = new Number(x);
+console.log(typeof y);
 ```
 
 ## 📌 Number Methods
@@ -1682,8 +1778,8 @@ All number methods can be used on any type of numbers (literals, variables, or e
 
 ```js
 let x = 12;
-x = toString(x)
-console.log(typeof(x));   // string
+x = toString(x);
+console.log(typeof x); // string
 ```
 
 #### 🔺 toFixed() Method
@@ -1692,8 +1788,15 @@ console.log(typeof(x));   // string
 
 ```js
 let num = 9.656;
-const number = num.toFixed(0) + "<br>" + num.toFixed(2) + "<br>" + num.toFixed(4) + "<br>" + num.toFixed(6);
-document.getElementById("demo").innerHTML = number
+const number =
+  num.toFixed(0) +
+  "<br>" +
+  num.toFixed(2) +
+  "<br>" +
+  num.toFixed(4) +
+  "<br>" +
+  num.toFixed(6);
+document.getElementById("demo").innerHTML = number;
 
 /*
 10
@@ -1703,24 +1806,35 @@ document.getElementById("demo").innerHTML = number
 */
 ```
 
-****
+---
+
 📝 toFixed(2) is perfect for working with money.
-****
+
+---
 
 #### 🔺 Number() Method
 
 ```js
 document.getElementById("demo").innerHTML =
-  Number(true) + "<br>" +               // 1
-  Number(false) + "<br>" +              // 0
-  Number("10") + "<br>" +               // 10
-  Number("  10  ") + "<br>" +           // 10
-  Number("  10") + "<br>" +             // 10
-  Number("10  ") + "<br>" +             // 10
-  Number("10.33") + "<br>" +            // 10.33
-  Number("10,33") + "<br>" +            // NaN
-  Number("10 33") + "<br>" +            // NaN
-  Number("John");                       // NaN
+  Number(true) +
+  "<br>" + // 1
+  Number(false) +
+  "<br>" + // 0
+  Number("10") +
+  "<br>" + // 10
+  Number("  10  ") +
+  "<br>" + // 10
+  Number("  10") +
+  "<br>" + // 10
+  Number("10  ") +
+  "<br>" + // 10
+  Number("10.33") +
+  "<br>" + // 10.33
+  Number("10,33") +
+  "<br>" + // NaN
+  Number("10 33") +
+  "<br>" + // NaN
+  Number("John"); // NaN
 ```
 
 #### 🔺 parseInt() Method
@@ -1728,14 +1842,20 @@ document.getElementById("demo").innerHTML =
 `parseInt()` parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
 
 ```js
-document.getElementById("demo").innerHTML = 
-  parseInt("-10") + "<br>" +             // -10
-  parseInt("-10.33") + "<br>" +          // -10
-  parseInt("10") + "<br>" +              // 10
-  parseInt("10.33") + "<br>" +           // 10
-  parseInt("10 6") + "<br>" +            // 10
-  parseInt("10 years") + "<br>" +        // 10
-  parseInt("years 10");                  // NaN
+document.getElementById("demo").innerHTML =
+  parseInt("-10") +
+  "<br>" + // -10
+  parseInt("-10.33") +
+  "<br>" + // -10
+  parseInt("10") +
+  "<br>" + // 10
+  parseInt("10.33") +
+  "<br>" + // 10
+  parseInt("10 6") +
+  "<br>" + // 10
+  parseInt("10 years") +
+  "<br>" + // 10
+  parseInt("years 10"); // NaN
 ```
 
 #### 🔺 Number.isInteger() Method
@@ -1746,8 +1866,15 @@ The `Number.isInteger()` method returns `true` if the argument is an integer.
 
 ```js
 let num = 9.656;
-const number = num.toPrecision() + "<br>" + num.toPrecision(2) + "<br>" + num.toPrecision(4) + "<br>" + num.toPrecision(6);
-document.getElementById("demo").innerHTML = number
+const number =
+  num.toPrecision() +
+  "<br>" +
+  num.toPrecision(2) +
+  "<br>" +
+  num.toPrecision(4) +
+  "<br>" +
+  num.toPrecision(6);
+document.getElementById("demo").innerHTML = number;
 ```
 
 #### 🔺 valueOf() Method
@@ -1756,9 +1883,9 @@ document.getElementById("demo").innerHTML = number
 
 ```js
 let x = 123;
-x.valueOf();            // 123
-(345).valueOf();        // 345
-(100 + 23).valueOf();   // 123
+x.valueOf(); // 123
+(345).valueOf(); // 345
+(100 + 23).valueOf(); // 123
 ```
 
 In JavaScript, a number can be a primitive value (typeof = number) or an object (typeof = object).
@@ -1769,7 +1896,8 @@ There is no reason to use it in your code.
 
 ## 📌 Array
 
-****
+---
+
 📝 **Whay use arrays ?**
 
 If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
@@ -1785,7 +1913,8 @@ However, what if you want to loop through the cars and find a specific one? And 
 The solution is an array!
 
 An array can hold many values under a single name, and you can access the values by referring to an index number.
-****
+
+---
 
 #### 🔺 Creating an Array
 
@@ -1793,8 +1922,8 @@ Using an array literal is the easiest way to create a JavaScript Array.
 
 Syntax:
 
-```js 
-const array_name = [item1, item2, ...]; 
+```js
+const array_name = [item1, item2, ...];
 ```
 
 ```js
@@ -1804,20 +1933,16 @@ const cars = ["Saab", "Volvo", "BMW"];
 Spaces and line breaks are not important. A declaration can span multiple lines:
 
 ```js
-const cars = [
-  "Saab",
-  "Volvo",
-  "BMW"
-];
+const cars = ["Saab", "Volvo", "BMW"];
 ```
 
 You can also create an array, and then provide the elements:
 
 ```js
 const cars = [];
-cars[0]= "Saab";
-cars[1]= "Volvo";
-cars[2]= "BMW";
+cars[0] = "Saab";
+cars[1] = "Volvo";
+cars[2] = "BMW";
 ```
 
 #### 🔺 Using the JavaScript Keyword new
@@ -1828,13 +1953,15 @@ The following example also creates an Array, and assigns values to it:
 const cars = new Array("Saab", "Volvo", "BMW");
 ```
 
-****
+---
+
 The two examples above do exactly the same.
 
 There is no need to use `new Array()`.
 
 For simplicity, readability and execution speed, use the array literal method.
-****
+
+---
 
 #### 🔺 Accessing Array Elements
 
@@ -1842,20 +1969,22 @@ You access an array element by referring to the **index number**:
 
 ```js
 const cars = ["Saab", "Volvo", "BMW"];
-console.log(cars[0]);     // Saab
+console.log(cars[0]); // Saab
 ```
 
-****
+---
+
 📝 **Note** Array indexes start with 0
 
 [0] is the first element. [1] is the second element.
-****
+
+---
 
 #### 🔺 Accessing the Last Array Element
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits[fruits.length-1])    // Mango
+console.log(fruits[fruits.length - 1]); // Mango
 ```
 
 #### 🔺 Changing an Array Element
@@ -1865,7 +1994,7 @@ This statement changes the value of the first element in `cars`:
 ```js
 const cars = ["Saab", "Volvo", "BMW"];
 cars[0] = "Opel";
-console.log(cars)
+console.log(cars);
 ```
 
 #### 🔺 Converting an Array to a String
@@ -1874,7 +2003,7 @@ The JavaScript method `toString()` converts an array to a string of (comma separ
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits.toString())
+console.log(fruits.toString());
 ```
 
 #### 🔺 Access the Full Array
@@ -1883,7 +2012,7 @@ With JavaScript, the full array can be accessed by referring to the array name:
 
 ```js
 const cars = ["Saab", "Volvo", "BMW"];
-console.log(cars)
+console.log(cars);
 ```
 
 #### 🔺 Arrays are Objects
@@ -1895,6 +2024,7 @@ But, JavaScript arrays are best described as arrays.
 Arrays use `numbers` to access its "elements". In this example, `person[0]` returns John:
 
 **Array :**
+
 ```js
 const person = ["John", "Doe", 46];
 ```
@@ -1902,8 +2032,9 @@ const person = ["John", "Doe", 46];
 Objects use `names` to access its "members". In this example, `person.firstName` returns John:
 
 **Object :**
+
 ```js
-const person = {firstName:"John", lastName:"Doe", age:46};
+const person = { firstName: "John", lastName: "Doe", age: 46 };
 ```
 
 #### 🔺 The length Property
@@ -1912,14 +2043,14 @@ The `length` property of an array returns the length of an array (the number of 
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits.length)    // 4
+console.log(fruits.length); // 4
 ```
 
 #### 🔺 Accessing the First Array Element
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits[0])
+console.log(fruits[0]);
 ```
 
 #### 🔺 Looping Array Elements
@@ -1927,16 +2058,16 @@ console.log(fruits[0])
 One way to loop through an array, is using a for loop:
 
 ```js
-let Language = ["html", "css", "JavaScript"]
-let Len = Language.length
+let Language = ["html", "css", "JavaScript"];
+let Len = Language.length;
 
-let text = "<ul>"
+let text = "<ul>";
 for (let i = 0; i < Len; i++) {
-  text += "<li>" + Language[i] + "</li>"
+  text += "<li>" + Language[i] + "</li>";
 }
-text += "</ul>"
+text += "</ul>";
 
-document.getElementById("demo").innerHTML = text
+document.getElementById("demo").innerHTML = text;
 ```
 
 You can also use the `Array.forEach()` function:
@@ -1944,14 +2075,14 @@ You can also use the `Array.forEach()` function:
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
-let text = "<ul>"
-fruits.forEach(myFruits)
-text += "</ul>"
+let text = "<ul>";
+fruits.forEach(myFruits);
+text += "</ul>";
 
-document.getElementById("demo").innerHTML = text
+document.getElementById("demo").innerHTML = text;
 
 function myFruits(value) {
-  text += "<li>" + value + "</li>"
+  text += "<li>" + value + "</li>";
 }
 ```
 
@@ -1981,11 +2112,13 @@ function myFunction() {
 }
 ```
 
-****
+---
+
 ⚠️ **WARNING !**
 
 Adding elements with high indexes can create undefined "holes" in an array:
-****
+
+---
 
 ```js
 const fruits = ["Banana", "Orange", "Apple"];
@@ -2009,6 +2142,7 @@ undefined
 Lemon
 */
 ```
+
 #### 🔺 Associative Arrays
 
 Many programming languages support arrays with named indexes.
@@ -2017,7 +2151,7 @@ Arrays with named indexes are called associative arrays (or hashes).
 
 JavaScript does **not** support arrays with named indexes.
 
-In JavaScript, **arrays** always use **numbered indexes**.  
+In JavaScript, **arrays** always use **numbered indexes**.
 
 ```js
 const person = [];
@@ -2025,16 +2159,18 @@ person[0] = "John";
 person[1] = "Doe";
 person[2] = 46;
 
-console.log(person[0] + " " + person.length)    // John 3
+console.log(person[0] + " " + person.length); // John 3
 ```
 
-****
+---
+
 📝 **The Difference Between Arrays and Objects**
 
-In JavaScript, **arrays** use **numbered indexes**.  
+In JavaScript, **arrays** use **numbered indexes**.
 
 In JavaScript, **objects** use **named indexes**.
-****
+
+---
 
 #### 🔺 new Array()
 
@@ -2054,7 +2190,7 @@ These two different statements both create a new array containing 6 numbers:
 ```js
 const points = new Array(40, 100, 1, 5, 25, 10);
 const points = [40, 100, 1, 5, 25, 10];
-console.log(points[0])    // 40
+console.log(points[0]); // 40
 ```
 
 #### 🔺 How to Recognize an Array
@@ -2065,7 +2201,7 @@ The problem is that the JavaScript operator `typeof` returns "`object`":
 
 ```js
 const fruits = ["Banana", "Orange", "Apple"];
-let type = typeof fruits;       // object
+let type = typeof fruits; // object
 ```
 
 The typeof operator returns object because a JavaScript array is an object.
@@ -2076,7 +2212,7 @@ To solve this problem ECMAScript 5 (JavaScript 2009) defined a new method `Array
 
 ```js
 const fruits = ["Banana", "Orange", "Apple"];
-console.log(Array.isArray(fruits));       // true
+console.log(Array.isArray(fruits)); // true
 ```
 
 **`Solution 2:`**
@@ -2085,7 +2221,7 @@ The `instanceof` operator returns true if an object is created by a given constr
 
 ```js
 var fruits = ["Banana", "Orange", "Apple"];
-console.log(fruits instanceof Array)        // true
+console.log(fruits instanceof Array); // true
 ```
 
 ## 📌 Array Methods
@@ -2099,13 +2235,13 @@ console.log(fruits instanceof Array)        // true
 | Array concat() | Array flat()     |
 | Array splice() | Array slice()    |
 
-#### 🔺  Array length
+#### 🔺 Array length
 
 The `length` property returns the length (size) of an array:
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-let size = fruits.length;       // 4
+let size = fruits.length; // 4
 ```
 
 #### 🔺 Array toString()
@@ -2114,7 +2250,7 @@ The JavaScript method `toString()` converts an array to a string of (comma separ
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-let convertString = fruits.toString()       
+let convertString = fruits.toString();
 // Banana,Orange,Apple,Mango
 ```
 
@@ -2124,11 +2260,12 @@ It behaves just like `toString()`, but in addition you can specify the separator
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("demo").innerHTML = fruits.join("*")
+document.getElementById("demo").innerHTML = fruits.join("*");
 // Banana * Orange * Apple * Mango
 ```
 
-****
+---
+
 **Popping and Pushing**
 
 When you work with arrays, it is easy to remove elements and add new elements.
@@ -2136,7 +2273,8 @@ When you work with arrays, it is easy to remove elements and add new elements.
 This is what popping and pushing is:
 
 Popping items out of an array, or pushing items into an array.
-****
+
+---
 
 #### 🔺 Array pop()
 
@@ -2145,7 +2283,7 @@ The `pop()` method removes the last element from an array:
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 document.getElementById("demo").innerHTML = fruits;
-fruits.pop()
+fruits.pop();
 document.getElementById("demo").innerHTML = fruits;
 ```
 
@@ -2157,11 +2295,11 @@ The `push()` method adds a new element to an array (at the end):
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.push("Kiwi");        
+fruits.push("Kiwi");
 // Banana,Orange,Apple,Mango,Kiwi
 ```
 
-#### 🔺  Array shift()
+#### 🔺 Array shift()
 
 Shifting is equivalent to popping, but working on the first element instead of the last.
 
@@ -2169,10 +2307,10 @@ The `shift()` method removes the first array element and "shifts" all other elem
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits)
+console.log(fruits);
 // [ 'Banana', 'Orange', 'Apple', 'Mango' ]
 
-fruits.shift()
+fruits.shift();
 console.log(fruits);
 // [ 'Orange', 'Apple', 'Mango' ]
 ```
@@ -2185,25 +2323,27 @@ The `unshift()` method adds a new element to an array (at the beginning), and "u
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits)
+console.log(fruits);
 // [ 'Banana', 'Orange', 'Apple', 'Mango' ]
 
-fruits.unshift("Kiwi")
+fruits.unshift("Kiwi");
 console.log(fruits);
 // [ 'Kiwi', 'Banana', 'Orange', 'Apple', 'Mango' ]
 ```
 
-****
+---
+
 📝 Array **indexes** start with 0:
 
 [0] is the first array element
 [1] is the second
 [2] is the third ...
-****
+
+---
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits)
+console.log(fruits);
 // [ 'Banana', 'Orange', 'Apple', 'Mango' ]
 
 fruits[0] = "Kiwi";
@@ -2217,15 +2357,16 @@ The `length` property provides an easy way to append a new element to an array:
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits)
+console.log(fruits);
 // [ 'Banana', 'Orange', 'Apple', 'Mango' ]
 
-fruits[fruits.length] = "Kiwi"
+fruits[fruits.length] = "Kiwi";
 console.log(fruits);
 // [ 'Banana', 'Orange', 'Apple', 'Mango', 'Kiwi' ]
 ```
 
-****
+---
+
 ⚠️ **WARNING !**
 
 Array elements can be deleted using the JavaScript operator `delete`.
@@ -2233,14 +2374,15 @@ Array elements can be deleted using the JavaScript operator `delete`.
 Using `delete` leaves `undefined` holes in the array.
 
 Use pop() or shift() instead.
-****
+
+---
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits[0])
+console.log(fruits[0]);
 // Banana
 
-delete fruits[0]
+delete fruits[0];
 console.log(fruits[0]);
 // undefined
 ```
@@ -2253,14 +2395,16 @@ The `concat()` method creates a new array by merging (concatenating) existing ar
 const myGirls = ["Cecilie", "Lone"];
 const myBoys = ["Emil", "Tobias", "Linus"];
 
-const myChildren = myGirls.concat(myBoys)
+const myChildren = myGirls.concat(myBoys);
 console.log(myChildren);
 // [ 'Cecilie', 'Lone', 'Emil', 'Tobias', 'Linus' ]
 ```
 
-****
+---
+
 The `concat()` method does not change the existing arrays. It always returns a new array.
-****
+
+---
 
 The `concat()` method can take any number of array arguments:
 
@@ -2278,16 +2422,17 @@ The `concat()` method can also take strings as arguments:
 ```js
 const myArray = ["Emil", "Tobias", "Linus"];
 const myChildren = myArray.concat("Peter");
-console.log(myChildren)
+console.log(myChildren);
 // [ 'Emil', 'Tobias', 'Linus', 'Peter' ]
 ```
+
 #### 🔺 Array splice()
 
 The `splice()` method can be used to add new items to an array:
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.splice(2, 0, "Lemon", "Kiwi")
+fruits.splice(2, 0, "Lemon", "Kiwi");
 console.log(fruits);
 // [ 'Banana', 'Orange', 'Lemon', 'Kiwi', 'Apple', 'Mango' ]
 ```
@@ -2302,8 +2447,8 @@ The `splice()` method returns an array with the deleted items:
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.splice(2, 2, "Lemon", "Kiwi")
-console.log(fruits);        
+fruits.splice(2, 2, "Lemon", "Kiwi");
+console.log(fruits);
 // [ 'Banana', 'Orange', 'Lemon', 'Kiwi' ]
 
 /*
@@ -2317,8 +2462,8 @@ With clever parameter setting, you can use `splice()` to remove elements without
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.splice(0, 1)
-console.log(fruits);        
+fruits.splice(0, 1);
+console.log(fruits);
 // [ 'Orange', 'Apple', 'Mango' ]
 ```
 
@@ -2336,23 +2481,25 @@ This example slices out a part of an array starting from array element 1 ("Orang
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits.slice(1));       
+console.log(fruits.slice(1));
 // [ 'Orange', 'Apple', 'Mango' ]
 ```
 
-****
+---
+
 📝 **Note**
 
 The slice() method creates a new array.
 
 The slice() method does not remove any elements from the source array.
-****
+
+---
 
 This example slices out a part of an array starting from array element 3 ("Apple"):
 
 ```js
 const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-console.log(fruits.slice(3));       
+console.log(fruits.slice(3));
 // [ 'Apple', 'Mango' ]
 ```
 
@@ -2362,7 +2509,7 @@ The method then selects elements from the start argument, and up to (but not inc
 
 ```js
 const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-console.log(fruits.slice(1, 3));        
+console.log(fruits.slice(1, 3));
 // [ 'Orange', 'Lemon' ]
 ```
 
@@ -2378,8 +2525,8 @@ These two examples will produce the same result:
 
 ```js
 const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-let x = fruits.toString()
-console.log(typeof x)       // string
+let x = fruits.toString();
+console.log(typeof x); // string
 ```
 
 ## 📌 Sorting Arrays
@@ -2390,8 +2537,8 @@ The `sort()` method sorts an array alphabetically:
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.sort()
-console.log(fruits);        
+fruits.sort();
+console.log(fruits);
 // [ 'Apple', 'Banana', 'Mango', 'Orange' ]
 ```
 
@@ -2403,13 +2550,14 @@ You can use it to sort an array in descending order:
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.sort()
-fruits.reverse()
-console.log(fruits);        
+fruits.sort();
+fruits.reverse();
+console.log(fruits);
 // [ 'Orange', 'Mango', 'Banana', 'Apple' ]
 ```
 
 #### 🔺 Numeric Sort
+
 By default, the `sort()` function sorts values as strings.
 
 This works well for strings ("Apple" comes before "Banana").
@@ -2422,10 +2570,12 @@ You can fix this by providing a **compare function**:
 
 ```js
 const points = [40, 100, 1, 5, 25, 10];
-console.log(points)       // [ 40, 100, 1, 5, 25, 10 ]
+console.log(points); // [ 40, 100, 1, 5, 25, 10 ]
 
-let sorted = points.sort(function (a, b) { return a - b })
-console.log(sorted)       // [ 1, 5, 10, 25, 40, 100 ]
+let sorted = points.sort(function (a, b) {
+  return a - b;
+});
+console.log(sorted); // [ 1, 5, 10, 25, 40, 100 ]
 ```
 
 #### 🔺 The Compare Function
@@ -2452,7 +2602,7 @@ The compare function compares all the values in the array, two values at a time 
 
 When comparing 40 and 100, the `sort()` method calls the compare function(40, 100).
 
-The function calculates 40 - 100 `(a - b)`, and since the result is negative (-60),  the sort function will sort 40 as a value lower than 100.
+The function calculates 40 - 100 `(a - b)`, and since the result is negative (-60), the sort function will sort 40 as a value lower than 100.
 
 You can use this code snippet to experiment with numerically and alphabetically sorting:
 
@@ -2483,26 +2633,27 @@ function myFunction2() {
 ```html
 <!DOCTYPE html>
 <html>
-<body>
-<h1>JavaScript Arrays</h1>
-<h2>The sort() Method</h2>
+  <body>
+    <h1>JavaScript Arrays</h1>
+    <h2>The sort() Method</h2>
 
-<p>Click the button (again and again) to sort the array in random order.</p>
+    <p>Click the button (again and again) to sort the array in random order.</p>
 
-<button onclick="myFunction()">Try it</button>
-<p id="demo"></p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
 
-<script>
-const points = [40, 100, 1, 5, 25, 10];
-document.getElementById("demo").innerHTML = points;  
+    <script>
+      const points = [40, 100, 1, 5, 25, 10];
+      document.getElementById("demo").innerHTML = points;
 
-function myFunction() {
-  points.sort(function(){return 0.5 - Math.random()});
-  document.getElementById("demo").innerHTML = points;
-}
-</script>
-
-</body>
+      function myFunction() {
+        points.sort(function () {
+          return 0.5 - Math.random();
+        });
+        document.getElementById("demo").innerHTML = points;
+      }
+    </script>
+  </body>
 </html>
 ```
 
@@ -2517,7 +2668,7 @@ function myArrayMax(arr) {
   return Math.max.apply(null, arr);
 }
 
-console.log(myArrayMax(points));        
+console.log(myArrayMax(points));
 // 100
 ```
 
@@ -2548,23 +2699,29 @@ The solution is to write a compare function to compare the property values:
 const cars = [
   { type: "Volvo", year: 2016 },
   { type: "Saab", year: 2001 },
-  { type: "BMW", year: 2010 }
+  { type: "BMW", year: 2010 },
 ];
 
 cars.sort((a, b) => {
-  return (
-    a.year - b.year
-  )
-})
+  return a.year - b.year;
+});
 
 function displayCars() {
   document.getElementById("demo").innerHTML =
-    cars[0].type + " " + cars[0].year + "<br>" +
-    cars[1].type + " " + cars[1].year + "<br>" +
-    cars[2].type + " " + cars[2].year;
+    cars[0].type +
+    " " +
+    cars[0].year +
+    "<br>" +
+    cars[1].type +
+    " " +
+    cars[1].year +
+    "<br>" +
+    cars[2].type +
+    " " +
+    cars[2].year;
 }
 
-displayCars()
+displayCars();
 ```
 
 #### 🔺 Stable Array sort()
@@ -2598,24 +2755,24 @@ const myArr = [
   { name: "X16", price: 140 },
   { name: "X17", price: 140 },
   { name: "X18", price: 140 },
-  { name: "X19", price: 140 }
+  { name: "X19", price: 140 },
 ];
 
 myArr.sort((p1, p2) => {
   if (p1.price < p2.price) {
-    return -1
+    return -1;
   }
 
   if (p1.price > p2.price) {
-    return 1
+    return 1;
   }
-})
+});
 
-let text = ""
+let text = "";
 
 myArr.forEach((value) => {
-  return text += value.name + " " + value.price + "<br>"
-})
+  return (text += value.name + " " + value.price + "<br>");
+});
 
 console.log(text);
 
@@ -2652,9 +2809,11 @@ The `forEach()` method calls a function (a callback function) once for each arra
 ```js
 const numbers = [45, 4, 9, 16, 25];
 
-let text = ""
-numbers.forEach((value, index, array) => { return text += value + "<br>" })
-document.getElementById("demo").innerHTML = text
+let text = "";
+numbers.forEach((value, index, array) => {
+  return (text += value + "<br>");
+});
+document.getElementById("demo").innerHTML = text;
 
 /*
 45
@@ -2670,15 +2829,17 @@ Note that the function takes 3 arguments:
 - The item value
 - The item index
 - The array itself
-  
+
 The example above uses only the value parameter. The example can be rewritten to:
 
 ```js
 const numbers = [45, 4, 9, 16, 25];
 
-let text = ""
-numbers.forEach((value) => { return text += value + "<br>" })
-document.getElementById("demo").innerHTML = text
+let text = "";
+numbers.forEach((value) => {
+  return (text += value + "<br>");
+});
+document.getElementById("demo").innerHTML = text;
 ```
 
 #### 🔺 Array map()
@@ -2694,9 +2855,9 @@ This example multiplies each array value by 2:
 ```js
 const numbers = [45, 4, 9, 16, 25];
 const number2 = numbers.map((value) => {
-  return value * 2
-})
-document.getElementById("demo").innerHTML = number2
+  return value * 2;
+});
+document.getElementById("demo").innerHTML = number2;
 
 /* 
 90, 
@@ -2716,8 +2877,8 @@ This example creates a new array from elements with a value larger than 18:
 ```js
 const numbers = [45, 4, 9, 16, 25];
 const numFilter = numbers.filter((value) => {
-  return value > 18
-})
+  return value > 18;
+});
 
 console.log(numFilter);
 // 45, 25
@@ -2729,18 +2890,22 @@ The `reduce()` method runs a function on each array element to produce (reduce i
 
 The `reduce()` method works from left-to-right in the array. See also `reduceRight()`.
 
-****
+---
+
 The `reduce()` method does not reduce the original array.
-****
+
+---
 
 This example finds the sum of all numbers in an array:
 
 ```js
 const numbers = [45, 4, 9, 16, 25];
 
-console.log(numbers.reduce((total, value, index, array) => {
-  return total + value
-}));
+console.log(
+  numbers.reduce((total, value, index, array) => {
+    return total + value;
+  })
+);
 
 // 99
 ```
@@ -2756,9 +2921,11 @@ The example above does not use the index and array parameters. It can be rewritt
 ```js
 const numbers = [45, 4, 9, 16, 25];
 
-console.log(numbers.reduce((total, value) => {
-  return total + value
-}));
+console.log(
+  numbers.reduce((total, value) => {
+    return total + value;
+  })
+);
 
 // 99
 ```
@@ -2769,16 +2936,20 @@ The `reduceRight()` method runs a function on each array element to produce (red
 
 The `reduceRight()` works from right-to-left in the array. See also `reduce()`.
 
-****
+---
+
 The `reduceRight()` method does not reduce the original array.
-****
+
+---
 
 ```js
 const numbers = [45, 4, 9, 16, 25];
 
-console.log(numbers.reduceRight((total, value) => {
-  return total + value
-}));
+console.log(
+  numbers.reduceRight((total, value) => {
+    return total + value;
+  })
+);
 
 // 99
 ```
@@ -2793,7 +2964,7 @@ This example checks if all array values are larger than 18:
 const numbers = [45, 4, 9, 16, 25];
 
 let result = numbers.every((value, index, array) => {
-  return value > 18
+  return value > 18;
 });
 
 console.log("All over 18 is " + result);
@@ -2811,7 +2982,7 @@ This example checks if some array values are larger than 18:
 const numbers = [45, 4, 9, 16, 25];
 
 let result = numbers.some((value, index, array) => {
-  return value > 18
+  return value > 18;
 });
 
 console.log("All over 18 is " + result);
@@ -2829,7 +3000,7 @@ This example finds (returns the value of) the first element that is larger than 
 const numbers = [4, 9, 16, 25, 29];
 
 let result = numbers.find((value, index, array) => {
-  return value > 18
+  return value > 18;
 });
 
 console.log("First number over 18 is " + result);
@@ -2847,8 +3018,8 @@ This example finds the index of the first element that is larger than 18:
 const numbers = [4, 9, 16, 25, 29];
 
 let result = numbers.findIndex((value, index, array) => {
-  return value > 18
-})
+  return value > 18;
+});
 
 console.log("First number over 18 has index " + result);
 // First number over 18 has index 3
@@ -2870,11 +3041,11 @@ The `Array.keys()` method returns an Array Iterator object with the keys of an a
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-const key = fruits.keys()
+const key = fruits.keys();
 
-let text = ""
+let text = "";
 for (let x of key) {
-  text += x + "<br>"
+  text += x + "<br>";
 }
 
 console.log(text);
@@ -2885,11 +3056,11 @@ console.log(text);
 
 ```js
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-const f = fruits.entries()
+const f = fruits.entries();
 
-text = ""
+text = "";
 for (let x of f) {
-  text += x + "<br>"
+  text += x + "<br>";
 }
 console.log(text);
 // 0,Banana<br>1,Orange<br>2,Apple<br>3,Mango<br>
@@ -2925,20 +3096,22 @@ console.log(year);
 ## 📌 Date Objects
 
 ```js
-const d = new Date()
+const d = new Date();
 ```
 
 ```js
-const d = new Date("2023-9-1")
+const d = new Date("2023-9-1");
 ```
 
-****
+---
+
 📝 **Note**
 
 Date objects are static. The "clock" is not "running".
 
 The computer clock is ticking, date objects are not.
-****
+
+---
 
 #### 🔺 Date Output
 
@@ -2946,9 +3119,11 @@ By default, JavaScript will use the browser's time zone and display a date as a 
 
 **Fri Sep 01 2023 09:24:22 GMT+0530 (India Standard Time)**
 
-****
+---
+
 You will learn much more about how to display dates, later in this tutorial.
-****
+
+---
 
 #### 🔺 Creating Date Objects
 
@@ -2986,11 +3161,12 @@ const d = new Date("September 01, 2023 09:28:44");
 
 ```js
 const d = new Date(2023, 11, 24, 10, 33, 30, 0);
-document.getElementById("demo").innerHTML = d
+document.getElementById("demo").innerHTML = d;
 // Sun Dec 24 2023 10:33:30 GMT+0530 (India Standard Time)
 ```
 
-****
+---
+
 📝 **Note**
 
 JavaScript counts months from **0** to **11**:
@@ -2998,7 +3174,8 @@ JavaScript counts months from **0** to **11**:
 **January = 0.**
 
 **December = 11.**
-****
+
+---
 
 #### 🔺 Using 6, 4, 3, or 2 Numbers
 
@@ -3062,11 +3239,13 @@ The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format:
 const d = new Date("2015-03-25");
 ```
 
-****
+---
+
 The computed date will be relative to your time zone.
 
 Depending on your time zone, the result above will vary between March 24 and March 25.
-****
+
+---
 
 #### 🔺 ISO Dates (Year and Month)
 
@@ -3076,9 +3255,11 @@ ISO dates can be written without specifying the day (YYYY-MM):
 const d = new Date("2015-03");
 ```
 
-****
+---
+
 Time zones will vary the result above between February 28 and March 01.
-****
+
+---
 
 #### 🔺 ISO Dates (Only Year)
 
@@ -3088,9 +3269,11 @@ ISO dates can be written without month and day (YYYY):
 const d = new Date("2015");
 ```
 
-****
+---
+
 Time zones will vary the result above between December 31 2014 and January 01 2015.
-****
+
+---
 
 #### 🔺 Short Dates.
 
@@ -3131,21 +3314,25 @@ const d = new Date(msec);
 | getMilliseconds() | Get **millisecond** (0-999)                   |
 | getTime()         | Get time (milliseconds since January 1, 1970) |
 
-****
+---
+
 📝 Note 1
 The get methods above return Local time.
 
 Universal time (UTC) is documented at the bottom of this page.
-****
 
-****
+---
+
+---
+
 📝 Note 2
 The get methods return information from existing date objects.
 
 In a date object, the time is static. The "clock" is not "running".
 
 The time in a date object is NOT the same as current time.
-****
+
+---
 
 #### 🔺 getFullYear() Method
 
@@ -3157,7 +3344,8 @@ console.log(d.getFullYear());
 // 2023
 ```
 
-****
+---
+
 ⚠️ **WARNING !**
 
 Old JavaScript code might use the non-standard method getYear().
@@ -3165,38 +3353,56 @@ Old JavaScript code might use the non-standard method getYear().
 getYear() is supposed to return a 2-digit year.
 
 getYear() is deprecated. Do not use it!
-****
+
+---
 
 #### 🔺 getMonth() Method
 
 The `getMonth()` method returns the month of a date as a number (0-11).
 
-****
+---
+
 📝 Note
 
 In JavaScript, January is month number 0, February is number 1, ...
 
 Finally, December is month number 11.
-****
+
+---
 
 ```js
-const d = new Date()
+const d = new Date();
 
 console.log(d.getMonth() + 1);
 // 9
 ```
 
-****
+---
+
 📝 **Note**
 
 You can use an array of names to return the month as a name:
-****
+
+---
 
 ```js
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
-const d = new Date()
-let month = months[d.getMonth()]
+const d = new Date();
+let month = months[d.getMonth()];
 
 console.log(month);
 // September
@@ -3207,7 +3413,7 @@ console.log(month);
 The `getDate()` method returns the day of a date as a number (1-31):
 
 ```js
-const d = new Date()
+const d = new Date();
 console.log(d.getDate());
 // 1
 ```
@@ -3217,7 +3423,7 @@ console.log(d.getDate());
 The `getHours()` method returns the hours of a date as a number (0-23):
 
 ```js
-const d = new Date()
+const d = new Date();
 console.log(d.getHours());
 // 22
 ```
@@ -3227,7 +3433,7 @@ console.log(d.getHours());
 The `getMinutes()` method returns the minutes of a date as a number (0-59):
 
 ```js
-const d = new Date()
+const d = new Date();
 console.log(d.getMinutes());
 // 15
 ```
@@ -3237,7 +3443,7 @@ console.log(d.getMinutes());
 The `getSeconds()` method returns the seconds of a date as a number (0-59):
 
 ```js
-const d = new Date()
+const d = new Date();
 console.log(d.getSeconds());
 // 20
 ```
@@ -3247,7 +3453,7 @@ console.log(d.getSeconds());
 The `getMilliseconds()` method returns the milliseconds of a date as a number (0-999):
 
 ```js
-const d = new Date()
+const d = new Date();
 console.log(d.getMilliseconds());
 // 609
 ```
@@ -3257,21 +3463,31 @@ console.log(d.getMilliseconds());
 The `getDay()` method returns the weekday of a date as a number (0-6).
 
 ```js
-const d = new Date()
+const d = new Date();
 console.log(d.getDay());
 // 5
 ```
 
-****
+---
+
 📝 **Note**
 
 You can use an array of names, and getDay() to return weekday as a name:
-****
+
+---
 
 ```js
-const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
-const d = new Date()
+const d = new Date();
 console.log(days[d.getDay()]);
 // Friday
 ```
@@ -3281,13 +3497,13 @@ console.log(days[d.getDay()]);
 The `getTime()` method returns the number of milliseconds since January 1, 1970:
 
 ```js
-const d = new Date("1970-01-01")
+const d = new Date("1970-01-01");
 console.log(d.getTime());
 // 0
 ```
 
 ```js
-const d = new Date()
+const d = new Date();
 console.log(d.getTime());
 // 1693587194392
 ```
@@ -3303,7 +3519,7 @@ const hour = minute * 60;
 const day = hour * 24;
 const year = day * 365;
 
-let years = Math.random(Date.now() / year)
+let years = Math.random(Date.now() / year);
 console.log(years);
 // 54
 ```
@@ -3328,9 +3544,9 @@ Set Date methods are used for setting a part of a date:
 The `setFullYear()` method sets the year of a date object. In this example to 2020:
 
 ```js
-const d = new Date()
-d.setFullYear(2023)
-document.getElementById("demo").innerHTML = d
+const d = new Date();
+d.setFullYear(2023);
+document.getElementById("demo").innerHTML = d;
 // Sat Sep 02 2023 02:05:29 GMT+0530 (India Standard Time)
 ```
 
@@ -3339,8 +3555,8 @@ document.getElementById("demo").innerHTML = d
 The `setMonth()` method sets the month of a date object (0-11):
 
 ```js
-const d = new Date()
-d.setMonth(8)
+const d = new Date();
+d.setMonth(8);
 // Sat Sep 02 2023 10:05:53 GMT+0530 (India Standard Time)
 ```
 
@@ -3349,8 +3565,8 @@ d.setMonth(8)
 The `setDate()` method sets the day of a date object (1-31):
 
 ```js
-const d = new Date()
-d.setDate(3)
+const d = new Date();
+d.setDate(3);
 // Sun Sep 03 2023 10:08:08 GMT+0530 (India Standard Time)
 ```
 
@@ -3359,8 +3575,8 @@ d.setDate(3)
 The `setHours()` method sets the hours of a date object (0-23):
 
 ```js
-const d = new Date()
-d.setHours(11)
+const d = new Date();
+d.setHours(11);
 // Sat Sep 02 2023 11:08:24 GMT+0530 (India Standard Time)
 ```
 
@@ -3369,8 +3585,8 @@ d.setHours(11)
 The `setMinutes()` method sets the minutes of a date object (0-59):
 
 ```js
-const d = new Date()
-d.setMinutes(15)
+const d = new Date();
+d.setMinutes(15);
 // Sat Sep 02 2023 10:15:58 GMT+0530 (India Standard Time)
 ```
 
@@ -3379,9 +3595,9 @@ d.setMinutes(15)
 The `setSeconds()` method sets the seconds of a date object (0-59):
 
 ```js
-const d = new Date()
-d.setSeconds(30)
-document.getElementById("demo").innerHTML = d
+const d = new Date();
+d.setSeconds(30);
+document.getElementById("demo").innerHTML = d;
 // Sat Sep 02 2023 11:33:30 GMT+0530 (India Standard Time)
 ```
 
@@ -3392,24 +3608,26 @@ Dates can easily be compared.
 The following example compares today's date with January 14, 2100:
 
 ```js
-let text
-const today = new Date()
-const someDay = new Date()
-someDay.setFullYear(2100, 0, 14)
+let text;
+const today = new Date();
+const someDay = new Date();
+someDay.setFullYear(2100, 0, 14);
 
 if (someDay > today) {
-  text = "Today is before January 14, 2100."
+  text = "Today is before January 14, 2100.";
 } else {
-  text = "Today is after January 14, 2100."
+  text = "Today is after January 14, 2100.";
 }
 
 console.log(text);
 // Today is before January 14, 2100.
 ```
 
-****
+---
+
 JavaScript counts months from 0 to 11. January is 0. December is 11.
-****
+
+---
 
 ## 📌 Math
 
@@ -3429,13 +3647,13 @@ There are 4 common methods to round a number to an integer:
 `Math.round(x)` returns the nearest integer:
 
 ```js
-console.log(Math.round(4.6))
+console.log(Math.round(4.6));
 // 5
 
-console.log(Math.round(4.5))
-// 5 
+console.log(Math.round(4.5));
+// 5
 
-console.log(Math.round(4.4))
+console.log(Math.round(4.4));
 // 4
 ```
 
@@ -3468,19 +3686,19 @@ console.log(Math.ceil(-4));
 Math.floor(x) returns the value of x rounded down to its nearest integer:
 
 ```js
-console.log(Math.floor(4.9))
+console.log(Math.floor(4.9));
 // 4
 
-console.log(Math.floor(4.7))
+console.log(Math.floor(4.7));
 // 4
 
-console.log(Math.floor(4.4))
+console.log(Math.floor(4.4));
 // 4
 
-console.log(Math.floor(4.2))
+console.log(Math.floor(4.2));
 // 4
 
-console.log(Math.floor(-4.2))
+console.log(Math.floor(-4.2));
 // -5
 ```
 
@@ -3489,19 +3707,19 @@ console.log(Math.floor(-4.2))
 Math.trunc(x) returns the integer part of x:
 
 ```js
-console.log(Math.trunc(4.9))
+console.log(Math.trunc(4.9));
 // 4
 
-console.log(Math.trunc(4.7))
+console.log(Math.trunc(4.7));
 // 4
 
-console.log(Math.trunc(4.4))
+console.log(Math.trunc(4.4));
 // 4
 
-console.log(Math.trunc(4.2))
+console.log(Math.trunc(4.2));
 // 4
 
-console.log(Math.trunc(-4.2))
+console.log(Math.trunc(-4.2));
 // -4
 ```
 
@@ -3526,11 +3744,13 @@ Math.random() returns a random number between 0 (inclusive), and 1 (exclusive):
 
 `Math.random()` used with `Math.floor()` can be used to return random integers.
 
-****
+---
+
 There is no such thing as JavaScript integers.
 
 We are talking about numbers with no decimals here.
-****
+
+---
 
 ```js
 // Returns a random integer from 0 to 9:
@@ -3623,8 +3843,8 @@ Here are some examples:
 The Boolean value of **0** (zero) is **false**:
 
 ```js
-let x = 0
-console.log(Boolean(x))
+let x = 0;
+console.log(Boolean(x));
 
 // false
 ```
@@ -3632,8 +3852,8 @@ console.log(Boolean(x))
 The Boolean value of "" (empty string) is **false**:
 
 ```js
-let x = ""
-console.log(Boolean(x))
+let x = "";
+console.log(Boolean(x));
 
 // false
 ```
@@ -3641,8 +3861,8 @@ console.log(Boolean(x))
 The Boolean value of **undefined** is **false**:
 
 ```js
-let x 
-console.log(Boolean(x))
+let x;
+console.log(Boolean(x));
 
 // false
 ```
@@ -3650,8 +3870,8 @@ console.log(Boolean(x))
 The Boolean value of **null** is **false**:
 
 ```js
-let x = null
-console.log(Boolean(x))
+let x = null;
+console.log(Boolean(x));
 
 // false
 ```
@@ -3659,33 +3879,33 @@ console.log(Boolean(x))
 The Boolean value of **false** is (you guessed it) **false**:
 
 ```js
-let x = false
-console.log(Boolean(x))
+let x = false;
+console.log(Boolean(x));
 
 // false
 ```
 
 ```js
-let x = 5
-let y = 5
+let x = 5;
+let y = 5;
 
-console.log(Boolean(x == y))
+console.log(Boolean(x == y));
 // true
 ```
 
 ```js
-let x = 5
-let y = 6
+let x = 5;
+let y = 6;
 
-console.log(Boolean(x == y))
+console.log(Boolean(x == y));
 // false
 ```
 
 ```js
-let x = 5
-let y = "5"
+let x = 5;
+let y = "5";
 
-console.log(Boolean(x === y))
+console.log(Boolean(x === y));
 // false
 ```
 
@@ -3704,7 +3924,7 @@ JavaScript also contains a conditional operator that assigns a value to a variab
 **Syntax**
 
 ```
-variablename = (condition) ? value1:value2 
+variablename = (condition) ? value1:value2
 ```
 
 ```js
@@ -3729,33 +3949,35 @@ console.log(compare);
 ```
 
 ```html
-  <input type="text" id="age">
+<input type="text" id="age" />
 
-  <input type="submit" value="Submit" onclick="arrowFunction()">
+<input type="submit" value="Submit" onclick="arrowFunction()" />
 
-  <p id="demo"></p>
-  
-  <script>
-    let arrowFunction = () => {
-      let text = ""
-      let age = Number(document.getElementById("age").value)
+<p id="demo"></p>
 
-      if (isNaN(age)) {
-        text = "Input is a not a number"
-      } else {
-        text = (age => 18) ? "Too young" : "Too Small"
-      }
+<script>
+  let arrowFunction = () => {
+    let text = "";
+    let age = Number(document.getElementById("age").value);
 
-      document.getElementById("demo").innerHTML = text + " to vote"
+    if (isNaN(age)) {
+      text = "Input is a not a number";
+    } else {
+      text = ((age) => 18) ? "Too young" : "Too Small";
     }
-  </script>
+
+    document.getElementById("demo").innerHTML = text + " to vote";
+  };
+</script>
 ```
 
 ## 📌 if, else, and else if
 
-****
+---
+
 Conditional statements are used to perform different actions based on different conditions.
-****
+
+---
 
 #### 🔺 Conditional Statements
 
@@ -3777,7 +3999,7 @@ In JavaScript we have the following conditional statements:
 
 Use the `if` statement to specify a block of JavaScript code to be executed if a condition is true.
 
-***Syntax***
+**_Syntax_**
 
 ```js
 if (condition) {
@@ -3785,17 +4007,19 @@ if (condition) {
 }
 ```
 
-****
+---
+
 ⚠️ **warning**
 
 That if is in lowercase letters. Uppercase letters (If or IF) will generate a JavaScript error.
-****
+
+---
 
 Make a "Good day" greeting if the hour is less than 18:00:
 
 ```js
 if (hours < 18) {
-  console.log("Good Day")
+  console.log("Good Day");
 }
 ```
 
@@ -3803,7 +4027,7 @@ if (hours < 18) {
 
 Use the `else` statement to specify a block of code to be executed if the condition is false.
 
-***Syntax***
+**_Syntax_**
 
 ```js
 if (condition) {
@@ -3816,14 +4040,14 @@ if (condition) {
 If the hour is less than 18, create a "Good day" greeting, otherwise "Good evening":
 
 ```js
-const hours = new Date().getHours()
+const hours = new Date().getHours();
 
-let greeting = ""
+let greeting = "";
 
 if (hours < 18) {
-  greeting = "Good Day"
+  greeting = "Good Day";
 } else {
-  greeting = "Good Evening"
+  greeting = "Good Evening";
 }
 
 console.log(greeting);
@@ -3841,7 +4065,7 @@ if (new Date().getHours() < 18) {
 
 Use the `else if` statement to specify a new condition if the first condition is false.
 
-***Syntax***
+**_Syntax_**
 
 ```js
 if (condition1) {
@@ -3856,17 +4080,16 @@ if (condition1) {
 If time is less than 10:00, create a "Good morning" greeting, if not, but time is less than 20:00, create a "Good day" greeting, otherwise a "Good evening":
 
 ```js
-const hours = new Date().getHours()
+const hours = new Date().getHours();
 
-let greeting = ""
+let greeting = "";
 
 if (hours < 10) {
-  greeting = "Good Morning"
+  greeting = "Good Morning";
 } else if (hours < 20) {
-  greeting = "Good Day"
-}
-else {
-  greeting = "Good Evening"
+  greeting = "Good Day";
+} else {
+  greeting = "Good Evening";
 }
 
 console.log(greeting);
@@ -3874,16 +4097,18 @@ console.log(greeting);
 
 ## 📌 Switch Statement
 
-****
+---
+
 The `switch` statement is used to perform different actions based on different conditions.
-****
+
+---
 
 Use the `switch` statement to select one of many code blocks to be executed.
 
-***Syntax***
+**_Syntax_**
 
 ```js
-switch(expression) {
+switch (expression) {
   case x:
     // code block
     break;
@@ -3891,7 +4116,7 @@ switch(expression) {
     // code block
     break;
   default:
-    // code block
+  // code block
 }
 ```
 
@@ -3909,31 +4134,31 @@ The `getDay()` method returns the weekday as a number between 0 and 6.
 This example uses the weekday number to calculate the weekday name:
 
 ```js
-const x = new Date().getDay()
+const x = new Date().getDay();
 
-let days
+let days;
 
 switch (x) {
   case 0:
-    days = "Sunday"
-    break
+    days = "Sunday";
+    break;
   case 1:
-    days = "Monday"
-    break
+    days = "Monday";
+    break;
   case 2:
-    days = "Tuesday"
-    break
+    days = "Tuesday";
+    break;
   case 3:
-    days = "Wednesday"
-    break
+    days = "Wednesday";
+    break;
   case 4:
-    days = "Thursday"
-    break
+    days = "Thursday";
+    break;
   case 5:
-    days = "Friday"
-    break
+    days = "Friday";
+    break;
   case 6:
-    days = "Saturday"
+    days = "Saturday";
 }
 
 console.log("Today is " + days);
@@ -3947,10 +4172,12 @@ This will stop the execution inside the switch block.
 
 It is not necessary to break the last case in a switch block. The block breaks (ends) there anyway.
 
-****
+---
+
 📝 **Note**
 If you omit the break statement, the next case will be executed even if the evaluation does not match the case.
-****
+
+---
 
 #### 🔺 The default Keyword
 
@@ -3961,19 +4188,19 @@ The `getDay()` method returns the weekday as a number between 0 and 6.
 If today is neither Saturday (6) nor Sunday (0), write a default message:
 
 ```js
-const x = new Date().getDay()
+const x = new Date().getDay();
 
-let days
+let days;
 
 switch (x) {
   case 6:
-    days = "Saturday"
-    break
+    days = "Saturday";
+    break;
   case 0:
-    days = "Sunday"
-    break
+    days = "Sunday";
+    break;
   default:
-    days = "Looking forward to the Weekend"
+    days = "Looking forward to the Weekend";
 }
 
 console.log(days);
@@ -3982,25 +4209,27 @@ console.log(days);
 The `default` case does not have to be the last case in a switch block:
 
 ```js
-let days
+let days;
 
 switch (new Date().getDay()) {
   default:
-    days = "Looking forward to the Weekend"
-    break
+    days = "Looking forward to the Weekend";
+    break;
   case 6:
-    days = "Saturday"
-    break
+    days = "Saturday";
+    break;
   case 0:
-    days = "Sunday"
+    days = "Sunday";
 }
 
 console.log(days);
 ```
 
-****
+---
+
 If `default` is not the last case in the switch block, remember to end the default case with a break.
-****
+
+---
 
 #### 🔺 Common Code Blocks
 
@@ -4009,19 +4238,19 @@ Sometimes you will want different switch cases to use the same code.
 In this example case 4 and 5 share the same code block, and 0 and 6 share another code block:
 
 ```js
-let text
+let text;
 
 switch (new Date().getDay()) {
   case 4:
   case 5:
-    text = "Soon it is Weekend"
-    break
+    text = "Soon it is Weekend";
+    break;
   case 0:
   case 6:
-    text = "It is weekend"
-    break
+    text = "It is weekend";
+    break;
   default:
-    text = "Looking forward to the  Weekend"
+    text = "Looking forward to the  Weekend";
 }
 
 console.log(text);
@@ -4072,24 +4301,26 @@ In this example there will be no match for x:
 
 ## 📌 For Loop
 
-****
-Loops can execute a block of code a number of times.
-****
+---
 
-***Loops*** are handy, if you want to run the same code over and over again, each time with a different value.
+Loops can execute a block of code a number of times.
+
+---
+
+**_Loops_** are handy, if you want to run the same code over and over again, each time with a different value.
 
 Often this is the case when working with arrays:
 
 ```js
-const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"]
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
 
-let text = ""
+let text = "";
 
 for (let i = 0; i < cars.length; i++) {
-  text += cars[i] + "<br>"
+  text += cars[i] + "<br>";
 }
 
-console.log(text)
+console.log(text);
 // BMW<br>Volvo<br>Saab<br>Ford<br>Fiat<br>Audi<br>
 ```
 
@@ -4121,7 +4352,7 @@ for (expression 1; expression 2; expression 3) {
 
 ```js
 for (let x = 0; x < 5; x++) {
-  console.log(x)
+  console.log(x);
 }
 
 /* 
@@ -4150,14 +4381,14 @@ This is not always the case. JavaScript doesn't care. Expression 1 is optional.
 You can initiate many values in expression 1 (separated by comma):
 
 ```js
-const cars = ["BMW", "Volvo", "Saab", "Ford"]
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
 
-let i, len, text
+let i, len, text;
 for (i = 0, len = cars.length, text = ""; i < len; i++) {
-  text += cars[i] + "<br>"
+  text += cars[i] + "<br>";
 }
 
-document.getElementById("demo").innerHTML = text
+document.getElementById("demo").innerHTML = text;
 ```
 
 **Expression 2**
@@ -4168,20 +4399,24 @@ This is not always the case. JavaScript doesn't care. Expression 2 is also optio
 
 If expression 2 returns true, the loop will start over again. If it returns false, the loop will end.
 
-****
+---
+
 If you omit expression 2, you must provide a break inside the loop. Otherwise the loop will never end. This will crash your browser. Read about breaks in a later chapter of this tutorial.
-****
+
+---
 
 ```js
-const cars = ["BMW", "Volvo", "Saab", "Ford"]
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
 
-let i = 2, len = cars.length, text = ""
+let i = 2,
+  len = cars.length,
+  text = "";
 
-for (;i < len; i++) {
-  text += cars[i] + "<br>"  
+for (; i < len; i++) {
+  text += cars[i] + "<br>";
 }
 
-document.getElementById("demo").innerHTML = text
+document.getElementById("demo").innerHTML = text;
 /*
 Saab
 Ford
@@ -4199,16 +4434,18 @@ Expression 3 can do anything like negative increment (i--), positive increment (
 Expression 3 can also be omitted (like when you increment your values inside the loop):
 
 ```js
-const cars = ["BMW", "Volvo", "Saab", "Ford"]
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
 
-let i = 2, len = cars.length, text = ""
+let i = 2,
+  len = cars.length,
+  text = "";
 
-for (; i < len;) {
-  text += cars[i] + "<br>"
-  i++
+for (; i < len; ) {
+  text += cars[i] + "<br>";
+  i++;
 }
 
-document.getElementById("demo").innerHTML = text
+document.getElementById("demo").innerHTML = text;
 /*
 Saab
 Ford
@@ -4219,7 +4456,7 @@ Ford
 
 The JavaScript `for in` statement loops through the properties of an Object:
 
-***Syntax***
+**_Syntax_**
 
 ```js
 for (key in object) {
@@ -4228,12 +4465,12 @@ for (key in object) {
 ```
 
 ```js
-const person = { fname: "John", lname: "Doe", age: 25 }
+const person = { fname: "John", lname: "Doe", age: 25 };
 
-let text = ""
+let text = "";
 
 for (let x in person) {
-  text += person[x]
+  text += person[x];
 }
 
 console.log(text);
@@ -4249,34 +4486,36 @@ console.log(text);
 
 ```js
 const numbers = [45, 4, 9, 16, 25];
-let text = ""
+let text = "";
 
 for (let x in numbers) {
-  text += numbers[x]
+  text += numbers[x];
 }
 
-console.log(text)
+console.log(text);
 // 45491625
 ```
 
-****
+---
+
 ⚠️ **warning**
 Do not use **for** **in** over an Array if the index **order** is important.
 
 The index order is implementation-dependent, and array values may not be accessed in the order you expect.
 
 It is better to use a **for** loop, a **for** **of** loop, or **Array.forEach()** when the order is important.
-****
+
+---
 
 ```js
-const numbers = [45, 4, 9, 16, 25]
-let txt = ""
+const numbers = [45, 4, 9, 16, 25];
+let txt = "";
 
 numbers.forEach((value, index, array) => {
-  txt += value
-})
+  txt += value;
+});
 
-console.log(txt)
+console.log(txt);
 // 45491625
 ```
 
@@ -4286,7 +4525,7 @@ The JavaScript `for of` statement loops through the values of an iterable object
 
 It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:
 
-***Syntax***
+**_Syntax_**
 
 ```js
 for (variable of iterable) {
@@ -4294,33 +4533,33 @@ for (variable of iterable) {
 }
 ```
 
-*variable* - For every iteration the value of the next property is assigned to the variable. Variable can be declared with `const`, `let`, or `var`.
+_variable_ - For every iteration the value of the next property is assigned to the variable. Variable can be declared with `const`, `let`, or `var`.
 
 #### 🔺 Looping over an Array
 
 ```js
 const cars = ["BMW", "Volvo", "Mini"];
 
-let text = ""
+let text = "";
 for (let x of cars) {
-  text += x + "<br>"
+  text += x + "<br>";
 }
 
-console.log(text)
+console.log(text);
 // BMW<br>Volvo<br>Mini<br>
 ```
 
 #### 🔺 Looping over a String
 
 ```js
-const cars = "JavaScript"
+const cars = "JavaScript";
 
-let text = ""
+let text = "";
 for (let x of cars) {
-  text += x + "<br>"
+  text += x + "<br>";
 }
 
-console.log(text)
+console.log(text);
 // J<br>a<br>v<br>a<br>S<br>c<br>r<br>i<br>p<br>t<br>
 ```
 
@@ -4330,7 +4569,7 @@ Loops can execute a block of code as long as a specified condition is true.
 
 The `while` loop loops through a block of code as long as a specified condition is true.
 
-***Syntax***
+**_Syntax_**
 
 ```js
 while (condition) {
@@ -4341,11 +4580,11 @@ while (condition) {
 In the following example, the code in the loop will run, over and over again, as long as a variable (i) is less than 10:
 
 ```js
-let text = ""
-let i = 0
+let text = "";
+let i = 0;
 while (i < 10) {
-  text += "<br>The Number is " + i
-  i++
+  text += "<br>The Number is " + i;
+  i++;
 }
 
 console.log(text);
@@ -4371,20 +4610,19 @@ The `do while` loop is a variant of the while loop. This loop will execute the c
 ```js
 do {
   // code block to be executed
-}
-while (condition);
+} while (condition);
 ```
 
 The example below uses a `do while` loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:
 
 ```js
-let text = ""
-let i = 0
+let text = "";
+let i = 0;
 
 do {
-  text += "<br>The Number is " + i
-  i++
-} while (i < 10)
+  text += "<br>The Number is " + i;
+  i++;
+} while (i < 10);
 
 console.log(text);
 
@@ -4410,12 +4648,12 @@ The loop in this example uses a `for` loop to collect the car names from the car
 
 ```js
 const cars = ["BMW", "Volvo", "Saab", "Ford"];
-let text = ""
-let i = 0
+let text = "";
+let i = 0;
 
-for (; cars[i];) {
-  text += cars[i] + "<br>"
-  i++
+for (; cars[i]; ) {
+  text += cars[i] + "<br>";
+  i++;
 }
 
 console.log(text);
@@ -4425,12 +4663,12 @@ console.log(text);
 
 ```js
 const cars = ["BMW", "Volvo", "Saab", "Ford"];
-let text = ""
-let i = 0
+let text = "";
+let i = 0;
 
 while (cars[i]) {
-  text += cars[i] + "<br>"
-  i++ 
+  text += cars[i] + "<br>";
+  i++;
 }
 
 console.log(text);
@@ -4449,12 +4687,14 @@ You have already seen the `break` statement used in an earlier chapter of this t
 The `break` statement can also be used to jump out of a loop:
 
 ```js
-let text = ""
+let text = "";
 for (let i = 0; i < 10; i++) {
-  if (i === 3) { break; }
-  text += i + "<br>"
+  if (i === 3) {
+    break;
+  }
+  text += i + "<br>";
 }
-document.getElementById("demo").innerHTML = text
+document.getElementById("demo").innerHTML = text;
 /*
 0
 1
@@ -4471,12 +4711,14 @@ The `continue` statement breaks one iteration (in the loop), if a specified cond
 This example skips the value of 3:
 
 ```js
-let text = ""
+let text = "";
 for (let i = 0; i < 10; i++) {
-  if (i === 3) { continue; }
-  text += i + "<br>"
+  if (i === 3) {
+    continue;
+  }
+  text += i + "<br>";
 }
-document.getElementById("demo").innerHTML = text
+document.getElementById("demo").innerHTML = text;
 /*
 0
 1
@@ -4501,7 +4743,7 @@ statements
 
 The `break` and the `continue` statements are the only JavaScript statements that can "jump out of" a code block.
 
-***Syntax***
+**_Syntax_**
 
 ```
 break labelname;
@@ -4520,11 +4762,11 @@ const cars = ["BMW", "Volvo", "Saab", "Ford"];
 let text = "";
 
 list: {
-  text += cars[0] + "<br>"; 
-  text += cars[1] + "<br>"; 
+  text += cars[0] + "<br>";
+  text += cars[1] + "<br>";
   break list;
-  text += cars[2] + "<br>"; 
-  text += cars[3] + "<br>"; 
+  text += cars[2] + "<br>";
+  text += cars[3] + "<br>";
 }
 
 document.getElementById("demo").innerHTML = text;
@@ -4536,7 +4778,7 @@ Volvo
 
 ## 📌 Errors
 
-***Throw, and Try...Catch...Finally***
+**_Throw, and Try...Catch...Finally_**
 
 The `try` statement defines a code block to run (to try).
 
@@ -4556,7 +4798,7 @@ In this example we misspelled "alert" as "adddlert" to deliberately produce an e
 
 ```js
 try {
-  textAlert("Hello World")
+  textAlert("Hello World");
 } catch (err) {
   console.log(err.message);
 }
@@ -4588,8 +4830,8 @@ Technically you can **throw an exception (throw an error)**.
 The exception can be a JavaScript `String`, a `Number`, a `Boolean` or an `Object`:
 
 ```js
-throw "Too big";    // throw a text
-throw 500;          // throw a number
+throw "Too big"; // throw a text
+throw 500; // throw a number
 ```
 
 If you use `throw` together with `try` and `catch`, you can control program flow and generate custom error messages.
@@ -4610,7 +4852,7 @@ If you use `throw` together with `try` and `catch`, you can control program flow
       if (isNaN(input)) throw "Not a Number!"
       input = Number(input)
       if (input < 5) throw "too low"
-      if (input > 10) throw "too high"          
+      if (input > 10) throw "too high"
     } catch (err) {
       result.innerHTML = "input is " + err
     }
@@ -4689,10 +4931,10 @@ A `RangeError` is thrown if you use a number that is outside the range of legal 
 For example: You cannot set the number of significant digits of a number to 500.
 
 ```js
-let num = 1
+let num = 1;
 
 try {
-  num.toPrecision(500)      // A number cannot have 500 significate digits
+  num.toPrecision(500); // A number cannot have 500 significate digits
 } catch (err) {
   console.log(err.name);
 }
@@ -4704,9 +4946,9 @@ try {
 A `ReferenceError` is thrown if you use (reference) a variable that has not been declared:
 
 ```js
-let x = 5
+let x = 5;
 try {
-  x = y + 1     // y cannot be used (reference)
+  x = y + 1; // y cannot be used (reference)
 } catch (err) {
   console.log(err.name);
 }
@@ -4719,8 +4961,8 @@ A `SyntaxError` is thrown if you try to evaluate code with a syntax error.
 
 ```js
 try {
-  eval("alert('Hello World)") //
-} catch(err) {
+  eval("alert('Hello World)"); //
+} catch (err) {
   console.log(err.name);
 }
 // SyntaxError
@@ -4731,9 +4973,9 @@ try {
 A `TypeError` is thrown if you use a value that is outside the range of expected types:
 
 ```js
-let num = 1
+let num = 1;
 try {
-  num.toUpperCase()      // You can not convert a number to upper case.
+  num.toUpperCase(); // You can not convert a number to upper case.
 } catch (err) {
   console.log(err.name);
 }
@@ -4742,14 +4984,18 @@ try {
 
 #### 🔺 Arrow Function
 
-****
+---
+
 Arrow functions were introduced in ES6.
 
 Arrow functions allow us to write shorter function syntax:
-****
+
+---
 
 ```js
-let myFunction = (a, b) => { a * b }
+let myFunction = (a, b) => {
+  a * b;
+};
 console.log(myFunction(2, 5));
 ```
 
@@ -4757,8 +5003,8 @@ console.log(myFunction(2, 5));
 
 ```js
 let hello = function () {
-  return "Hello world"
-}
+  return "Hello world";
+};
 
 console.log(hello());
 // Hello World!
@@ -4768,8 +5014,8 @@ console.log(hello());
 
 ```js
 let hello = () => {
-  return "Hello World!"
-}
+  return "Hello World!";
+};
 console.log(hello());
 // Hello World!
 ```
@@ -4778,8 +5024,8 @@ It gets shorter! If the function has only one statement, and the statement `retu
 
 ```js
 let hello = (value) => {
-  return "Hello " + value
-}
+  return "Hello " + value;
+};
 console.log(hello("World!"));
 // Hello World!
 ```
@@ -4789,14 +5035,16 @@ In fact, if you have only one parameter, you can skip the parentheses as well:
 **Arrow Function Without Parentheses:**
 
 ```js
-let hello = value => "Hello " + value
+let hello = (value) => "Hello " + value;
 console.log(hello("World!"));
 // Hello World!
 ```
 
-****
-****
-****
+---
+
+---
+
+---
 
 <!-- ## 🎓 What is JSON ? -->
 
@@ -4840,13 +5088,11 @@ The following example changes the content (the `innerHTML`) of the `<p>` element
 ```html
 <html>
   <body>
-
     <p id="demo"></p>
 
     <script>
-      document.getElementById("demo").innerHTML = "Hello World!"
+      document.getElementById("demo").innerHTML = "Hello World!";
     </script>
-
   </body>
 </html>
 ```
@@ -4861,17 +5107,17 @@ If you want to access any element in an HTML page, you always start with accessi
 
 Below are some examples of how you can use the document object to access and manipulate HTML.
 
-****
+---
 
 **Finding HTML Elements**
 
 | Method                                 | Description                   |
 | -------------------------------------- | ----------------------------- |
-| document.getElementById(*id*)          | Find an element by element id |
-| document.getElementByTagName(*name*)   | Find Element by tag name      |
-| document.getElementByClassName(*name*) | Find Element bt class name    |
+| document.getElementById(_id_)          | Find an element by element id |
+| document.getElementByTagName(_name_)   | Find Element by tag name      |
+| document.getElementByClassName(_name_) | Find Element bt class name    |
 
-****
+---
 
 **Changing HTML Element**
 
@@ -4883,27 +5129,27 @@ Below are some examples of how you can use the document object to access and man
 | **Method**                           | **Description**                               |
 | element.setAttribute                 | Change the attribute value of an HTML element |
 
-****
+---
 
 **Adding and Deleting Elements**
 
 | Method                            | Description                       |
 | --------------------------------- | --------------------------------- |
-| document.createElement(*element*) | Create an HTML element            |
-| document.removeChild(*element*)   | Remove an HTML element            |
-| document.appendChild(*element*)   | Add an HTML element               |
-| document.replaceChild(*new, old*) | Replace an HTML element           |
-| document.write(*text*)            | Write into the HTML output stream |
+| document.createElement(_element_) | Create an HTML element            |
+| document.removeChild(_element_)   | Remove an HTML element            |
+| document.appendChild(_element_)   | Add an HTML element               |
+| document.replaceChild(_new, old_) | Replace an HTML element           |
+| document.write(_text_)            | Write into the HTML output stream |
 
-****
+---
 
 **Adding Events Handlers**
 
 | Method                                                     | Description                                   |
 | ---------------------------------------------------------- | --------------------------------------------- |
-| document.getElementById(*id*).onclick = function(){*code*} | Adding event handler code to an onclick event |
+| document.getElementById(_id_).onclick = function(){_code_} | Adding event handler code to an onclick event |
 
-****
+---
 
 **Finding HTML Objects**
 
@@ -4953,9 +5199,10 @@ This example finds the element with `id="intro"`:
 <p id="demo"></p>
 
 <script>
-  const element = document.getElementById("intro")
+  const element = document.getElementById("intro");
 
-  document.getElementById("demo").innerHTML = "The text from the intro paragraph is: " + element.innerHTML
+  document.getElementById("demo").innerHTML =
+    "The text from the intro paragraph is: " + element.innerHTML;
 </script>
 ```
 
@@ -4967,7 +5214,7 @@ If the element is found, the return method will return the element as an object 
 
 If the element is not found, element will contain `null`.
 
-****
+---
 
 **Finding Element by Tag Name**
 
@@ -4983,9 +5230,10 @@ This example finds all `<p>` elements:
 <p id="demo"></p>
 
 <script>
-  const element = document.getElementsByTagName("P")
+  const element = document.getElementsByTagName("P");
 
-  document.getElementById("demo").innerHTML = "The text in first paragraph (index 0) is: " + element[0].innerHTML
+  document.getElementById("demo").innerHTML =
+    "The text in first paragraph (index 0) is: " + element[0].innerHTML;
 </script>
 ```
 
@@ -4996,28 +5244,29 @@ This example finds all `<p>` elements:
 This example finds the element with `id="main"`, and then finds all `<p>` elements inside `"main"`:
 
 ```html
-  <div id="main">
-    <p>Hello World</p>
-    <p>John Doe</p>
-  </div>
+<div id="main">
+  <p>Hello World</p>
+  <p>John Doe</p>
+</div>
 
-  <p>My Age is 22</p>
+<p>My Age is 22</p>
 
-  <p id="demo"></p>
+<p id="demo"></p>
 
-  <script>
-    const x = document.getElementById("main")
-    const y = x.getElementsByTagName("p")
+<script>
+  const x = document.getElementById("main");
+  const y = x.getElementsByTagName("p");
 
-    document.getElementById("demo").innerHTML = 'This second paragraph (index 0) inside "main" is: ' + y[1].innerHTML
-  </script>
+  document.getElementById("demo").innerHTML =
+    'This second paragraph (index 0) inside "main" is: ' + y[1].innerHTML;
+</script>
 ```
 
 | result                                                     |
 | ---------------------------------------------------------- |
 | This second paragraph (index 0) inside "main" is: John Doe |
 
-****
+---
 
 **Finding Elements by Class Name**
 
@@ -5026,55 +5275,59 @@ If you want to find all elements with the same class name, use `getElementByClas
 This example returns a list of all elements with `class-"intro"`.
 
 ```html
-  <p class="into">Hello World</p>
-  <p class="into">John Doe</p>
-  <p>My Age is 22</p>
+<p class="into">Hello World</p>
+<p class="into">John Doe</p>
+<p>My Age is 22</p>
 
-  <p id="demo"></p>
+<p id="demo"></p>
 
-  <script>
-    const x = document.getElementsByClassName("into")
-    document.getElementById("demo").innerHTML = `My name is <b>${x[1].innerHTML}</b>`
-  </script>
+<script>
+  const x = document.getElementsByClassName("into");
+  document.getElementById(
+    "demo"
+  ).innerHTML = `My name is <b>${x[1].innerHTML}</b>`;
+</script>
 ```
 
 | result              |
 | ------------------- |
 | My name is John Doe |
 
-****
+---
 
 **Using document.anchors**
 
 ```html
-  <a name="HTML" href=""></a>
-  <a name="CSS" href=""></a>
-  <a name="JavaScript" href=""></a>
+<a name="HTML" href=""></a>
+<a name="CSS" href=""></a>
+<a name="JavaScript" href=""></a>
 
-  <p id="demo"></p>
+<p id="demo"></p>
 
-  <script>
-    document.getElementById("demo").innerHTML = `Number of anchor are: ${document.anchors.length}`
-  </script>
+<script>
+  document.getElementById(
+    "demo"
+  ).innerHTML = `Number of anchor are: ${document.anchors.length}`;
+</script>
 ```
 
 | result                  |
 | ----------------------- |
 | Number of anchor are: 3 |
 
-****
+---
 
 **document.body**
 
 ```html
-  <h1>Hello World</h1>
-  <p>This is a paragraph.</p>
+<h1>Hello World</h1>
+<p>This is a paragraph.</p>
 
-  <p id="demo"></p>
+<p id="demo"></p>
 
-  <script>
-    document.getElementById("demo").innerHTML = document.body.innerHTML
-  </script>
+<script>
+  document.getElementById("demo").innerHTML = document.body.innerHTML;
+</script>
 ```
 
 | result               |
@@ -5085,28 +5338,30 @@ This example returns a list of all elements with `class-"intro"`.
 | Hello World          |
 | This is a paragraph. |
 
-****
+---
 
 **document.forms**
 
 ```html
-  <form action="">
-    <label for="fName">First name : </label>
-    <input type="text" name="fName" id="fName">
-  </form>
+<form action="">
+  <label for="fName">First name : </label>
+  <input type="text" name="fName" id="fName" />
+</form>
 
-  <p id="demo"></p>
+<p id="demo"></p>
 
-  <script>
-    document.getElementById("demo").innerHTML = `Number Of Forms : ${document.forms.length}`
-  </script>
+<script>
+  document.getElementById(
+    "demo"
+  ).innerHTML = `Number Of Forms : ${document.forms.length}`;
+</script>
 ```
 
 | result              |
 | ------------------- |
 | Number Of Forms : 1 |
 
-****
+---
 
 **document.head**
 
@@ -5114,8 +5369,7 @@ This example returns a list of all elements with `class-"intro"`.
 <p id="demo"></p>
 
 <script>
-document.getElementById("demo").innerHTML =
-document.head;
+  document.getElementById("demo").innerHTML = document.head;
 </script>
 ```
 
@@ -5123,19 +5377,19 @@ document.head;
 | ------------------------ |
 | [object HTMLHeadElement] |
 
-****
+---
 
 **document.image**
 
 ```html
-<img src="./code_black_bg.png" alt="CodeImage">
-<img src="./code_white_bg.png" alt="CodeImage">
+<img src="./code_black_bg.png" alt="CodeImage" />
+<img src="./code_white_bg.png" alt="CodeImage" />
 
 <p id="demo"></p>
 
 <script>
-document.getElementById("demo").innerHTML =
-"Number of images: " + document.images.length;
+  document.getElementById("demo").innerHTML =
+    "Number of images: " + document.images.length;
 </script>
 ```
 
@@ -5143,18 +5397,20 @@ document.getElementById("demo").innerHTML =
 | ------------------- |
 | Number of images: 2 |
 
-****
+---
 
 **document.links**
 
 ```html
-<p><a href="./html/intro.html">HTML</a><br><a href="./css/intro.html">CSS</a></p>
+<p>
+  <a href="./html/intro.html">HTML</a><br /><a href="./css/intro.html">CSS</a>
+</p>
 
 <p id="demo"></p>
 
 <script>
-document.getElementById("demo").innerHTML =
-"Number of links: " + document.links.length;
+  document.getElementById("demo").innerHTML =
+    "Number of links: " + document.links.length;
 </script>
 ```
 
@@ -5162,26 +5418,26 @@ document.getElementById("demo").innerHTML =
 | ------------------ |
 | Number of links: 2 |
 
-****
+---
 
 **document.title**
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>JavaScript Documentation</title>
+  </head>
 
-<head>
-  <title>JavaScript Documentation</title>
-</head>
+  <body>
+    <p id="demo"></p>
 
-<body>
-  <p id="demo"></p>
-
-  <script>
-    document.getElementById("demo").innerHTML = `The title of this document is: <b>${document.title}</b>`
-  </script>
-</body>
-
+    <script>
+      document.getElementById(
+        "demo"
+      ).innerHTML = `The title of this document is: <b>${document.title}</b>`;
+    </script>
+  </body>
 </html>
 ```
 
@@ -5191,20 +5447,24 @@ document.getElementById("demo").innerHTML =
 
 ## 🎓 Browser BOM
 
-🚧 ***Under Working***
+🚧 **_Under Working_**
 
 <!--  -->
 
-****
-****
-****
+---
+
+---
+
+---
 
 ## 📓 Project's
 
 - [Music WebSite](https://github.com/webDev5464/SimpMusic.git)
 
-****
+---
+
 [![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.com/badshah5464/Next_Js-README.git) [![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
-****
+
+---
 
 <!--  -->
