@@ -5603,7 +5603,7 @@ To assign events to HTML elements you can use event attributes.
 <p id="time"></p>
 ```
 
-**Assign Events Using the HTML DOM
+Assign Events Using the HTML DOM
 
 ```html
 <button id="btn">Click!</button>
