@@ -5551,7 +5551,69 @@ This example changes the style of the HTML element with `id="id1"`, when the use
 
 #### 🔺 DOM Events
 
+\*\*Reacting to Events
 
+A JavaScript can be executed when an events occurs, like when a user clicks on HTML element.
+
+To execute code when a user on an element, add JavaScript code to an HTML event attribute:
+
+```
+click=JavaScript
+```
+
+Example of HTML events:
+
+- When a user click to mouse
+- When a web page has loaded
+- When an image has been loaded
+- When the mouse moves over an element
+- When an input field changed
+- When an HTML form submitted
+- When a user strokes a key
+
+In a example, the content of the `<h1>` element is changed when a user clicks on it:
+
+```html
+<h1 onclick="this.innerHTML = 'Hello World!'">Click on this text!</h1>
+```
+
+In this example, a function is called from the event handler:
+
+```html
+<h1 onclick="changeText(this)">Click on this text!</h1>
+
+<script>
+  function changeText(id) {
+    id.innerHTML = "Hello World";
+  }
+</script>
+```
+
+**Event Element**
+
+To assign events to HTML elements you can use event attributes.
+
+```html
+<button onclick="timing()">Click!</button>
+<script>
+  function timing() {
+    document.getElementById("time").innerHTML = Date();
+  }
+</script>
+<p id="time"></p>
+```
+
+**Assign Events Using the HTML DOM
+
+```html
+<button id="btn">Click!</button>
+<p id="time"></p>
+<script>
+  document.getElementById("btn").onclick = function myTiming() {
+    document.getElementById("time").innerHTML = Date();
+  };
+</script>
+```
 
 ## 🎓 Browser BOM
 
