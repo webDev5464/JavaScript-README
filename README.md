@@ -5551,7 +5551,7 @@ This example changes the style of the HTML element with `id="id1"`, when the use
 
 #### 🔺 DOM Events
 
-\*\*Reacting to Events
+Reacting to Events
 
 A JavaScript can be executed when an events occurs, like when a user clicks on HTML element.
 
@@ -5589,7 +5589,7 @@ In this example, a function is called from the event handler:
 </script>
 ```
 
-**Event Element**
+**Event Attribute**
 
 To assign events to HTML elements you can use event attributes.
 
@@ -5612,6 +5612,21 @@ Assign Events Using the HTML DOM
   document.getElementById("btn").onclick = function myTiming() {
     document.getElementById("time").innerHTML = Date();
   };
+</script>
+```
+
+**The onchange Event**
+
+The `onchange` event is often used in combination with validation of input fields
+
+```html
+<input type="text" name="name" id="name" onchange="upperCase()" />
+
+<script>
+  function upperCase() {
+    const x = document.getElementById("name");
+    x.value = x.value.toUpperCase();
+  }
 </script>
 ```
 

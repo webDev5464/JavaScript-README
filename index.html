@@ -6,6 +6,15 @@
     <title>Document</title>
   </head>
   <body>
+    <input type="text" name="name" id="name" onchange="upperCase()" />
 
+    <script>
+      function upperCase() {
+        const x = document.getElementById("name");
+        x.value = x.value.toUpperCase();
+      }
+    </script>
+
+    <script src="./index.js"></script>
   </body>
 </html>
