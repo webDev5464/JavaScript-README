@@ -5488,6 +5488,71 @@ This example changes the style of the HTML element with `id="id1"`, when the use
 </button>
 ```
 
+#### 🔺 DOM Animation
+
+- Copy End pest in your device.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      #container {
+        height: 400px;
+        width: 400px;
+        background-color: yellow;
+        position: relative;
+      }
+
+      #animation {
+        height: 50px;
+        width: 50px;
+        background-color: red;
+        position: absolute;
+      }
+
+      button {
+        margin: 0 0 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="action()">Click!</button>
+
+    <section id="container">
+      <div id="animation"></div>
+    </section>
+
+    <script>
+      function action() {
+        let animation = document.getElementById("animation");
+        let id = null;
+        let pos = 0;
+        clearInterval(0);
+        id = setInterval(frame, 5);
+
+        function frame() {
+          if (pos == 350) {
+            clearInterval(id);
+          } else {
+            pos++;
+            animation.style.top = pos + "px";
+            animation.style.left = pos + "px";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
+```
+
+#### 🔺 DOM Events
+
+
+
 ## 🎓 Browser BOM
 
 🚧 **_Under Working_**
