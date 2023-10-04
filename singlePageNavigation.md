@@ -4,7 +4,7 @@
 
 ---
 
-- CSS
+- **CSS**
 
 ```css
 .container {
@@ -28,7 +28,7 @@
 }
 ```
 
-- html
+- **HTML**
 
 ```html
 <div>
@@ -53,7 +53,7 @@
 </div>
 ```
 
-- JavaScript
+- **JavaScript**
 
 ```js
 document.getElementById("default").click();

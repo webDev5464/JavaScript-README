@@ -1762,12 +1762,12 @@ console.log(typeof y);
 
 ## 📌 Number Methods
 
-| Method          | Description                                        |
-| :-------------- | :------------------------------------------------- |
-| toString()      | Return a number as a string                        |
-| toFixed()       | Returns a number written with a number of decimals |
-| toPrecision()   | Returns a number written with a specified length   |
-| ValueOf()       | Returns a number as a number                       |
+| Method        | Description                                        |
+| :------------ | :------------------------------------------------- |
+| toString()    | Return a number as a string                        |
+| toFixed()     | Returns a number written with a number of decimals |
+| toPrecision() | Returns a number written with a specified length   |
+| ValueOf()     | Returns a number as a number                       |
 
 #### 🔺 toString() Method
 
@@ -5648,6 +5648,8 @@ The `onchange` event is often used in combination with validation of input field
 ## 🧪 Simple Methods
 
 - [Single Page Navigation](./singlePageNavigation.md)
+- [Toggle navbar](./toggleNavbar.md)
+
 ---
 
 [![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.com/badshah5464/Next_Js-README.git) [![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
