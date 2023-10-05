@@ -1,4 +1,4 @@
-![logo](javascript.png)
+![logo](./assets/javascript.png)
 
 # 🎓 JavaScript Basic
 
@@ -5057,7 +5057,7 @@ console.log(hello("World!"));
 
 The HTML DOM model is constructed as a tree of Objects:
 
-![DOM_Tree](./pic_htmltree.gif)
+![DOM_Tree](./assets/pic_htmltree.gif)
 
 With the object model, JavaScript gets all the power it needs to create dynamic HTML:
 
@@ -5647,8 +5647,8 @@ The `onchange` event is often used in combination with validation of input field
 
 ## 🧪 Simple Methods
 
-- [Single Page Navigation](./singlePageNavigation.md)
-- [Toggle navbar](./toggleNavbar.md)
+- [Single Page Navigation](./pages/singlePageNavigation.md)
+- [Toggle navbar](./pages/toggleNavbar.md)
 
 ---
 
