@@ -5629,31 +5629,32 @@ The `onchange` event is often used in combination with validation of input field
 </script>
 ```
 
-## 🎓 Browser BOM
+**The onmouseover and onmouseout Events**
 
-🚧 **_Under Working_**
+The `onmouseover` and `onmouseout` events can be used to trigger a function when the user mouses over, or out of, an HTML element:
 
-<!--  -->
-
----
-
----
-
----
-
-## 📓 Project's
-
-- [Music WebSite](https://github.com/webDev5464/SimpMusic.git)
-
-## 🧪 Simple Methods
-
-- [Single Page Navigation](./pages/singlePageNavigation.md)
-- [Toggle navbar](./pages/toggleNavbar.md)
-
----
-
-[![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.com/badshah5464/Next_Js-README.git) [![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
-
----
+````html
+<div onmouseover="mOn(this)" onmouseout="mOff(this)">Mouse Over me!</div>
+<script>
+  function mOn(obj) {
+    obj.innerHTML = "Hello World!";
+  }
+  function mOff(obj) {
+    obj.innerHTML = "Mouse Over me!";
+  }
+</script>
+``` ## 🎓 Browser BOM 🚧 **_Under Working_**
 
 <!--  -->
+
+--- --- --- ## 📓 Project's - [Music
+WebSite](https://github.com/webDev5464/SimpMusic.git) ## 🧪 Simple Methods -
+[Single Page Navigation](./pages/singlePageNavigation.md) - [Toggle
+navbar](./pages/toggleNavbar.md) --- [![Learn : Next Js
+Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.com/badshah5464/Next_Js-README.git)
+[![Learn : Git and
+Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
+---
+
+<!--  -->
+````
