@@ -5645,6 +5645,22 @@ The `onmouseover` and `onmouseout` events can be used to trigger a function when
 </script>
 ```
 
+**The onmousedown, onmouseup and onclick Events**
+
+```html
+<h1 id="heading">Click The button</h1>
+<button onmousedown="mDown()" onmouseup="mUp()">Click!</button>
+<script>
+  let heading = document.getElementById("heading");
+  function mDown() {
+    heading.innerHTML = "Hello World!";
+  }
+  function mUp() {
+    heading.innerHTML = "Click The button";
+  }
+</script>
+```
+
 ## 🎓 Browser BOM
 
 🚧 **Under Working**
