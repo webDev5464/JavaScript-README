@@ -1,10 +1,10 @@
 ## 🎓 Single Page Navigation
 
-- [overview](https://single-page-navitaion-in-jsreadme.netlify.app/)
+- **Preview** :- [Click here!](https://single-page-navitaion-in-jsreadme.netlify.app/)
 
 ---
 
-- **HTML**
+**HTML**
 
 ```html
 <nav>
@@ -28,7 +28,7 @@
 </main>
 ```
 
-- **JavaScript**
+**JavaScript**
 
 ```js
 document.getElementById("default").click();

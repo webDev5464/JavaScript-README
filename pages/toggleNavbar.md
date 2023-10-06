@@ -1,8 +1,8 @@
 ## 🎓 Toggle Navbar
 
-- [overview](https://toggle-navbar-jsmd.netlify.app/)
+- **Preview** :- [Click here!](https://toggle-navbar-jsmd.netlify.app/)
 
-- **HTML**
+**HTML**
 
 ```html
 <div>
@@ -20,7 +20,7 @@
 </div>
 ```
 
-- **JavaScript**
+**JavaScript**
 
 ```js
 let menu = document.getElementById("menu");
