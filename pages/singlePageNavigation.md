@@ -4,65 +4,47 @@
 
 ---
 
-- **CSS**
-
-```css
-.container {
-  display: flex;
-}
-
-.container > section {
-  border: 1px solid gray;
-  background-color: aliceblue;
-  font-weight: bold;
-  padding: 8px;
-  cursor: pointer;
-}
-
-.showContainer > section {
-  width: 500px;
-  padding: 0 5px;
-  background-color: antiquewhite;
-  overflow: auto;
-  border: 1px solid black;
-}
-```
-
 - **HTML**
 
 ```html
-<div>
-  <!--? Clicking buttons -->
-  <div class="container">
-    <section onclick="onePage('sectionOne')">Section 1</section>
-    <section onclick="onePage('sectionTwo')" id="default">Section 2</section>
-    <section onclick="onePage('sectionThree')">Section 3</section>
+<nav>
+  <ul>
+    <li class="navLink" onclick="toggleNav('home')" id="default">Home</li>
+    <li class="navLink" onclick="toggleNav('products')">products</li>
+    <li class="navLink" onclick="toggleNav('cart')">cart</li>
+  </ul>
+</nav>
+
+<main>
+  <div id="home" class="container">
+    <h1>This is a Home Page</h1>
   </div>
-  <!--? Contain show -->
-  <div class="showContainer">
-    <section class="clickedShow" id="sectionOne">
-      <h3>Section 1 :</h3>
-    </section>
-    <section class="clickedShow" id="sectionTwo">
-      <h3>Section 2 :</h3>
-    </section>
-    <section class="clickedShow" id="sectionThree">
-      <h3>Section 3 :</h3>
-    </section>
+  <div id="products" class="container">
+    <h1>This is a products page</h1>
   </div>
-</div>
+  <div id="cart" class="container">
+    <h1>This is a cart page</h1>
+  </div>
+</main>
 ```
 
 - **JavaScript**
 
 ```js
 document.getElementById("default").click();
-function onePage(pageName) {
-  let clickedShow = document.getElementsByClassName("clickedShow");
 
-  for (let val = 0; val < clickedShow.length; val++) {
-    clickedShow[val].style.display = "none";
+function toggleNav(pageName) {
+  let container = document.getElementsByClassName("container");
+  let navLink = document.getElementsByClassName("navLink");
+  for (let init = 0; init < container.length; init++) {
+    container[init].style.display = "none";
   }
   document.getElementById(pageName).style.display = "block";
+
+  for (let init = 0; init < navLink.length; init++) {
+    navLink[init].style.color = "black";
+  }
+  document.querySelector(`[onclick="toggleNav('${pageName}')"]`).style.color =
+    "red";
 }
 ```
