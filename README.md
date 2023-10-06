@@ -5683,6 +5683,8 @@ The `onmouseover` and `onmouseout` events can be used to trigger a function when
 
 - [Toggle navbar](./pages/toggleNavbar.md)
 
+- [fetch API](./pages/fetchAPI.md)
+
 ---
 
 [![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.combadshah5464/Next_Js-README.git)
