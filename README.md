@@ -5687,9 +5687,12 @@ The `onmouseover` and `onmouseout` events can be used to trigger a function when
 
 ---
 
-[![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.combadshah5464/Next_Js-README.git)
+*`new`*
+[![Learn : React + vite](https://img.shields.io/badge/LEARN-React_+_Vite-emreld.svg)](https://github.com/webDev5464/vite-README.git)
 
 [![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
+
+[![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.combadshah5464/Next_Js-README.git)
 
 ---
 
