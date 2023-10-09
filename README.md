@@ -3962,7 +3962,7 @@ console.log(compare);
     if (isNaN(age)) {
       text = "Input is a not a number";
     } else {
-      text = ((age) => 18) ? "Too young" : "Too Small";
+      text = age >= 18 ? "Yes You can vote." : "Too young";
     }
 
     document.getElementById("demo").innerHTML = text + " to vote";
