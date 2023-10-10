@@ -2711,7 +2711,7 @@ for (let x = 0; x < cars.length; x++) {
   result += cars[x].type + " " + cars[x].year + "<br>";
 }
 
-chagan.innerHTML = result;
+demo.innerHTML = result;
 ```
 
 <!-- #### 🔺 Stable Array sort()
