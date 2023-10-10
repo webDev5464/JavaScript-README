@@ -2705,25 +2705,16 @@ cars.sort((a, b) => {
   return a.year - b.year;
 });
 
-function displayCars() {
-  document.getElementById("demo").innerHTML =
-    cars[0].type +
-    " " +
-    cars[0].year +
-    "<br>" +
-    cars[1].type +
-    " " +
-    cars[1].year +
-    "<br>" +
-    cars[2].type +
-    " " +
-    cars[2].year;
+let result = "";
+
+for (let x = 0; x < cars.length; x++) {
+  result += cars[x].type + " " + cars[x].year + "<br>";
 }
 
-displayCars();
+chagan.innerHTML = result;
 ```
 
-#### 🔺 Stable Array sort()
+<!-- #### 🔺 Stable Array sort()
 
 **revised** the Array `sort()` method.
 
@@ -2797,7 +2788,7 @@ X17 140
 X18 140
 X19 140
 */
-```
+``` -->
 
 ## 📌 Array Iteration
 
