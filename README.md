@@ -2231,8 +2231,8 @@ console.log(fruits instanceof Array); // true
 | Array pop()    | Array push()     |
 | Array shift()  | Array unshift()  |
 | Array join()   | Array delete()   |
-| Array concat() | Array flat()     |
-| Array splice() | Array slice()    |
+| Array concat() | Array slice()    |
+| Array splice() |
 
 #### 🔺 Array length
 
@@ -5576,6 +5576,55 @@ The `onmouseover` and `onmouseout` events can be used to trigger a function when
 </script>
 ```
 
+#### 🔺 DOM EventListener
+
+**addEventListener()**
+
+Add an event listener that fires when a user clicks a button:
+
+```js
+<button id="button">Click!</button>
+<p id="date"></p>
+
+<script>
+  document.getElementById("button").addEventListener("click", showDate);
+
+  function showDate() {
+    document.getElementById("date").innerHTML = Date();
+  }
+</script>
+```
+
+- The `addEventListener()` method attaches an event handler to the specified element.
+
+- The `addEventListener()` method attaches an event handler to an element without overwriting existing event handlers.
+
+- You can add many event handlers to one element.
+
+- You can add many event handlers of the same type to one element, i.e two "click" events.
+
+- You can add event listeners to any DOM object not only HTML elements. i.e the window object.
+
+- The `addEventListener()` method makes it easier to control how the event reacts to bubbling.
+
+- When using the `addEventListener()` method, the JavaScript is separated from the HTML markup, for better readability and allows you to add event listeners even when you do not control the HTML markup.
+
+- You can easily remove an event listener by using the `removeEventListener()` method.
+
+#### 🔺 Event Handler to an Element
+
+```html
+<button onclick="addEventListener('click', function () {
+  alert('Hello World!')
+})">Click!</button>
+```
+
+#### 🔺 Add many Event Handlers to the same Element.
+
+The `addEventListener()` method allows you to add many events to the same element, without overwriting existing events:
+
+
+
 ## 🎓 Browser BOM
 
 🚧 **Under Working**
@@ -5608,7 +5657,7 @@ The `onmouseover` and `onmouseout` events can be used to trigger a function when
 
 [![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
 
-[![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.combadshah5464/Next_Js-README.git) _`under working`_
+<!-- [![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.combadshah5464/Next_Js-README.git) _`under working`_ -->
 
 ---
 

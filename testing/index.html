@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- <script src="./script.js"></script> -->
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animation</title>
+  <style>
+    #container {
+      height: 400px;
+      width: 400px;
+      background-color: yellow;
+      position: relative;
+    }
+
+    #animation {
+      height: 50px;
+      width: 50px;
+      background-color: red;
+      position: absolute;
+    }
+
+    button {
+      margin: 0 0 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <button onclick="action()">Click!</button>
+
+  <section id="container">
+    <div id="animation"></div>
+  </section>
+
+  <script>
+    function action() {
+      let animation = document.getElementById("animation");
+      let id = null;
+      let pos = 0;
+      clearInterval(0);
+      id = setInterval(frame, 5);
+
+      function frame() {
+        if (pos == 350) {
+          clearInterval(id);
+        } else {
+          pos++;
+          animation.style.top = pos + "px";
+          animation.style.left = pos + "px";
+        }
+      }
+    }
+  </script>
+</body>
+
 </html>
