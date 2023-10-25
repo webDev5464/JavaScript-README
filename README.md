@@ -5641,6 +5641,8 @@ The `addEventListener()` method allows you to add many events to the same elemen
 
 - [Music WebSite](https://github.com/webDev5464/SimpMusic.git)
 
+- [E-Commerce](./pages/eCom.md)
+
 ## 🧪 Simple Methods
 
 - [Single Page Navigation](./pages/singlePageNavigation.md)
