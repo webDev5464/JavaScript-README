@@ -268,17 +268,6 @@ let y = 2;
 let z = x * y;
 ```
 
-## 📌 Type of Operators
-
-- Arithmetic Operators
-- Assignment Operators
-- Comparison Operators
-- String Operators
-- Logical Operators
-- Bitwise Operators
-- Ternary Operators
-- Type Operators
-
 ## 📌 Arithmetic Operators
 
 | Operator | Description    |
@@ -4774,7 +4763,7 @@ If you use `throw` together with `try` and `catch`, you can control program flow
 </script>
 ```
 
-### 🔺 The finally Statement
+#### 🔺 The finally Statement
 
 The `finally` statement lets you execute code, after try and catch, regardless of the result:
 
