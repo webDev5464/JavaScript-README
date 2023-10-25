@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--black);
+  color: var(--white);
+  transition: .5s;
+  user-select: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--nav-bg);
+  color: var(--black);
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  transition: .5s;
+  z-index: 10;
+}
+
+.navControler {
+  display: flex;
+  margin: 0 10px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  margin: 0 100px;
+}
+
+nav ul>li {
+  list-style: none;
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+.refLinks {
+  font-size: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.refLinks a {
+  color: var(--black);
+  transition: .5s;
+}
+
+.refLinks>div {
+  margin: 0 10px;
+}
+
+.themeBtn {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeIcon {
+  color: var(--white);
+}
+
+.navLink {
+  color: var(--black);
+}
+
+.active {
+  color: var(--nav-color);
+  font-weight: bold;
+}
+
+/*  */
+
+main {
+  padding: 60px 10px 10px 10px;
+}
+
+#hereRenderProducts {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+}
+
+.productCard {
+  position: relative;
+  display: flex;
+  background-color: var(--productsCardBg);
+  color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px gray;
+}
+
+.productDetail {
+  padding: 10px;
+}
+
+.productPrice {
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productPrice>div>p>span {
+  margin: 0 10px;
+}
+
+.productPrice>div>p>span:first-child {
+  color: var(--delPrice);
+}
+
+.addToCartBtn>div {
+  margin: 0 0 5px 170px;
+  border: 2px solid var(--white);
+  padding: 5px;
+  background-color: var(--addToCartBtnBg);
+  color: var(--black);
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: inset 0 0 3px var(--black);
+}
+
+.addToCartBtn>div:active {
+  scale: .95;
+}
+
+.productImage {
+  padding: 5px 5px 0 5px;
+}
+
+.productImage>img {
+  width: 250px;
+  border-radius: 3px;
+}
