@@ -308,3 +308,110 @@ productsData.forEach((x) => {
 })
 hereRenderProducts.innerHTML = renderProducts
 ```
+
+## 📌 Add to cart method
+
+`**index.html**`
+
+```html
+<section class="container" id="cart">
+  <!-- ----- -->
+  <div id="cartDataRender"></div>
+  <!-- ----- -->
+</section>
+```
+
+`**script.js**`
+
+```js
+let cartDataRender = document.getElementById("cartDataRender")
+const cartData = []
+function addToCart(id) {
+  let findData = productsData.find((state) => state.id == id)
+  let pushData = cartData.find((state) => state.id == id)
+  let popup = document.querySelector(".popup")
+
+  if (pushData) {
+    /* 
+      if you are not satisfied for this alert message!
+      Have a suggestion for set popup timing message.
+    */
+   alert("Product Already added")
+  } else {
+    let x = cartData.push(findData)
+    console.log(cartData);
+  }
+
+  let renderCartData = cartData.map((x) => {
+    return `
+    <div class="productCard">
+      <div class="productImage">
+        <img src="${x.img}" />
+      </div>
+      <div class="productDetail">
+        <div>
+          <p>${x.title}</p>
+        </div>
+        <div class="productPrice">          
+          <div>
+            <p>            
+              <span><del>${x.price}/-</del></span>
+              <span>${x.discount}% Off</span>
+              <span>${x.price - Math.round((x.price * x.discount) / 100)}/-</span>
+            </p>
+          </div>
+          <div class="removeCartBtn" onclick="removeCart(${x.id})">
+            <div>Add Cart</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    `
+  })
+  cartDataRender.innerHTML = renderCartData.join("")
+}
+```
+
+#### 🔺 Alert auto remove popup message
+
+`**index.html**`
+
+```html
+<div class="popup">
+  <h2>Product Already Added</h2>
+</div>
+```
+
+`**style.css**`
+
+```css
+.popup {
+  position: fixed;
+  bottom: 10px;
+  right: -1000px;
+  padding: 10px;
+  border: 2px dashed var(--black);
+  border-radius: 10px;
+  background-color: var(--popupBg);
+  transition: .5s;
+  opacity: .8;
+}
+
+.showPopup {
+  right: 10px;
+}
+```
+
+`**script.js**`
+
+```js
+if (pushData) {
+  /* ----- */
+  popup.classList.add("showPopup")
+  setTimeout(() => { popup.classList.remove("showPopup") }, 2000)
+  /* ----- */
+} else {
+  let x = cartData.push(findData)
+  console.log(cartData);
+}
+```

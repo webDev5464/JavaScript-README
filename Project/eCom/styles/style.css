@@ -121,17 +121,26 @@ main {
 }
 
 .addToCartBtn>div {
+  background-color: var(--addToCartBtnBg);
+}
+
+.removeCartBtn>div {
+  background-color: var(--popupBg);
+}
+
+.addToCartBtn>div,
+.removeCartBtn>div {
   margin: 0 0 5px 170px;
   border: 2px solid var(--white);
   padding: 5px;
-  background-color: var(--addToCartBtnBg);
   color: var(--black);
   border-radius: 4px;
   cursor: pointer;
   box-shadow: inset 0 0 3px var(--black);
 }
 
-.addToCartBtn>div:active {
+.addToCartBtn>div:active,
+.removeCartBtn>div:active {
   scale: .95;
 }
 
@@ -142,4 +151,24 @@ main {
 .productImage>img {
   width: 250px;
   border-radius: 3px;
+}
+
+#cartDataRender>.productCard {
+  margin: 10px 0;
+}
+
+.popup {
+  position: fixed;
+  bottom: 10px;
+  right: -1000px;
+  padding: 10px;
+  border: 2px dashed var(--black);
+  border-radius: 10px;
+  background-color: var(--popupBg);
+  transition: .5s;
+  opacity: .8;
+}
+
+.showPopup {
+  right: 10px;
 }
