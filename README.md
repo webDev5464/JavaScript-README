@@ -5640,6 +5640,8 @@ The `addEventListener()` method allows you to add many events to the same elemen
 
 - [fetch API](./pages/fetchAPI.md)
 
+- [setTheme in localStorage](./pages/setThemeInLocalStorage.md)
+
 ---
 
 [![Learn : React + vite](https://img.shields.io/badge/LEARN-React_+_Vite-emreld.svg)](https://github.com/webDev5464/vite-README.git) _`new`_
