@@ -338,8 +338,7 @@ function addToCart(id) {
     */
    alert("Product Already added")
   } else {
-    let x = cartData.push(findData)
-    console.log(cartData);
+    cartData.push(findData)    
   }
 
   let renderCartData = cartData.map((x) => {
@@ -414,4 +413,67 @@ if (pushData) {
   let x = cartData.push(findData)
   console.log(cartData);
 }
+```
+
+## 📌 Add to cart in localStorage
+
+`**script.js**`
+
+```js
+let cartDataRender = document.getElementById("cartDataRender")
+const cartData = []
+function addToCart(id) {
+  let findData = productsData.find((state) => state.id == id)
+  let pushData = cartData.find((state) => state.id == id)
+  let popup = document.querySelector(".popup")
+
+  if (pushData) {
+    popup.classList.add("showPopup")
+    setTimeout(() => { popup.classList.remove("showPopup") }, 2000)
+  } else {
+    cartData.push(findData)
+    localStorage.setItem("cart", JSON.stringify(cartData))
+  }
+
+  /* ----- */
+  addToCartLocalStorage()
+  /* ----- */
+}
+
+/* ----- */
+function addToCartLocalStorage() {
+  const storedCart = JSON.parse(localStorage.getItem("cart")) || []
+
+  let renderCartData = storedCart.map((x) => {
+    return `
+    <div class="productCard">
+      <div class="productImage">
+        <img src="${x.img}" />
+      </div>
+      <div class="productDetail">
+        <div>
+          <p>${x.title}</p>
+        </div>
+        <div class="productPrice">          
+          <div>
+            <p>            
+              <span><del>${x.price}/-</del></span>
+              <span>${x.discount}% Off</span>
+              <span>${x.price - Math.round((x.price * x.discount) / 100)}/-</span>
+            </p>
+          </div>
+          <div class="removeCartBtn" onclick="removeCart(${x.id})">
+            <div>Remove</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    `
+  })
+  cartDataRender.innerHTML = renderCartData.join("")
+}
+window.addEventListener("load", () => {
+  addToCartLocalStorage()
+})
+/* ----- */
 ```

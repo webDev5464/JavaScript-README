@@ -42,11 +42,17 @@ function addToCart(id) {
     popup.classList.add("showPopup")
     setTimeout(() => { popup.classList.remove("showPopup") }, 2000)
   } else {
-    let x = cartData.push(findData)
-    console.log(cartData);
+    cartData.push(findData)
+    localStorage.setItem("cart", JSON.stringify(cartData))
   }
 
-  let renderCartData = cartData.map((x) => {
+  addToCartLocalStorage()
+}
+
+function addToCartLocalStorage() {
+  const storedCart = JSON.parse(localStorage.getItem("cart")) || []
+
+  let renderCartData = storedCart.map((x) => {
     return `
     <div class="productCard">
       <div class="productImage">
@@ -65,7 +71,7 @@ function addToCart(id) {
             </p>
           </div>
           <div class="removeCartBtn" onclick="removeCart(${x.id})">
-            <div>Add Cart</div>
+            <div>Remove</div>
           </div>
         </div>
       </div>
@@ -74,6 +80,9 @@ function addToCart(id) {
   })
   cartDataRender.innerHTML = renderCartData.join("")
 }
+window.addEventListener("load", () => {
+  addToCartLocalStorage()
+})
 
 //! single page
 document.getElementById("default").click()
