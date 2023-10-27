@@ -377,7 +377,7 @@ function addToCart(id) {
 
 ```html
 <div class="popup">
-  <h2>Product Already Added</h2>
+  <h3>Product Already Added</h3>
 </div>
 ```
 

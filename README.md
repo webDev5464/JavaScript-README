@@ -60,9 +60,7 @@ JavaScript statements often start with a keyword to identify the JavaScript acti
 
 ## 📌 syntax
 
-#### 🔺 How to create variables ?
-
-#### 🔺 How to use variables ?
+#### 🔺 How to create variables ? Or How to use variables ?
 
 ```js
 // create variables:

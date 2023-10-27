@@ -165,7 +165,7 @@ main {
   border: 2px dashed var(--black);
   border-radius: 10px;
   background-color: var(--popupBg);
-  transition: .5s;
+  transition: .5s ease-in;
   opacity: .8;
 }
 
