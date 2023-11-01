@@ -5642,13 +5642,11 @@ The `addEventListener()` method allows you to add many events to the same elemen
 
 ---
 
-[![Learn : React + vite](https://img.shields.io/badge/LEARN-React_+_Vite-emreld.svg)](https://github.com/webDev5464/vite-README.git) _`new`_
+## 🔃 Reference's
 
-[![Learn : NodeJs ExpressJs & MongoDb](https://img.shields.io/badge/LEARN-NodeJs_ExpressJs_&_MongoDb-emreld.svg)](https://github.com/webDev5464/NodeExpressJs-README.git) _`New 🚧 Under build`_
+[![Learn : React + vite](https://img.shields.io/badge/LEARN-React_+_Vite-emreld.svg)](https://github.com/webDev5464/vite-README.git)
 
-[![Learn : Git and Github](https://img.shields.io/badge/LEARN-Git_and_Github-emreld.svg)](https://github.com/badshah5464/Git-And-Github_README.git)
-
-<!-- [![Learn : Next Js Documentation](https://img.shields.io/badge/LEARN-Next_js-emreld.svg)](https://github.combadshah5464/Next_Js-README.git) _`under working`_ -->
+[![Learn : NodeJs ExpressJs & MongoDb](https://img.shields.io/badge/LEARN-NodeJs_ExpressJs_&_MongoDb-emreld.svg)](https://github.com/webDev5464/NodeExpressJs-README.git)
 
 ---
 
