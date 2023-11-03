@@ -1,121 +1,61 @@
-<!-- # 📓 E-Commerce
+# 📓 E-Commerce Project
 
-## 📌 Create single page navigation
+**Using methods in this project.**
 
-`**index.html**`
+- Create Products Data
+- Render Products
+- Add to cart products
+- Click end show product image
+- Remove cart products
+- Search products
+- Alert popup message
+- Theme change end theme set local storage
+- Single page Navigation
 
-```html
-<nav>
-  <div>
-    <h3>My E-Commerce</h3>
-  </div>
-  <ul>
-    <li class="link" onclick="singlePage('products')" id="default">Products</li>
-    <li class="link" onclick="singlePage('cart')">Cart</li>
-  </ul>
-</nav>
+## 📌 Single Page Navigation (Without Reload Page Change)
 
-<main>
-  <section class="container" id="products">
-    <h2>Products page</h2>
-  </section>
-
-  <section class="container" id="cart">
-    <h2>Cart page</h2>
-  </section>
-</main>
-```
-
-`**script.js**`
-
-```js
-document.getElementById("default").click()
-function singlePage(pageName) {
-  let link = document.querySelectorAll(".link")
-  let container = document.querySelectorAll(".container")
-
-  for (let int = 0; int < container.length; int++) {
-    container[int].style.display = "none"
-  }
-  document.getElementById(pageName).style.display = "block"
-
-  for (let int = 0; int < link.length; int++) {
-    link[int].style.color = "white"
-  }
-  document.querySelector(`[onclick="singlePage('${pageName}')"]`).style.color = "tomato"
-}
-```
-
-## 📌 Theme change end set localStorage
-
-- create `dark.css` end `light.css`
-- using variable to global theme change.
-
-`**dark.css**`
-
-```css
-:root {
-  --black: black;
-  --white: white;
-  --nav-color: brown;
-  --nav-bg: #9b9b9b;
-}
-```
-
-`**light.css**`
-
-```css
-:root {
-  --black: white;
-  --white: black;
-  --nav-color: lightblue;
-  --nav-bg: #03006b;
-}
-```
-
-`**index.html**`
+#### 🔺 `index.html`
 
 ```html
-<link rel="stylesheet" href="./styles/darkTheme.css" id="changeStyle">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-com</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <nav>
+    <div>
+      <h3>My E-Commerce</h3>
+    </div>      
+    
+    <ul>
+      <li class="link" onclick="singlePage('products')" id="default">Products</li>
+      <li class="link" onclick="singlePage('cart')">Cart</li>
+    </ul>    
+  </nav>
+
+  <main>
+    <section class="container" id="products">
+      <h1>Products Page</h1>
+    </section>
+
+    <section class="container" id="cart">
+      <h1>Cart Page</h1>
+    </section>
+  </main>
+  
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
 ```
 
-```html
-<div class="themeBtn" onclick="toggleTheme()">
-  <div id="themeIcon"></div>
-</div>
-```
-
-`**script.js**`
-
-```js
-let changeStyle = document.getElementById("changeStyle")
-let themeIcon = document.getElementById("themeIcon")
-themeIcon.innerHTML = '<i class="fa-solid fa-sun"></i>'
-function toggleTheme() {
-  if (changeStyle.getAttribute("href") === "./styles/darkTheme.css") {
-    changeStyle.setAttribute("href", "./styles/lightTheme.css")
-    themeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>'
-
-    localStorage.setItem("theme", "light")
-  } else {
-    changeStyle.setAttribute("href", "./styles/darkTheme.css")
-    themeIcon.innerHTML = '<i class="fa-solid fa-sun"></i>'
-
-    localStorage.setItem("theme", "dark")
-  }
-}
-
-const storageTheme = localStorage.getItem("theme")
-if (storageTheme === "light") {
-  changeStyle.setAttribute("href", "./styles/lightTheme.css")
-  themeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>'
-} else {
-  changeStyle.setAttribute("href", "./styles/darkTheme.css")
-  themeIcon.innerHTML = '<i class="fa-solid fa-sun"></i>'
-}
-```
-
-**single page change style with theme**
+#### 🔺 `script.js`
 
 ```js
 document.getElementById("default").click()
@@ -136,7 +76,7 @@ function singlePage(pageName) {
 }
 ```
 
-`**style.css**`
+#### 🔺 `style.css`
 
 ```css
 .navLink {
@@ -149,9 +89,103 @@ function singlePage(pageName) {
 }
 ```
 
-## 📌 create products array object
+## 📌 Change Theme with localStorage
 
-- create new file `**products.js**`
+#### 🔺 `index.html`
+
+**Link Stylesheet in html**
+
+- **darkTheme.css** is default
+- **lightTheme.css** is toggle change
+
+```html
+<head>
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./styles/darkTheme.css" id="changeStyle">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+```
+
+- toggle switch
+
+```html
+<div class="themeBtn" onclick="toggleTheme()">
+  <div id="themeIcon"></div>
+</div>
+```
+
+#### 🔺 `darkTheme.css end lightTheme.css`
+
+**darkTheme.css**
+
+```css
+:root {
+  --black: black;
+  --white: white;
+  --nav-color: brown;
+  --nav-bg: #9b9b9b;
+  --productsCardBg: #3b3b3b;
+  --delPrice: gray;
+  --addToCartBtnBg: #add8e6;
+  --removeCartBtnBg: tomato;
+  --alertPopupBg: tomato;
+  --successPopupBg: lightgreen;
+}
+```
+
+**lightTheme.css**
+
+```css
+:root {
+  --black: white;
+  --white: black;
+  --nav-color: lightblue;
+  --nav-bg: #03006b;
+  --productsCardBg: #b9b9b9;
+  --delPrice: #5f5f5f;
+  --addToCartBtnBg: #3535ff;
+  --removeCartBtnBg: tomato;
+  --alertPopupBg: tomato;
+  --successPopupBg: lightgreen;
+}
+```
+
+#### 🔺 `script.js`
+
+```js
+let changeStyle = document.getElementById("changeStyle")
+let themeIcon = document.getElementById("themeIcon")
+themeIcon.innerHTML = '<i class="fa-solid fa-sun"></i>'
+function toggleTheme() {
+  if (changeStyle.getAttribute("href") === "./styles/darkTheme.css") {
+    changeStyle.setAttribute("href", "./styles/lightTheme.css")
+    themeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>'
+
+    // Set theme in localStorage
+    localStorage.setItem("theme", "light")
+  } else {
+    changeStyle.setAttribute("href", "./styles/darkTheme.css")
+    themeIcon.innerHTML = '<i class="fa-solid fa-sun"></i>'
+
+    // Set theme in localStorage
+    localStorage.setItem("theme", "dark")
+  }
+}
+
+//! getItem in localStorage
+const storageTheme = localStorage.getItem("theme")
+if (storageTheme === "light") {
+  changeStyle.setAttribute("href", "./styles/lightTheme.css")
+  themeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>'
+} else {
+  changeStyle.setAttribute("href", "./styles/darkTheme.css")
+  themeIcon.innerHTML = '<i class="fa-solid fa-sun"></i>'
+}
+```
+
+## 📌 Create Products in Array Object
+
+#### 🔺 `products.js`
 
 ```js
 const earbud = [
@@ -197,7 +231,8 @@ const earbud = [
     qty: 1,
     category: "earbud",
   }
-]
+];
+
 const tshirt = [
   {
     id: 101,
@@ -238,12 +273,13 @@ const tshirt = [
     qty: 1,
     category: "tshirt",
   }
-]
+];
 ```
 
-- link script in `**index.html**`
+#### 🔺 `index.html`
 
 ```html
+  <!-- link products.js -->
   <script src="./js/products.js"></script>
   <script src="./js/script.js"></script>
 </body>
@@ -251,21 +287,22 @@ const tshirt = [
 
 ## 📌 Render Products
 
-`**index.html**`
+#### 🔺 `index.html`
 
 ```html
 <main>
   <section class="container" id="products">
+    <!-- Products render here! -->
     <div id="hereRenderProducts"></div>
   </section>
 
   <section class="container" id="cart">
-    <h2>Cart page</h2>
+    <h1>Cart Page</h1>
   </section>
 </main>
 ```
 
-`**script.js**`
+#### 🔺 `script.js`
 
 ```js
 let hereRenderProducts = document.getElementById("hereRenderProducts")
@@ -275,7 +312,8 @@ productsData.forEach((x) => {
   renderProducts += `
     <div class="productCard">
       <div class="productImage">
-        <img src="${x.img}" />
+        ${/* showProductsImageFunction() :- Click end show product image */}        
+        <img src="${x.img}" onclick="showProductImageFunction(${x.id})" />
       </div>
       <div class="productDetail">
         <div>
@@ -289,7 +327,8 @@ productsData.forEach((x) => {
               <span>${x.price - Math.round((x.price * x.discount) / 100)}/-</span>
             </p>
           </div>
-          <div class="addToCartBtn">
+          ${/* addToCart() :- product add to cart method */}
+          <div class="addToCartBtn" onclick="addToCart(${x.id})">
             <div>Add Cart</div>
           </div>
         </div>
@@ -300,159 +339,55 @@ productsData.forEach((x) => {
 hereRenderProducts.innerHTML = renderProducts
 ```
 
-## 📌 Add to cart method
+## 📌 Click end show product image
 
-`**index.html**`
-
-```html
-<section class="container" id="cart">
-  <div id="cartDataRender"></div>
-</section>
-```
-
-`**script.js**`
-
-```js
-let cartDataRender = document.getElementById("cartDataRender")
-const cartData = []
-function addToCart(id) {
-  let findData = productsData.find((state) => state.id == id)
-  let pushData = cartData.find((state) => state.id == id)
-  let popup = document.querySelector(".popup")
-
-  if (pushData) {
-   alert("Product Already added")
-  } else {
-    cartData.push(findData)    
-  }
-
-  let renderCartData = cartData.map((x) => {
-    return `
-    <div class="productCard">
-      <div class="productImage">
-        <img src="${x.img}" />
-      </div>
-      <div class="productDetail">
-        <div>
-          <p>${x.title}</p>
-        </div>
-        <div class="productPrice">          
-          <div>
-            <p>            
-              <span><del>${x.price}/-</del></span>
-              <span>${x.discount}% Off</span>
-              <span>${x.price - Math.round((x.price * x.discount) / 100)}/-</span>
-            </p>
-          </div>
-          <div class="removeCartBtn" onclick="removeCart(${x.id})">
-            <div>Add Cart</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    `
-  })
-  cartDataRender.innerHTML = renderCartData.join("")
-}
-```
-
-#### 🔺 Alert auto remove popup message
-
-`**index.html**`
+#### 🔺 `index.html`
 
 ```html
-<div class="popup">
-  <h3>Product Already Added</h3>
+<div class="showProductImage">
+  <div id="cancelBtn"><i class="fa-solid fa-xmark"></i></div>
+  <div class="productImageChild"><img src="" id="setProductImage"></div>
 </div>
 ```
 
-`**style.css**`
+#### 🔺 `style.css`
 
 ```css
-.popup {
+.showProductImage {
+  display: none;
+  z-index: 20;
   position: fixed;
-  bottom: 10px;
-  right: -1000px;
-  padding: 10px;
-  border: 2px dashed var(--black);
-  border-radius: 10px;
-  background-color: var(--popupBg);
-  transition: .5s;
-  opacity: .8;
+  background-color: var(--black);
+  top: 0;
+  height: 100vh;
+  width: 100%;
 }
 
-.showPopup {
-  right: 10px;
+.ActiveProductsImage {
+  display: block;
+}
+
+#cancelBtn {
+  position: absolute;
+  right: 0;
+  margin: 15px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+#cancelBtn:active {
+  scale: .9;
+}
+
+.productImageChild {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  height: 100vh;
+}
+
+.productImageChild>img {
+  width: 700px;
 }
 ```
-
-`**script.js**`
-
-```js
-if (pushData) {
-  popup.classList.add("showPopup")
-  setTimeout(() => { popup.classList.remove("showPopup") }, 2000)
-} else {
-  let x = cartData.push(findData)
-  console.log(cartData);
-}
-```
-
-## 📌 Add to cart in localStorage
-
-`**script.js**`
-
-```js
-let cartDataRender = document.getElementById("cartDataRender")
-const cartData = []
-function addToCart(id) {
-  let findData = productsData.find((state) => state.id == id)
-  let pushData = cartData.find((state) => state.id == id)
-  let popup = document.querySelector(".popup")
-
-  if (pushData) {
-    popup.classList.add("showPopup")
-    setTimeout(() => { popup.classList.remove("showPopup") }, 2000)
-  } else {
-    cartData.push(findData)
-    localStorage.setItem("cart", JSON.stringify(cartData))
-  }
-
-  addToCartLocalStorage()
-}
-
-function addToCartLocalStorage() {
-  const storedCart = JSON.parse(localStorage.getItem("cart")) || []
-
-  let renderCartData = storedCart.map((x) => {
-    return `
-    <div class="productCard">
-      <div class="productImage">
-        <img src="${x.img}" />
-      </div>
-      <div class="productDetail">
-        <div>
-          <p>${x.title}</p>
-        </div>
-        <div class="productPrice">          
-          <div>
-            <p>            
-              <span><del>${x.price}/-</del></span>
-              <span>${x.discount}% Off</span>
-              <span>${x.price - Math.round((x.price * x.discount) / 100)}/-</span>
-            </p>
-          </div>
-          <div class="removeCartBtn" onclick="removeCart(${x.id})">
-            <div>Remove</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    `
-  })
-  cartDataRender.innerHTML = renderCartData.join("")
-}
-window.addEventListener("load", () => {
-  addToCartLocalStorage()
-})
-``` -->

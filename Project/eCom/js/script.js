@@ -5,7 +5,7 @@ let renderProducts = ""
 productsData.forEach((x) => {
   renderProducts += `
     <div class="productCard">
-      <div class="productImage">
+      <div class="productImage">        
         <img src="${x.img}" onclick="showProductImageFunction(${x.id})" />
       </div>
       <div class="productDetail">
@@ -198,10 +198,14 @@ function toggleTheme() {
   if (changeStyle.getAttribute("href") === "./styles/darkTheme.css") {
     changeStyle.setAttribute("href", "./styles/lightTheme.css")
     themeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>'
+
+    // Set theme in localStorage
     localStorage.setItem("theme", "light")
   } else {
     changeStyle.setAttribute("href", "./styles/darkTheme.css")
     themeIcon.innerHTML = '<i class="fa-solid fa-sun"></i>'
+
+    // Set theme in localStorage
     localStorage.setItem("theme", "dark")
   }
 }
