@@ -6,5 +6,7 @@
   --productsCardBg: #3b3b3b;
   --delPrice: gray;
   --addToCartBtnBg: #add8e6;
-  --popupBg: tomato;
+  --removeCartBtnBg: tomato;
+  --alertPopupBg: tomato;
+  --successPopupBg: lightgreen;
 }

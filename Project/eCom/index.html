@@ -15,11 +15,22 @@
 <body>
 
   <nav>
-    <div>
-      <h3>My E-Commerce</h3>
+    <div class="headingEndSearch">
+      <div>
+        <h3>My E-Commerce</h3>
+      </div>
+
+      <div class="Search">
+        <div class="SearchParent">
+          <input type="text" placeholder="Search..." id="searchInput">
+          <div class="magnifyingIcon" onclick="enterSearch()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="navControler">
+    <div class="navController">
       <ul>
         <li class="link" onclick="singlePage('products')" id="default">Products</li>
         <li class="link" onclick="singlePage('cart')">Cart</li>
@@ -46,9 +57,13 @@
     </section>
   </main>
 
-  <div class="popup">
-    <h3>Product Already Added</h3>
+
+  <div class="showProductImage">
+    <div id="cancelBtn"><i class="fa-solid fa-xmark"></i></div>
+    <div class="productImageChild"><img src="" id="setProductImage"></div>
   </div>
+  <div class="popup"></div>
+
   <script src="./js/products.js"></script>
   <script src="./js/script.js"></script>
 </body>

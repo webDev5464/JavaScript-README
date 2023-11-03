@@ -1,4 +1,4 @@
-# 📓 E-Commerce
+<!-- # 📓 E-Commerce
 
 ## 📌 Create single page navigation
 
@@ -96,18 +96,15 @@ function toggleTheme() {
     changeStyle.setAttribute("href", "./styles/lightTheme.css")
     themeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>'
 
-    // setItem in localStorage
     localStorage.setItem("theme", "light")
   } else {
     changeStyle.setAttribute("href", "./styles/darkTheme.css")
     themeIcon.innerHTML = '<i class="fa-solid fa-sun"></i>'
 
-    // setItem in localStorage
     localStorage.setItem("theme", "dark")
   }
 }
 
-// getItem in localStorage
 const storageTheme = localStorage.getItem("theme")
 if (storageTheme === "light") {
   changeStyle.setAttribute("href", "./styles/lightTheme.css")
@@ -131,13 +128,11 @@ function singlePage(pageName) {
   }
   document.getElementById(pageName).style.display = "block"
 
-  /* ----- */
   for (let int = 0; int < link.length; int++) {
     link[int].classList.add("navLink")
     link[int].classList.remove("active")
   }
   document.querySelector(`[onclick="singlePage('${pageName}')"]`).classList.add("active")
-  /* ----- */
 }
 ```
 
@@ -249,9 +244,7 @@ const tshirt = [
 - link script in `**index.html**`
 
 ```html
-  /* ----- */
   <script src="./js/products.js"></script>
-  /* ----- */
   <script src="./js/script.js"></script>
 </body>
 ```
@@ -263,9 +256,7 @@ const tshirt = [
 ```html
 <main>
   <section class="container" id="products">
-    <!-- ----- -->
     <div id="hereRenderProducts"></div>
-    <!-- ----- -->
   </section>
 
   <section class="container" id="cart">
@@ -315,9 +306,7 @@ hereRenderProducts.innerHTML = renderProducts
 
 ```html
 <section class="container" id="cart">
-  <!-- ----- -->
   <div id="cartDataRender"></div>
-  <!-- ----- -->
 </section>
 ```
 
@@ -332,10 +321,6 @@ function addToCart(id) {
   let popup = document.querySelector(".popup")
 
   if (pushData) {
-    /* 
-      if you are not satisfied for this alert message!
-      Have a suggestion for set popup timing message.
-    */
    alert("Product Already added")
   } else {
     cartData.push(findData)    
@@ -405,10 +390,8 @@ function addToCart(id) {
 
 ```js
 if (pushData) {
-  /* ----- */
   popup.classList.add("showPopup")
   setTimeout(() => { popup.classList.remove("showPopup") }, 2000)
-  /* ----- */
 } else {
   let x = cartData.push(findData)
   console.log(cartData);
@@ -435,12 +418,9 @@ function addToCart(id) {
     localStorage.setItem("cart", JSON.stringify(cartData))
   }
 
-  /* ----- */
   addToCartLocalStorage()
-  /* ----- */
 }
 
-/* ----- */
 function addToCartLocalStorage() {
   const storedCart = JSON.parse(localStorage.getItem("cart")) || []
 
@@ -475,5 +455,4 @@ function addToCartLocalStorage() {
 window.addEventListener("load", () => {
   addToCartLocalStorage()
 })
-/* ----- */
-```
+``` -->
