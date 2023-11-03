@@ -130,7 +130,6 @@ function addToCart(id) {
 }
 
 //! remove cart
-
 function removeCart(id) {
   let findCartData = cartData.findIndex(x => x.id == id)
   let popup = document.querySelector(".popup")

@@ -1,5 +1,12 @@
 # 📓 E-Commerce Project
 
+- [Prevue](https://js-documentation-ecom-project.netlify.app/)
+- [Source Code](../Project/eCom/)
+
+****
+****
+****
+
 **Using methods in this project.**
 
 - Create Products Data
@@ -306,7 +313,7 @@ const tshirt = [
 
 ```js
 let hereRenderProducts = document.getElementById("hereRenderProducts")
-const productsData = [...earbud]
+const productsData = [...earbud, ...tshirt]
 let renderProducts = ""
 productsData.forEach((x) => {
   renderProducts += `
@@ -342,6 +349,8 @@ hereRenderProducts.innerHTML = renderProducts
 ## 📌 Click end show product image
 
 #### 🔺 `index.html`
+
+**Define bottom closing element.**
 
 ```html
 <div class="showProductImage">
@@ -391,3 +400,279 @@ hereRenderProducts.innerHTML = renderProducts
   width: 700px;
 }
 ```
+
+#### 🔺 `script.js`
+
+```js
+let setProductImage = document.getElementById("setProductImage")
+let cancelBtn = document.getElementById("cancelBtn")
+let showProductImage = document.querySelector(".showProductImage")
+
+cancelBtn.addEventListener("click", () => {
+  showProductImage.classList.remove("ActiveProductsImage")
+})
+
+function showProductImageFunction(id) {
+  let productImage = productsData.find(x => x.id == id)
+  setProductImage.src = productImage.img
+  showProductImage.classList.add("ActiveProductsImage")
+}
+```
+
+## 📌 Add to Cart & popup alert message
+
+#### 🔺 `index.html`
+
+**Add to Cart element**
+
+```html
+<main>
+  <section class="container" id="products">
+    <div id="hereRenderProducts"></div>
+  </section>
+
+  <section class="container" id="cart">
+    <!-- add to cart here! -->
+    <div id="cartDataRender"></div>
+  </section>
+</main>
+```
+
+- **Popup element**
+
+**Define bottom closing element.**
+
+```html
+<div class="popup"></div>
+```
+
+#### 🔺 `style.css`
+
+- **popup css**
+
+```css
+.popup {
+  position: fixed;
+  bottom: 10px;
+  right: -1000px;
+  padding: 10px;
+  border: 2px dashed var(--black);
+  border-radius: 10px;
+  transition: .5s ease-in;
+  opacity: .8;
+}
+
+.alertPopup {
+  right: 10px;
+  background-color: var(--alertPopupBg);
+}
+
+.successPopup {
+  right: 10px;
+  background-color: var(--successPopupBg);
+}
+```
+
+#### 🔺 `script.js`
+
+```js
+let cartDataRender = document.getElementById("cartDataRender")
+const cartData = []
+
+function addToCart(id) {
+  let findData = productsData.find(state => state.id == id)
+  let pushData = cartData.find(state => state.id == id)
+
+  // get popup class
+  let popup = document.querySelector(".popup")
+
+  if (pushData) {
+
+    // popup alert message
+    popup.innerHTML = "<h3>Product Already Added</h3>"
+    popup.classList.add("alertPopup")
+    setTimeout(() => popup.classList.remove("alertPopup"), 2000)
+  } else {
+    cartData.push(findData)
+  }
+
+  let renderData = cartData.map(x => {
+    return `
+      <div class="productCard">
+        <div class="productImage">
+          <img src="${x.img}" />
+        </div>
+        <div class="productDetail">
+          <div>
+            <p>${x.title}</p>
+          </div>
+          <div class="productPrice">          
+            <div>
+              <p>            
+                <span><del>${x.price}/-</del></span>
+                <span>${x.discount}% Off</span>
+                <span>${x.price - Math.round((x.price * x.discount) / 100)}/-</span>
+              </p>
+            </div>
+            <div class="removeCartBtn" onclick="removeCart(${x.id})">
+              <div>Remove</div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    `
+  })
+
+  cartDataRender.innerHTML = renderData.join("")
+}
+```
+
+## Remove cart & popup success message
+
+#### 🔺 `script.js`
+
+```js
+function removeCart(id) {
+  let findCartData = cartData.findIndex(x => x.id == id)
+  let popup = document.querySelector(".popup")
+
+  if (!findCartData) {
+    cartData.splice(findCartData, 1)
+
+    // popup success message
+    popup.innerHTML = "<h3>Remove Product</h3>"
+    popup.classList.add("successPopup")
+    setTimeout(() => popup.classList.remove("successPopup"), 2000)
+  }
+
+  let renderData = cartData.map(x => {
+    return `
+      <div class="productCard">
+        <div class="productImage">
+          <img src="${x.img}" />
+        </div>
+        <div class="productDetail">
+          <div>
+            <p>${x.title}</p>
+          </div>
+          <div class="productPrice">          
+            <div>
+              <p>            
+                <span><del>${x.price}/-</del></span>
+                <span>${x.discount}% Off</span>
+                <span>${x.price - Math.round((x.price * x.discount) / 100)}/-</span>
+              </p>
+            </div>
+            <div class="removeCartBtn" onclick="removeCart(${x.id})">
+              <div>Remove</div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    `
+  })
+
+  cartDataRender.innerHTML = renderData.join("")
+}
+```
+
+## 📌 Search Method
+
+#### 🔺 `index.html`
+
+```html
+<div class="Search">
+  <div class="SearchParent">
+    <input type="text" placeholder="Search..." id="searchInput">
+    <div class="magnifyingIcon" onclick="enterSearch()">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+</div>
+```
+
+#### 🔺 `style.css`
+
+```css
+.Search {
+  display: flex;
+  align-items: center;
+  margin: 0 30px;
+}
+
+.SearchParent {
+  position: relative;
+}
+
+.magnifyingIcon {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.magnifyingIcon:active {
+  scale: .9;
+}
+
+.SearchParent>input {
+  height: 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 0px 30px 0 5px;
+  background-color: transparent;
+  color: var(--black);
+  border: 3px inset var(--black);
+}
+
+.activeSearchInput {
+  display: block;
+  width: 100%;
+}
+```
+
+#### 🔺 `script.js`
+
+```js
+let searchInput = document.getElementById("searchInput")
+
+function enterSearch() {
+  let inputValue = searchInput.value
+  let productSearched = productsData.filter(item => item.title.toUpperCase().includes(inputValue.toUpperCase()))
+  console.log(productSearched);
+
+  const SearchedResult = productSearched.map((x) => {
+    return `
+      <div class="productCard">
+        <div class="productImage">
+          <img src="${x.img}" onclick="showProductImageFunction(${x.id})" />
+        </div>
+        <div class="productDetail">
+          <div>
+            <p>${x.title}</p>
+          </div>
+          <div class="productPrice">          
+            <div>
+              <p>            
+                <span><del>${x.price}/-</del></span>
+                <span>${x.discount}% Off</span>
+                <span>${x.price - Math.round((x.price * x.discount) / 100)}/-</span>
+              </p>
+            </div>
+            <div class="addToCartBtn" onclick="addToCart(${x.id})">
+              <div>Add Cart</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
+  })
+  hereRenderProducts.innerHTML = SearchedResult.join("")
+}
+```
+
+****
+****
+****
