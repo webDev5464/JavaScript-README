@@ -4779,25 +4779,28 @@ finally {
 
 ```js
 <input type="text" id="input">
-<button onclick="resultFunction()">Test Input!</button>
+<input type="submit" onclick="submitButton()" />
 <p id="result"></p>
 
 <script>
-  let resultFunction = () => {
+  function submitButton() {
     let result = document.getElementById("result")
-    result.innerHTML = ""
     let input = document.getElementById("input").value
+    input.innerHTML = ""
 
     try {
-      if (input.trim() == "") throw "is empty"
-      if (isNaN(input)) throw "is not a number"
+      if (input.trim() == "") throw "Input is blank";
+      if (isNaN(input)) throw "Not a Number";
       input = Number(input)
-      if (input < 5) throw "too low"
-      if (input > 10) throw "too high"
+      if (input > 10) throw "to high"
+      if (input < 5) throw "to low"
+      if (5 < input && 10 > input) throw "Value is submitted"
     } catch (err) {
-      result.innerHTML = "input is " + err
+      result.innerHTML = err
     } finally {
-      document.getElementById("input").value = ""
+      if (5 < input && 10 > input) {
+        document.getElementById("input").value = ""
+      }
     }
   }
 </script>
