@@ -5659,5 +5659,6 @@ The `addEventListener()` method allows you to add many events to the same elemen
 
 <!--  -->
 
-## 🪪 LICENSE 
-[Copyright (c) 2023 Dev_eLoper](/LICENSE)
+# 🪪 General Public License
+[GNU License](/LICENSE) : 
+*JavaScript-README Copyright (C) 2023 Dev_eLoper*
