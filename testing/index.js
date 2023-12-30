@@ -1,12 +1,18 @@
-// startBorder(boolean: true or false, color:string, size:number, title:string) 
-const startBorder = (control, color, size, title) => console.log((control === true ? `%c <<<<<| ${title} |>>>>>` : `%c <<<<<||||||||||||>>>>>`), (`color: ${color}; font-size: ${size}px;`));
+// !/* ---------------------------------- */
+const Server = ({ color, backgroundColor, title, size }) => console.log(
+  (title != null ? `\n%c<<<<<| ${title.toUpperCase()} |>>>>>\n` : `\n%c<<<<<|||||||||>>>>>\n`),
+  (`color: ${color}; font-size: ${size}px; background-color: ${backgroundColor};`)
+);
 
-//!/* ---------------------------------- */
-startBorder(true, "red", 22, "Start")
-//!/* ---------------------------------- */
+Server({ color: "lightGreen", title: "starting", backgroundColor: "black" })
 
-const list = []
+setTimeout(() => {
+  Server({ color: "lightGreen", backgroundColor: "black", title: "ending" })
+}, 5000)
+// !/* ---------------------------------- */
 
-//!/* ---------------------------------- */
-startBorder(false, "blue", 22)
-//!/* ---------------------------------- */
+
+
+/*
+  ? API : https://res.cloudinary.com/dpiiduvvx/raw/upload/v1703580765/API/productsAPI
+*/

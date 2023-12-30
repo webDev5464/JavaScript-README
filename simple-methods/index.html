@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <label>Countries:</label>
+  <select name="" id="countries" onchange="Staterender(this.value)">
+    <option value="default">Select Country</option>
+  </select>
+  <label>State:</label>
+  <select name="" id="State" onchange="Cityrender(this.value)">
+    <option value="default">Select State</option>
+  </select>
+  <label>City:</label>
+  <select name="" id="City">
+    <option value="default">Select City</option>
+  </select>
+  <script>
+    let items = [
+      {
+        country: 'India', state: 'gujarat', city: 'ahmedabad'
+      },
+      {
+        country: 'India', state: 'gujarat', city: 'surat'
+      },
+      {
+        country: 'India', state: 'gujarat', city: 'rajkot'
+      },
+      {
+        country: 'India', state: 'mumbai', city: 'pune'
+      },
+      {
+        country: 'India', state: 'mumbai', city: 'malad'
+      },
+      {
+        country: 'USa', state: 'california', city: 'newyork'
+      },
+      {
+        country: 'USa', state: 'texas', city: 'la'
+      },
+    ]
+
+    function Countryrender() {
+      let current = ''
+      for (let x = 0; x < items.length; x++) {
+        if (current == items[x].country) {
+          continue;
+          console.log(items[x].country)
+        }
+        countries.innerHTML += <option value="${items[x].country}">${items[x].country}</option>
+        current = items[x].country
+        console.log(countries.value);
+
+      }
+    }
+    function Staterender(val) {
+      City.innerHTML = <option value="">Select state</option>
+      State.innerHTML = ` <option value="">Select state</option>`
+
+      let currentstate = ''
+      for (let x = 0; x < items.length; x++) {
+        if (currentstate == items[x].state) {
+          continue;
+        }
+        if (items[x].country == val) {
+          State.innerHTML += <option value="${items[x].state}">${items[x].state}</option>
+
+          console.log(items[x].state)
+        }
+        currentstate = items[x].state
+        console.log(State.value);
+
+      }
+    }
+    function Cityrender(val) {
+      City.innerHTML = <option value="">Select state</option>
+
+      let currentcity = ''
+      for (let x = 0; x < items.length; x++) {
+        if (currentcity == items[x].city) {
+          continue;
+        }
+        if (items[x].state == val) {
+          City.innerHTML += <option value="${items[x].city}">${items[x].city}</option>
+          console.log(items[x].state)
+        }
+        currentcity = items[x].city
+        console.log(City.value);
+
+      }
+    }
+    Countryrender()
+  </script>
+</body>
+
+</html>
