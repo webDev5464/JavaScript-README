@@ -11,7 +11,14 @@ setTimeout(() => {
 }, 5000)
 // !/* ---------------------------------- */
 
+let text = "8274612863"
+let arr = []
 
+for (let x = 0; x < text.length; x++) {
+  arr[x] = Number(text[x])
+}
+
+console.log(arr);
 
 /*
   ? API : https://res.cloudinary.com/dpiiduvvx/raw/upload/v1703580765/API/productsAPI
