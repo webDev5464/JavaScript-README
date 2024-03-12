@@ -4944,6 +4944,88 @@ try {
 // TypeError
 ```
 
+## 📌 LocalStorage
+
+- syntax
+
+```js
+localStorage
+```
+
+- save data to localStorage
+
+```js
+localStorage.setItem("key", "value")
+```
+
+- Read Data from Local Storage
+
+```js
+localStorage.getItem("key")
+```
+
+- Remove Data from Local Storage
+
+```js
+localStorage.removeItem("key")
+```
+
+- Remove All (Clear Local Storage)
+
+```js
+localStorage.clear()
+```
+
+#### 🔺 Object Store in localStorage
+
+-  the key is "person" and the value is the stringified version of the person object. JSON.stringify() is used to convert the JavaScript object into a JSON string because localStorage can only store strings.
+
+```js
+const person = { name: "John Doe", age: 32 }
+localStorage.setItem("person", JSON.stringify(person))
+```
+
+- localStorage stores data as strings, we use JSON.parse() to convert the JSON string back into a JavaScript object.
+
+```js
+const storedPerson = JSON.parse(localStorage.getItem("person"))
+console.log(storedPerson);
+```
+
+## 📌 setTimeout()
+
+```js
+setTimeout(() => {
+  console.log("Hello World!");
+}, 5000)
+```
+
+So, to summarize, this code will log the string "Hello World!" to the console after a delay of 5 seconds.
+
+## 📌 setInterval
+
+```js
+setInterval(() => {
+  console.log("Hello World!");
+}, 2000);
+```
+
+So, to summarize, this code will log the string "Hello World!" to the console every 2 seconds, repeatedly, until the page is refreshed or the interval is cleared using the clearInterval function.
+
+```js
+// Set up the interval to log a message to the console every 2 seconds
+const intervalId = setInterval(() => {
+  console.log("Hello World!");
+}, 2000);
+
+// Clear the interval after 10 seconds
+setTimeout(() => {
+  clearInterval(intervalId);
+}, 10000);
+```
+
+So, to summarize, this code will log the string "Hello World!" to the console every 2 seconds for 10 seconds, and then stop logging the message to the console.
+
 ---
 
 ---
