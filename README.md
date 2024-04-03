@@ -1257,7 +1257,18 @@ console.log(newText);
 
 ---
 
-📝 **Note**
+<!-- 📝 **Note**
+
+The replace() method does not change the string it is called on.
+
+The replace() method returns a new string.
+
+The replace() method replaces only the first match
+
+If you want to replace all matches, use a regular expression with the /g flag set. See examples below. -->
+
+<details>
+<summary>📝 <strong>Note</strong></summary>
 
 The replace() method does not change the string it is called on.
 
@@ -1266,6 +1277,7 @@ The replace() method returns a new string.
 The replace() method replaces only the first match
 
 If you want to replace all matches, use a regular expression with the /g flag set. See examples below.
+</details>
 
 ---
 
