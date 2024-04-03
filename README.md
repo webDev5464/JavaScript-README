@@ -1257,20 +1257,10 @@ console.log(newText);
 
 ---
 
-<!-- 📝 **Note**
-
-The replace() method does not change the string it is called on.
-
-The replace() method returns a new string.
-
-The replace() method replaces only the first match
-
-If you want to replace all matches, use a regular expression with the /g flag set. See examples below. -->
-
 <details>
 <summary>📝 <strong>Note</strong></summary>
 
-<p style="color: red;">The replace() method does not change the string it is called on.</p>
+The replace() method does not change the string it is called on.
 
 The replace() method returns a new string.
 
@@ -1556,7 +1546,8 @@ console.log(text.search(/locate/)); // 7
 
 ---
 
-📝 **Did You Notice?**
+<details>
+<summery>📝 <strong>Did You Notice?</strong></summery>
 
 The two methods, `indexOf()` and `search()`, are equal?
 
@@ -1568,6 +1559,7 @@ The two methods are **NOT** equal. These are the differences:
 - The `indexOf()` method cannot take powerful search values (regular expressions).
 
 You will learn more about regular expressions in a later chapter.
+</details>
 
 ---
 
