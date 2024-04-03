@@ -1547,7 +1547,7 @@ console.log(text.search(/locate/)); // 7
 ---
 
 <details>
-<summery>📝 <strong>Did You Notice?</strong></summery>
+<summary>📝 <strong>Did You Notice?</strong></summary>
 
 The two methods, `indexOf()` and `search()`, are equal?
 
