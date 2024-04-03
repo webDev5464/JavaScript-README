@@ -1270,7 +1270,7 @@ If you want to replace all matches, use a regular expression with the /g flag se
 <details>
 <summary>📝 <strong>Note</strong></summary>
 
-The replace() method does not change the string it is called on.
+<p style="color: red;">The replace() method does not change the string it is called on.</p>
 
 The replace() method returns a new string.
 
