@@ -927,7 +927,7 @@ Arrow functions allow us to write shorter function syntax:
 
 ```js
 let myFunction = (a, b) => {
-  a * b;
+  return a * b;
 };
 console.log(myFunction(2, 5));
 ```
