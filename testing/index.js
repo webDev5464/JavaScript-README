@@ -11,7 +11,19 @@ setTimeout(() => {
 }, 5000)
 // !/* ---------------------------------- */
 
-
 /*
   ? API : https://res.cloudinary.com/dpiiduvvx/raw/upload/v1703580765/API/productsAPI
 */
+
+//? Start here
+
+function greet(name, myFunction) {
+  console.log('Hello world');
+  myFunction(name);
+}
+
+function sayName(name) {
+  console.log('Hello ' + name);
+}
+
+setTimeout(greet, 2000, 'John', sayName);
